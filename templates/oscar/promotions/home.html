@@ -1,0 +1,761 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block navigation %}
+    {% include "partials/nav_primary.html" with expand_dropdown=1 %}
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block column_left %}
+{% endblock %}
+
+{% block content %}
+<div class="img-banner" id="img-banner">
+        <div class="container">
+            <div class="row">
+               <div class="banner-details">
+                  <img src="{% static "markatix/img/01.jpg" %}" class="img-responsive">
+                  <div class="banner-text">
+                     <h4>Romantic Gateways from Bangalore</h4>
+                     <a href="#">Know More <span class="arrow-right"><i class="fa fa-arrow-right"></span></i></a>
+                  </div>
+               </div>
+            </div>
+        </div>
+</div>
+<div class="banner-dropdown" id="banner-dropdown">
+         <div class="container">
+            <div class="row">
+               <div class="dropdown-details hidden-xs">
+                  <div class="dropdown-heading">
+                     <h3 class="text-center">Find Your Flavour</h3>
+                  </div>
+                  <div class="dropdown-content">
+                     <div class="col-md-2">
+                        <div class="dropdown destinations text-center">
+                           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Destinations
+                           <span class="caret"></span></button>
+                           <ul class="dropdown-menu">
+                              <li><a href="#">HTML</a></li>
+                              <li><a href="#">CSS</a></li>
+                              <li><a href="#">JavaScript</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="input-group equal-btn">
+                           <div class="input-group-addon">
+                              <i class="fa fa-calendar">
+                              </i>
+                           </div>
+                           <input class="form-control" id="date" name="date" placeholder="Arrival Date" type="text"/>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="input-group equal-btn">
+                           <div class="input-group-addon">
+                              <i class="fa fa-calendar">
+                              </i>
+                           </div>
+                           <input class="form-control" id="date" name="date" placeholder="Departure Date" type="text"/>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <!-- <div class="dropdown month text-center">
+                           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Month
+                              <span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                 <li><a href="#">HTML</a></li>
+                                 <li><a href="#">CSS</a></li>
+                                 <li><a href="#">JavaScript</a></li>
+                              </ul>
+                           </div> -->
+                        <input class="form-control" id="people" name="people" placeholder="No. Of People" type="number"/>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="button submit text-center">
+                           <button class="btn btn-primary" type="button">Submit</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+</div>  
+<div class="experieces-text" id="experieces-text">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="experieces-text-img">
+                     <h2 class="text-center">EXPERIENCES</h2>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="experieces-text">
+                     <h4>Explore some of the best stays around places your choice from our partners and friends</h4>
+                     <p>Each partner/host has been in preson visited to experience, understand, relate to the property, its surroundings and things to do, so you get what you see. The Real Experience.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+</div>
+<div class="dependent-carousel">
+         <div class="container">
+            <div class="container no-padding">
+               <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                     <div class="item active">
+                        <img src="http://placehold.it/760x400/e7c255/fff">
+                        <div class="carousel-caption">
+                           <h4><a href="#">Lorem ipsum dolor sit amet consetetur</a></h4>
+                           <p>Lorem ipsum dolor sit amet<a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                        </div>
+                     </div>
+                     <!-- End Item -->
+                     <div class="item">
+                        <img src="http://placehold.it/760x400/4d9999/fff">
+                        <div class="carousel-caption">
+                           <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy</a></h4>
+                           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy<a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                        </div>
+                     </div>
+                     <!-- End Item -->
+                     <div class="item">
+                        <img src="http://placehold.it/760x400/9f9f86/fff">
+                        <div class="carousel-caption">
+                           <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
+                           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                        </div>
+                     </div>
+                     <!-- End Item -->
+                     <div class="item">
+                        <img src="http://placehold.it/760x400/cc887c/fff">
+                        <div class="carousel-caption">
+                           <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
+                           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod<a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                        </div>
+                     </div>
+                     <!-- End Item -->
+                     <div class="item">
+                        <img src="http://placehold.it/760x400/a577ad/fff">
+                        <div class="carousel-caption">
+                           <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
+                           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod<a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                        </div>
+                     </div>
+                     <!-- End Item -->
+                  </div>
+                  <!-- End Carousel Inner -->
+                  <ul class="list-group col-sm-4">
+                     <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active height">
+                        <!-- <h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4> -->
+                        <img src="http://via.placeholder.com/365x60/e7c255/fff" class="img-responsive">
+                     </li>
+                     <li data-target="#myCarousel" data-slide-to="1" class="list-group-item height">
+                        <!-- <h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4> -->
+                        <img src="http://via.placeholder.com/365x60/4d9999/fff" class="img-responsive">
+                     </li>
+                     <li data-target="#myCarousel" data-slide-to="2" class="list-group-item height">
+                        <!-- <h4>tempor invidunt ut labore et dolore</h4> -->
+                        <img src="http://via.placeholder.com/365x60/9f9f86/fff" class="img-responsive"> 
+                     </li>
+                     <li data-target="#myCarousel" data-slide-to="3" class="list-group-item height">
+                        <!-- <h4>magna aliquyam erat, sed diam voluptua</h4> -->
+                        <img src="http://via.placeholder.com/365x60/cc887c/fff" class="img-responsive">
+                     </li>
+                     <li data-target="#myCarousel" data-slide-to="4" class="list-group-item height">
+                        <!-- <h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4> -->
+                        <img src="http://via.placeholder.com/365x60/a577ad/fff" class="img-responsive">
+                     </li>
+                  </ul>
+                  <!-- Controls -->
+                  <div class="carousel-controls">
+                     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                     <span class="glyphicon glyphicon-chevron-left"></span>
+                     </a>
+                     <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right"></span>
+                     </a>
+                  </div>
+               </div>
+               <!-- End Carousel -->
+            </div>
+         </div>
+</div>
+<div class="experintial-stays" id="experintial-stays">
+         <div class="container">
+            <div class="row">
+               <div class="customized-heading-1">
+                  <h3>top experiential</h3>
+                  <h2>stays</h2>
+                  <h6>popular places based on audience stay</h6>
+               </div>
+            </div>
+            <!-- <div class="row">
+               <div class="col-sm-12">
+                  <div class="container-fluid">
+                     <div class="row">
+                        <div class="custom-carousel" id="custom-carousel">
+                           <div class="col-xs-12 col-sm-12 col-md-12">
+                              <div class=" carousel-showmanymoveone slide" id="itemslider">
+                                 <div class="carousel-inner">
+                                    <div class="item">
+                                       <div class="col-xs-12 col-sm-6 col-md-2">
+                                          <img src="img/slider/01.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-1">
+                                          <img src="img/slider/02.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-2">
+                                          <img src="img/slider/01.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-3">
+                                          <img src="img/slider/04.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-4">
+                                          <img src="img/slider/05.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-5">
+                                          <img src="img/slider/06.jpg" class="img-responsive">
+                                       </div>
+                                    </div>
+                                    <div class="item active">
+                                       <div class="col-xs-12 col-sm-6 col-md-2">
+                                          <img src="img/slider/04.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-1">
+                                          <img src="img/slider/06.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-2">
+                                          <img src="img/slider/02.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-3">
+                                          <img src="img/slider/01.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-4">
+                                          <img src="img/slider/05.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-5">
+                                          <img src="img/slider/02.jpg" class="img-responsive ">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="slider-control">
+                                    <a class="left carousel-control" href="#itemslider" data-slide="prev">‹</a>
+                                    <a class="right carousel-control" href="#itemslider" data-slide="next">›</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+            <div class="row">
+              <div class="col-xs-6 col-md-2 margin-mobile padding-mobile
+              ">
+                <div class="content-1">
+                 <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                    <div class="content-overlay-1"></div>
+                    <img class="content-image-5" src="{% static "markatix/img/slider/01.jpg" %}" class="img-responsive">
+                    <div class="content-details-1 fadeIn-bottom-1">
+                       <h3 class="content-title">This is a title</h3>
+                       <!-- <p class="content-text">This is a short description</p> -->
+                    </div>
+                 </a>
+                </div> 
+              </div>
+              <div class="col-xs-6 col-md-2 margin-mobile padding-mobile">
+                <div class="content-1">
+                 <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                    <div class="content-overlay-1"></div>
+                    <img class="content-image-5" src="{% static "markatix/img/slider/04.jpg" %}" class="img-responsive">
+                    <div class="content-details-1 fadeIn-bottom-1">
+                       <h3 class="content-title">This is a title</h3>
+                       <!-- <p class="content-text">This is a short description</p> -->
+                    </div>
+                 </a>
+                </div> 
+              </div>
+              <div class="col-xs-6 col-md-2 padding-mobile">
+                <div class="content-1">
+                 <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                    <div class="content-overlay-1"></div>
+                    <img class="content-image-5" src="{% static "markatix/img/slider/06.jpg" %}" class="img-responsive">
+                    <div class="content-details-1 fadeIn-bottom-1">
+                       <h3 class="content-title">This is a title</h3>
+                       <!-- <p class="content-text">This is a short description</p> -->
+                    </div>
+                 </a>
+                </div> 
+              </div>
+              <div class="col-xs-6 col-md-2 padding-mobile">
+                <div class="content-1">
+                 <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                    <div class="content-overlay-1"></div>
+                    <img class="content-image-5" src="{% static "markatix/img/slider/04.jpg" %}" class="img-responsive">
+                    <div class="content-details-1 fadeIn-bottom-1">
+                       <h3 class="content-title">This is a title</h3>
+                       <!-- <p class="content-text">This is a short description</p> -->
+                    </div>
+                 </a>
+                </div> 
+              </div>
+              <div class="col-xs-6 col-md-2 padding-mobile">
+                <div class="content-1">
+                 <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                    <div class="content-overlay-1"></div>
+                    <img class="content-image-5" src="{% static "markatix/img/slider/05.jpg" %}" class="img-responsive">
+                    <div class="content-details-1 fadeIn-bottom-1">
+                       <h3 class="content-title">This is a title</h3>
+                       <!-- <p class="content-text">This is a short description</p> -->
+                    </div>
+                 </a>
+                </div> 
+              </div>
+              <div class="col-xs-6 col-md-2 padding-mobile">
+                <div class="content-1">
+                 <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                    <div class="content-overlay-1"></div>
+                    <img class="content-image-5" src="{% static "markatix/img/slider/06.jpg" %}" class="img-responsive">
+                    <div class="content-details-1 fadeIn-bottom-1">
+                       <h3 class="content-title">This is a title</h3>
+                       <!-- <p class="content-text">This is a short description</p> -->
+                    </div>
+                 </a>
+                </div> 
+              </div>
+            </div>
+         </div>
+</div>
+<div class="recommend-place" id="recommend-place">
+         <div class="container">
+            <div class="row">
+               <div class="customized-heading-2">
+                  <div class="background-img-2">
+                     <h3>Do It</h3>
+                     <h2>Yourself</h2>
+                  </div>
+                  <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-3 padding-change-1">
+                  <div class="recom-place-1">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1"></div>
+                           <img class="content-image-1" src="{% static "markatix/img/04.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="recom-place-2">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1"></div>
+                           <img class="content-image-1" src="{% static "markatix/img/05.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4  padding-change-2">
+                  <div class="recom-place-3">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1 content-overlay-2"></div>
+                           <img class="content-image-2" src="{% static "markatix/img/06.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 content-details-2  fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3  padding-change-3 hidden-xs">
+                  <div class="recom-place-4">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1"></div>
+                           <img class="content-image-1" src="{% static "markatix/img/07.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="recom-place-5">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1"></div>
+                           <img class="content-image-1" src="{% static "markatix/img/08.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-2  padding-change-4 hidden-xs">
+                  <div class="recom-place-6">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1 content-overlay-2"></div>
+                           <img class="content-image-2" src="{% static "markatix/img/09.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 content-details-3  fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+</div>
+<div class="explore-world" id="explore-world">
+         <div class="container">
+            <div class="row">
+               <div class="customized-heading-2">
+                  <div class="background-img-3">
+                     <h3>Explore The</h3>
+                     <h2>World of Eco Hunter</h2>
+                  </div>
+                  <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <ul class="tabs-try">
+                     <li class="one filter-button active" data-filter="blog">
+                        <p>Blog</p>
+                     </li>
+                     <li class="two filter-button" data-filter="craft-post">
+                        <p>Craft Post</p>
+                     </li>
+                     <!-- 
+                        <li class="three filter-button" data-filter="sprinkle"><a href="#">Images</a></li> -->
+                     <hr/>
+                     <!--   <li class="four"><a href="#">Quatro</a></li> -->
+                  </ul>
+                  <div class="row">
+                     <div class="col-md-6 padding-change-5">
+                        <div class="explore-world exp-1 filter blog">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-1 filter craft-post hidden-xs">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-2 filter blog">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1 temporary-1"></div>
+                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/02.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-2 filter craft-post hidden-xs">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1 temporary-1"></div>
+                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/02.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-3 filter blog">
+                            <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1 temporary-1"></div>
+                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/03.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-3 filter craft-post hidden-xs">
+                            <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1 temporary-1"></div>
+                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/03.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="col-md-6 padding-change-5">
+                        <div class="explore-world exp-4 filter blog hidden-xs">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1 temporary"></div>
+                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/02.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-4 filter craft-post">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1 temporary"></div>
+                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/02.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-5 filter blog hidden-xs">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1 temporary"></div>
+                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/05.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-5 filter craft-post">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1 temporary"></div>
+                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/05.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-6 filter adjust-margin blog hidden-xs">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-6 filter adjust-margin craft-post">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+</div>
+<div class="join-the-network" id="join-the-network">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="join-data">
+                     <div class="join-content">
+                        <h2>Join The Network</h2>
+                        <h6>Smart Places requires smart partners. Join the Ecohunters Network <a href="#">Readmore</a></h6>
+                     </div>
+                     <div class="join-btn">
+                        <a href="#">Sign Up</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+    </div>
+    
+    <div class="review" id="review">
+       <div class="container">
+          <div class="row">
+             <!-- <div class="col-md-12">
+                <div class="col-md-3">
+                   <div class="reviewer-img">
+                      <img src="img/10.jpg" class="img-responsive">
+                   </div>
+                </div>
+                <div class="col-md-9">
+                   <div class="review-txt">
+                      <div class="review-heading">
+                         <h3>Black&Wood <span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>
+                      </div>
+                      <div class="review-content">
+                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                      </div>
+                   </div>
+                </div>
+              </div> -->
+             <div class="col-md-8 col-md-offset-2">
+                 <div class="customized-heading-2">
+                    <div class="background-img-3">
+                       <h3>We Are</h3>
+                       <h2>At our Best</h2>
+                    </div>
+                 </div>
+                <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+                <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                   <!-- Carousel indicators -->
+                   <ol class="carousel-indicators">
+                      <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                      <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+                   </ol>
+                   <!-- Carousel items -->
+                   <div class="carousel-inner">
+                      <div class="active item text-center">
+                         <!-- <div class="profile-circle" style="background-color: rgba(0,0,0,.2);"></div>-->
+                          <div class="reviewer-img text-center">
+                            <img src="{% static "markatix/img/10.jpg" %}" class="img-responsive">
+                          </div>
+                          <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                         </blockquote>
+                          <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>
+                      </div>
+                      <div class="item text-center">
+                        <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
+                         <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                         </blockquote>
+                         <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>
+                      </div>
+                      <div class="item text-center">
+                        <div class="profile-circle" style="background-color: rgba(145,169,216,.2);"></div>
+                         <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                         </blockquote>
+                         <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <footer class="hidden-xs">
+         <div class="footer" id="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                     <h3> Lorem Ipsum </h3>
+                     <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                     <h3> Lorem Ipsum </h3>
+                     <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                     <h3> Lorem Ipsum </h3>
+                     <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                     <h3> Lorem Ipsum </h3>
+                     <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                     <h3> Lorem Ipsum </h3>
+                     <ul>
+                        <li>
+                           <div class="input-append newsletter-box text-center">
+                              <input type="text" class="full text-center" placeholder="Email ">
+                              <button class="btn  bg-gray" type="button"> Lorem ipsum <i class="fa fa-long-arrow-right"> </i> </button>
+                           </div>
+                        </li>
+                     </ul>
+                     <ul class="social">
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                     </ul>
+                  </div>
+               </div>
+               <!--/.row--> 
+            </div>
+            <!--/.container--> 
+         </div>
+         <!--/.footer-->
+    </footer>
+
+{% endblock content %}

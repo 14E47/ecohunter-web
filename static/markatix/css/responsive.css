@@ -1,0 +1,478 @@
+
+@media only screen  and (max-device-width: 480px)
+{
+/*------------
+Navbar Brand
+------------*/
+	.navbar-header
+	{
+		background-color: #ddd;
+	}
+	.navbar-brand
+	{
+		padding: 1%;
+		height: 60px;
+		width: 20%;
+		background-color: transparent !important;
+	}
+	.navbar-brand:hover
+	{
+		background-color: transparent !important;
+	}
+	.navbar-styling
+	{
+		padding-left: 0%;
+		padding-bottom: 3%;		
+	}
+	.navbar-right > *
+	{
+		padding-top:0%;
+		height: 0px;
+		background-color: transparent;
+		margin-top: -6%;
+		margin-left: 2%;
+	}
+	.nav-contact > a
+	{
+		color: #777 !important;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+	/*.nav>li>a
+	{
+		padding: 0px;
+	}*/
+	.navbar-default .navbar-nav>li>a
+	{
+		margin-left: -18px;
+	    /* color: #777; */
+	    margin-top: 0px;
+	}
+/*	-----------------
+	Banner-Image
+	-----------------*/
+	.img-banner
+	{
+		margin-top: 16%;
+	}
+	.banner-text
+	{
+		margin-top: -25%;
+		margin-left: 5%;
+	}
+	.banner-text h4
+	{
+		color: #fff;
+	}
+	.banner-text a
+	{
+		padding: 4px 20px 4px 20px;
+	}
+/*	-------------------
+	Experience Text
+	-------------------*/
+	.experieces-text-img>h2
+	{
+		margin-top: 0px;
+		margin-bottom: 5px;
+	}
+	.experieces-text>h4
+	{
+		margin-top: 5px;
+		margin-bottom: 10px; 
+	}
+
+/*	----------------------
+	Dependent Carousel
+	----------------------*/
+
+	.no-padding
+	{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+/*	-----------------------
+	Recommend Place
+	-----------------------*/
+	.customized-heading-2>h6
+	{
+		padding-right: 0%;
+		padding-left: 0%;
+	}
+	.content-image-1
+	{
+		width: 375px;
+    	height: 195px;
+	}
+	.padding-change-2
+	{
+		padding-left: 0px;
+	}
+	/*---------------------
+	Experintial Stays Styling
+	-----------------------*/
+	/*.margin-mobile
+	{
+		margin: 2%;
+	}*/
+	.padding-mobile
+	{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+	/*----------------------
+	Explore the World
+	----------------------*/
+
+	.content-image-4
+	{
+		width: 100%;
+	}
+	.tabs-try li>p {
+	    display: inline-block;
+	    width: 45%;
+		/*    margin-right: 20%;
+	    margin-left: 20%;*/
+	    text-decoration: none !important;
+	    color: #000;
+	    font-size: 14px;
+	    font-weight: 900;
+	    cursor: pointer;
+	}
+	.content-image-4 {
+	    width: 375px;
+	    height: 170px;
+	    padding: 5px;
+	    max-width: 100%;
+	}
+
+	/*----------------------
+	Explore the World
+	----------------------*/
+
+	.review-heading
+	{
+		text-align: center;
+	}
+	.review-content>p
+	{
+		text-align: justify;
+	}
+/*	------------------------
+	Join the Network
+	------------------------
+*/	.join-content
+	{
+		text-align: center;
+	}
+	.join-btn
+	{
+		text-align: center;
+	}
+	.join-btn a {
+	    padding: 5px 35px 5px 35px;
+	    border: 2px solid #fff;
+	    border-radius: 50px;
+	    text-decoration: none;
+	    color: #fff;
+	    font-weight: 900;
+	}
+
+/*	------------------------
+	Review Section
+	------------------------
+*/
+	.center-review-mbl
+	{
+		text-align: center;
+	}
+
+/*	------------------------
+	Navbar Fixed Bottom
+	------------------------
+*/	.navbar-fixed-bottom
+	{
+		background-color: #222;
+	}
+	#inner-div
+	{
+		text-align: center;
+	}
+	#inner-div>a
+	{
+		font-size: 30px;
+		color: #a38f72;
+	}
+	.portfolio-modal .modal-content {
+		border-radius: 0;
+		background-clip: border-box;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border: none;
+		min-height: 100%;
+		padding: 65px 0;
+		text-align: center;
+	}
+	.portfolio-modal .modal-content h2 {
+	    margin: 0;
+	    font-size: 3em;
+	}
+	.portfolio-modal .modal-content .item-details {
+	  margin: 30px 0;
+	}
+	.portfolio-modal .close-modal {
+	  position: absolute;
+	  width: 75px;
+	  height: 75px;
+	  background-color: transparent;
+	  top: 25px;
+	  right: 25px;
+	  cursor: pointer;
+	}
+	.portfolio-modal .close-modal:hover {
+	  opacity: 0.3;
+	}
+	.portfolio-modal .close-modal .lr {
+	  height: 75px;
+	  width: 1px;
+	  margin-left: 35px;
+	  background-color: #2C3E50;
+	  transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  /* IE 9 */
+	  -webkit-transform: rotate(45deg);
+	  /* Safari and Chrome */
+	  z-index: 1051;
+	}
+	.portfolio-modal .close-modal .lr .rl {
+	  height: 75px;
+	  width: 1px;
+	  background-color: #2C3E50;
+	  transform: rotate(90deg);
+	  -ms-transform: rotate(90deg);
+	  /* IE 9 */
+	  -webkit-transform: rotate(90deg);
+	  /* Safari and Chrome */
+	  z-index: 1052;
+	}
+	.portfolio-modal .modal-backdrop {
+	  opacity: 0;
+	  display: none;
+	}
+	.dropdown-content>*
+	{	
+		margin-left: 1%;
+	    margin-top: 10%;
+	    margin-right: 1%;
+	    margin-bottom: 4%;
+	}
+	.submit .btn-primary
+	{
+		margin-top: 6%;
+		margin-left: 0%;
+	}
+	.dropdown .btn-primary
+	{
+		margin-bottom: 8%;
+		width: 100%;
+	}
+	.customized-heading-3 {
+	    color: #a38f72;
+	    text-transform: capitalize;
+	    text-align: center;
+	}
+/*	----------------------------
+	Third Page
+	---------------------------*/
+	.customized-heading-3>h6
+	{
+		padding-right: 0%;
+		padding-left: 0%;
+	}
+	.activities-selection
+	{
+		padding:0% 0% 0% 0%;
+	}
+	.experience-tab
+	{
+		margin: 5%;
+	}
+	.book-button
+	{
+		margin-top: 10%;
+		margin-left: 24%;
+	}
+	.customized-heading-5 h6
+	{
+		padding-left: 0%;
+		padding-right: 0%;
+	}
+	.tab-img>img
+	{
+		width: 100%;
+    	height: 250px;
+	}
+	.view-more-text
+	{
+		display: none;
+	}
+	.view-more
+	{
+		margin-left: 40%;
+	}
+/*	-------------------------
+	Second Page Styling
+	-------------------------*/
+	.equal-margin {
+	    margin-top: -2%;
+	    margin-bottom: 4%;
+	}
+	.margin-top
+	{
+		margin-top: 6%;
+	}
+	.product-carousel {
+	    width: 100%;
+	    height: 275px;
+	}
+	.filter-mobile-btn a
+	{
+		position: fixed;
+		text-align: center;
+		padding: 1% 4% 1% 4%;
+		background-color: #2C3E50;
+		color: #fff;
+		text-decoration: none;
+		bottom: 0px;
+		right: 35%;
+		left: 35%;
+		margin-top: 10%;
+		border-radius: 50px;
+	}
+	#d-private , #d-entire , #d-shared
+	{
+		font-weight: 900;
+		font-size: 18px;
+	}
+	.d-room-qoute
+	{
+		font-size: 15px;
+		color: #aaa;
+	}
+	.des-price select
+	{
+		margin-top: 5%;
+		margin-right: 1%;
+		margin-left: 1%;
+		margin-bottom: 2%;
+		display: inline-block;
+		width: 45%;
+		border-radius: 0px;
+	}
+	.price-quote
+	{
+		color: #aaa;
+		font-size: 15px;
+	}
+/*	------------
+	Search Bar
+	------------*/
+	.searchBarWrapper
+	{
+		position: absolute !important;
+	    left: 20% !important;
+	   /* top: 5% !important;*/
+	    right: 0 !important;
+	    z-index: 100 !important;
+	    display: inline-block;
+    	width: 80%;
+	}
+	.searchBarSmall
+	{
+		line-height: 24px !important;
+	    /*letter-spacing: undefined !important;*/
+	    padding-top: 0px !important;
+	    padding-bottom: 0px !important;
+	    color: #484848 !important;
+	    border-radius: 4px !important;
+	    border: 1px solid #DBDBDB !important;
+	    box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08) !important;
+	    padding: 0px !important;
+	    display: table !important;
+	    table-layout: fixed !important;
+	    width: 100% !important;
+	    position: relative !important;
+	}
+	.button-search
+	{
+		line-height: 18px !important;
+	    letter-spacing: 0.2px !important;
+	    padding-top: 0px !important;
+	    padding-bottom: 0px !important;
+	    color: #484848 !important;
+	    background: #ffffff !important;
+	    border: 0px !important;
+	    border-radius: 4px !important;
+	    cursor: pointer !important;
+	    display: inline !important;
+	    text-align: left !important;
+	    padding: 11px 12px !important;
+	    position: relative !important;
+	    width: 100% !important;
+	    white-space: nowrap !important;
+	    overflow: hidden !important;
+	    text-overflow: ellipsis !important;
+	    outline: none !important;
+		height: 56px;
+	}
+	.copy {
+	    color: #484848 !important;
+	    margin-left: 8px !important;
+	    /*vertical-align: middle !important;*/
+	    font-size: 20px;
+	}
+	.focusUnderline {
+	    position: absolute !important;
+	    left: 0px !important;
+	    right: 0px !important;
+	    bottom: 0px !important;
+	    height: 2px !important;
+	    background: #008489 !important;
+	    -webkit-transition: opacity 0.3s !important;
+	    -moz-transition: opacity 0.3s !important;
+	    transition: opacity 0.3s !important;
+	    opacity: 0 !important;
+	    z-index: 1 !important;
+	}
+	.glyphicon-search
+	{
+		font-size: 22px;
+	}
+/*	---------------------------------
+	Login-SignUp-ForgotPassword-Page
+	--------------------------------*/
+	.login-form
+	{
+		text-align: center;
+	    margin-top: 20%;
+	    position: absolute;
+	    margin-bottom: 0%;
+	    margin-left: 0%;
+	}
+	.login-form-1
+	{
+		min-width: 280px;
+		margin: 5%;
+	}
+	.login-form-custom
+	{
+	    text-align: center;
+	    margin-top:20%;
+	    position: absolute;
+	    margin-bottom: 0%;
+	    margin-left: -4%;
+	}
+}

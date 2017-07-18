@@ -1,0 +1,72 @@
+{% load reviews_tags %}
+{% load thumbnail %}
+{% load i18n %}
+{% load display_tags %}
+{% load staticfiles %}
+{% block product %}
+<article class="product_pod">
+   <div class="places-dest margin-top">
+      <div class="container-fluid">
+         <div class="row margin">
+            <div class="col-md-4 margin">
+               <div id="myCarousel" class="carousel slide no-padding product-carousel" data-ride="carousel" data-interval="false">
+                  {% block product_image %}
+                  <div class="image_container">
+                     {% with image=product.primary_image %}
+                     {% thumbnail image.original "x155" upscale=False as thumb %}
+                     <div class="carousel-inner">
+                        <div class="item active">
+                           <a href="{{ product.get_absolute_url }}">
+                              <div class="content-overlay"></div>
+                              <img src="{{ thumb.url }}" alt="{{ product.get_title }}" class="content-image img-responsive img-size">
+                              <div class="content-details fadeIn-bottom">
+                                 <h3 class="content-title">This is a title</h3>
+                                 <p class="content-text">This is a short description</p>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     {% endthumbnail %}
+                     {% endwith %}
+                  </div>
+                  {% endblock %}
+               </div>
+            </div>
+         </div>
+         <!--    {% block product_review %}
+            {% iffeature "reviews" %}
+            <p class="star-rating {{ product.rating|as_stars }}">
+               <i class="icon-star"></i>
+               <i class="icon-star"></i>
+               <i class="icon-star"></i>
+               <i class="icon-star"></i>
+               <i class="icon-star"></i>
+            </p>
+            {% endiffeature %}
+            {% endblock %} -->
+         <div class="desti-descrip">   
+            <div class="desti-price-name">
+             {% block product_title %}
+                <h4 class="destin-name"><i class="fa fa-shield"></i> 
+                    <span id="d-name">
+                        <a href="{{ product.get_absolute_url }}" title="{{ product.get_title }}">{{ product.get_title|truncatewords:4 }}
+                        </a>
+                    </span>
+                </h4>
+             {% endblock %}
+             {% block product_price %}
+                <h4 class="desti-price"><i class="fa fa-bed"></i> 
+                    Starting From &#8377<span id="d-pirce"> 2750</span>
+                </h4>
+              <!--   {% include "catalogue/partials/stock_record.html" %}
+                {% if not product.is_parent %}
+                {% include "catalogue/partials/add_to_basket_form_compact.html" %}
+                {% endif %} -->
+            </div>     
+             {% endblock %}
+            
+         </div>
+      </div>
+   </div>
+</article>
+{% endblock %}
