@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% load staticfiles %}
+{% load staticfiles category_tags debug_tags %}
 {% load i18n %}
 
 {% block navigation %}
@@ -28,6 +28,18 @@
 <div class="banner-dropdown" id="banner-dropdown">
          <div class="container">
             <div class="row">
+              <!-- 
+              <form method="POST" id="form">{% csrf_token %}
+               {% category_tree as tree_categories %}
+                <select id="selectId">
+                  {% for city in tree_categories %}
+                    <option value="{{city.0.get_absolute_url}}">{{city.0.name}}</option>
+                  {% endfor %}
+                </select>
+                <input type="submit"></input>
+              </form>
+               -->
+              <form method="GET" id="form">
                <div class="dropdown-details hidden-xs">
                   <div class="dropdown-heading">
                      <h3 class="text-center">Find Your Flavour</h3>
@@ -37,11 +49,20 @@
                         <div class="dropdown destinations text-center">
                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Destinations
                            <span class="caret"></span></button>
+                           {% category_tree as tree_categories %}
+                            <select id="selectId">
+                              {% for city in tree_categories %}
+                                <option value="{{city.0.get_absolute_url}}">{{city.0.name}}</option>
+                              {% endfor %}
+                            </select>
+                           <!-- 
+                           {% category_tree as tree_categories %}
                            <ul class="dropdown-menu">
-                              <li><a href="#">HTML</a></li>
-                              <li><a href="#">CSS</a></li>
-                              <li><a href="#">JavaScript</a></li>
+                              {% for city in tree_categories %}
+                                <li><a href="{{city.0.get_absolute_url}}">{{city.0.name}}</a></li>
+                              {% endfor %}
                            </ul>
+                           -->
                         </div>
                      </div>
                      <div class="col-md-2">
@@ -50,7 +71,7 @@
                               <i class="fa fa-calendar">
                               </i>
                            </div>
-                           <input class="form-control" id="date" name="date" placeholder="Arrival Date" type="text"/>
+                           <input class="form-control" id="date" name="date_from" placeholder="Arrival Date" type="text"/>
                         </div>
                      </div>
                      <div class="col-md-2">
@@ -59,11 +80,11 @@
                               <i class="fa fa-calendar">
                               </i>
                            </div>
-                           <input class="form-control" id="date" name="date" placeholder="Departure Date" type="text"/>
+                           <input class="form-control" id="date" name="date_to" placeholder="Departure Date" type="text"/>
                         </div>
                      </div>
                      <div class="col-md-2">
-                        <!-- <div class="dropdown month text-center">
+                      <!-- <div class="dropdown month text-center">
                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Month
                               <span class="caret"></span></button>
                               <ul class="dropdown-menu">
@@ -76,11 +97,13 @@
                      </div>
                      <div class="col-md-2">
                         <div class="button submit text-center">
-                           <button class="btn btn-primary" type="button">Submit</button>
+                           <input class="btn btn-primary" type="submit"></input>
+                           <!-- <button class="btn btn-primary" type="button">Submit</button> -->
                         </div>
                      </div>
                   </div>
                </div>
+             </form>
             </div>
          </div>
 </div>  
@@ -759,3 +782,4 @@
     </footer>
 
 {% endblock content %}
+

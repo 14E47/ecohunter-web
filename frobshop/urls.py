@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
+from django.conf.urls.static import static
+from django.conf import settings
+
 from django.contrib import admin
+
 from oscar.app import application
+
+from booking import urls as booking_url
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
@@ -23,6 +29,9 @@ urlpatterns = [
     # The Django admin is not officially supported; expect breakage.
     # Nonetheless, it's often useful for debugging.
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^booking/', include(booking_url)),
 
     url(r'', include(application.urls)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = 'Ecohunter'

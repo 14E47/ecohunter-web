@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     #'compressor',
     'widget_tweaks',
-] + get_core_apps()
+    'booking',
+    'template_debug',
+] + get_core_apps(['custom_oscar.catalogue'])
 
 SITE_ID = 1
 
