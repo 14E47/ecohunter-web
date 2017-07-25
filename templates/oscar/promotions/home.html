@@ -66,21 +66,19 @@
                         </div>
                      </div>
                      <div class="col-md-2">
-                        <div class="input-group equal-btn">
-                           <div class="input-group-addon">
-                              <i class="fa fa-calendar">
-                              </i>
-                           </div>
-                           <input class="form-control" id="date" name="date_from" placeholder="Arrival Date" type="text"/>
+                        <div class='input-group date' id='datetimepicker6'>
+                           <input type='text' class="form-control" />
+                           <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                           </span>
                         </div>
                      </div>
                      <div class="col-md-2">
-                        <div class="input-group equal-btn">
-                           <div class="input-group-addon">
-                              <i class="fa fa-calendar">
-                              </i>
-                           </div>
-                           <input class="form-control" id="date" name="date_to" placeholder="Departure Date" type="text"/>
+                        <div class='input-group date' id='datetimepicker7'>
+                           <input type='text' class="form-control" />
+                           <span class="input-group-addon">
+                           <span class="glyphicon glyphicon-calendar"></span>
+                           </span>
                         </div>
                      </div>
                      <div class="col-md-2">
@@ -782,4 +780,6 @@
     </footer>
 
 {% endblock content %}
+{% block extrastyles %}
 
+{% endblock %}
