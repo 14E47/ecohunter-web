@@ -1046,10 +1046,10 @@ Login - SignUp Page
 }
 .login-form {
     text-align: center;
-    margin-top: 10%;
-    position: absolute;
+    margin-top: 25%;
+/*    position: absolute;*/
     margin-bottom: 0%;
-    margin-left: 40%;
+/*    margin-left: 35%;*/
 }
 .login-form-custom {
     text-align: center;
@@ -1125,7 +1125,7 @@ Login - SignUp Page
 .login-form-1 .login-button {
     position: absolute;
     right: -25px;
-    top: 50%;
+    top: 37%;
     background: #ffffff;
     color: #999999;
     padding: 11px 0;
@@ -1685,4 +1685,48 @@ Accordian Vertical Side Filter
     margin-bottom: -1px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
+}
+/*
+-------------------
+Third page Tabs
+------------------*/
+.process-step .btn:focus {
+    outline: none;
+}
+.process {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+.process-row {
+    display: table-row;
+}
+.process-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.process-row:before {
+    top: 30px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+.process-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.process-step p {
+    margin-top: 4px;
+}
+.btn-circle {
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 0%;
 }
