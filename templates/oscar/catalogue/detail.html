@@ -45,157 +45,144 @@
 {% block header %}
 {% endblock header %}
 
+{% block extrascripts %}
+
+{% endblock %}
+
 {% block content %}
 
-<article class="product_page"><!-- Start of product page -->
-
-    <div class="row">
-
-        {% block product_gallery %}
-        <div class="col-sm-6">
-            {% include "catalogue/partials/gallery.html" %}
-        </div>
-        {% endblock %}
-
-        {% block product_main %}
-        <div class="col-sm-6 product_main">
-            {% comment %}
-            This is a but clunky here.  Better to have some kind of JS-driven dashboard menu that 
-            pops out when clicked.  A bit like the Django-Debug-Toolbar button
-            {% endcomment %}
-            {% if user.is_authenticated and user.is_staff %}
-                <a class="pull-right hidden-xs" href="{% url 'dashboard:catalogue-product' pk=product.id %}"><small><i class="icon-edit"></i> {% trans "Edit this product" %}</small></a>
-            {% endif %}
-            <h1>{{ product.get_title }}</h1>
-
-            {% block product_stock_record %}
-                {% include "catalogue/partials/stock_record.html" with verbose=1 %}
-            {% endblock %}
-
-            {% iffeature "reviews" %}
-                {% include "catalogue/reviews/partials/review_stars.html" %}
-            {% endiffeature %}
-
-            <hr/>
-
-            {% block product_basket_form %}
-                {% include "catalogue/partials/add_to_basket_form.html" %}
-            {% endblock %}
-        </div><!-- /col-sm-6 -->
-        {% endblock %}
-
-    </div><!-- /row -->
-
-    {% block product_description %}
-        {% if product.description %}
-        <div id="product_description" class="sub-header">
-            <h2>{% trans "Product Description" %}</h2>
-        </div>
-        <p>{{ product.description|safe }}</p>
-        {% endif %}
-    {% endblock %}
-
-    {% block product_info %}
-    <div class="sub-header">
-        <h2>{% trans "Product Information" %}</h2>
-    </div>
-    <table class="table table-striped">
-        {% if product.upc %}
-        <tr>
-            <th>{% trans "UPC" %}</th><td>{{ product.upc }}</td>
-        </tr>
-        {% endif %}
-        <tr>
-            <th>{% trans "Product Type" %}</th><td>{{ product.get_product_class.name }}</td>
-        </tr>
-
-        {% purchase_info_for_product request product as session %}
-        {% if session.price.exists %}
-            <tr>
-                <th>{% trans "Price (excl. tax)" %}</th><td>{{ session.price.excl_tax|currency:session.price.currency }}</td>
-            </tr>
-            {% if session.price.is_tax_known %}
-                <tr>
-                    <th>{% trans "Price (incl. tax)" %}</th><td>{{ session.price.incl_tax|currency:session.price.currency }}</td>
-                </tr>
-                <tr>
-                    <th>{% trans "Tax" %}</th><td>{{ session.price.tax|currency:session.price.currency }}</td>
-                </tr>
-            {% endif %}
-            <tr>
-                <th>{% trans "Availability" %}</th>
-                <td>{{ session.availability.message }}</td>
-            </tr>
-        {% endif %}
-        {% for av in product.attribute_values.all %}
-            <tr>
-                <th>{{ av.attribute.name }}</th>
-                <td>{{ av.value_as_html }}</td>
-            </tr>
-        {% endfor %}
-        {% iffeature "reviews" %}
-            <tr>
-                <th>{% trans "Number of reviews" %}</th>
-                <td>{{ product.num_approved_reviews }}</td>
-            </tr>
-        {% endiffeature %}
-    </table>
-    {% endblock %}
-
-    {% iffeature "reviews" %}
-        {% block product_review %}
-        <section>
-            <div id="reviews" class="sub-header">
-                {% if product.num_approved_reviews > 3 %}
-                    <a href="{% url 'catalogue:reviews-list' product_slug=product.slug product_pk=product.id %}" class="btn pull-right">{% trans "See all reviews" %}</a>
-                {% endif %}
-                <h2>{% trans "Customer Reviews" %}</h2>
+      <ul class="bxslider">
+        <li><img src="{% static "markatix/img/27.jpg" %}" class="img-responsive" /></li>
+        <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>
+        <li><img src="{% static "markatix/img/29.jpg" %}" class="img-responsive" /></li>
+        <li><img src="{% static "markatix/img/30.jpg" %}" class="img-responsive" /></li>
+      </ul>
+      <div class="explore-ecohunter" id="explore-ecohunter">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="customized-heading-3">
+                  <h3>Radisson</h3>
+                  <h2>Blu</h2>
+                  <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
+               </div>
             </div>
-
-            {% if product.num_approved_reviews == 0 %}
-                <p>
-                    {% if product|is_review_permitted:user %}
-                        {% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id as add_review_url %}
-                            {% blocktrans %}This product does not have any reviews yet -
-                            <a href="{{ add_review_url }}#addreview">be the first to write one</a>.
-                        {% endblocktrans %}
-                    {% else %}
-                        {% trans "This product does not have any reviews yet" %}.
-                    {% endif %}
-                </p>
-            {% else %}
-                <ol class="list-unstyled review-list">
-                    {% for review in product.reviews.approved.all|slice:":3" %}
-                        <li>
-                        {% include 'catalogue/partials/review.html' %}
-                        </li>
-                    {% endfor %}
-                </ol>
-            {% endif %}
-        </section>
-        {% endblock product_review %}
-    {% endiffeature %}
-
-    {% with recommended_products=product.recommended_products.all|slice:":6" %}
-        {% if recommended_products %}
-            <div class="sub-header">
-                <h2>{% trans "Recommended items" %}</h2>
+         </div>
+      </div>
+      <div class="dest-itenary-info">
+        <div class="col-md-8 col-md-offset-2 text-center desti-styling">
+          <div class="desti-decrib">
+            <div class="col-md-3">
+                <div class="desti-property-av">
+                  <div class="desti-property-icon">
+                    <img src="{% static "markatix/img/icons/001-open-door.png" %}" class="img-responsive icon-i">
+                  </div>
+                  <div class="desti-property-icon-heading">
+                    <p id="d-prop-heading">Entire home/apt</p>
+                  </div>
+                </div>
             </div>
-            <ul class="row">
-                {% for product in recommended_products %}
-                <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                    {% render_product product %}
-                </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
+            <div class="col-md-3">
+                <div class="desti-guest-av">
+                  <div class="desti-property-guest-icon">
+                    <img src="{% static "markatix/img/icons/002-home.png" %}" class="img-responsive icon-i">
+                  </div>
+                  <div class="desti-property-guest-count">
+                    <p id="d-prop-guest-count">4 guests</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="desti-bedroom-av">
+                  <div class="desti-bedroom-icon">
+                    <img src="{% static "markatix/img/icons/003-users.png" %}" class="img-responsive icon-i">
+                  </div>
+                  <div class="desti-bedroom-icon-heading">
+                    <p id="d-prop-bed-count">2 Bedroom</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="desti-beds-invent-av">
+                  <div class="desti-beds-invent-icon">
+                    <img src="{% static "markatix/img/icons/004-bed.png" %}" class="img-responsive icon-i">
+                  </div>
+                  <div class="desti-beds-invent-heading">
+                    <p id="d-prop-invent-count">2 Beds</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="process">
+               <div class="process-row nav nav-tabs">
+                  <div class="process-step">
+                     <button type="button" class="btn btn-info btn-circle" data-toggle="tab" href="#menu1"><i class="fa fa-info fa-3x"></i></button>
+                     <p><small>The<br />Experience</small></p>
+                  </div>
+                  <div class="process-step">
+                     <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#menu2"><i class="fa fa-file-text-o fa-3x"></i></button>
+                     <p><small><br />Activities</small></p>
+                  </div>
+                  <div class="process-step">
+                     <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#menu3"><i class="fa fa-image fa-3x"></i></button>
+                     <p><small><br />Accomodation</small></p>
+                  </div>
+                  <div class="process-step">
+                     <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#menu4"><i class="fa fa-cogs fa-3x"></i></button>
+                     <p><small>Practical<br />Info</small></p>
+                  </div>
+                  <div class="process-step">
+                     <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#menu5"><i class="fa fa-check fa-3x"></i></button>
+                     <p><small>Book<br />Now</small></p>
+                  </div>
+               </div>
+      </div>
+      <div class="tab-content">
+               <div id="menu1" class="tab-pane fade active in">
+                  <h3 class="text-center">The Experience</h3>
+                  <p class="text-center">Some content in Experience.</p>
+                  <!-- <ul class="list-unstyled list-inline pull-right">
+                     <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                  </ul> -->
+               </div>
+               <div id="menu2" class="tab-pane fade">
+                  <h3 class="text-center">Activities</h3>
+                  <p class="text-center">Some content in Activities</p>
+                  <!-- <ul class="list-unstyled list-inline pull-right">
+                     <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
+                     <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                  </ul> -->
+               </div>
+               <div id="menu3" class="tab-pane fade">
+                  <h3 class="text-center">Accomodation</h3>
+                  <p class="text-center">Some content in Accomodation.</p>
+                  <!-- <ul class="list-unstyled list-inline pull-right">
+                     <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
+                     <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                  </ul> -->
+               </div>
+               <div id="menu4" class="tab-pane fade">
+                  <h3 class="text-center"</h3>Practical Info</h3>
+                  <p class="text-center">Some content in Practical Info</p>
+                  <!-- <ul class="list-unstyled list-inline pull-right">
+                     <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
+                     <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                  </ul> -->
+               </div>
+               <div id="menu5" class="tab-pane fade">
+                  <h3 class="text-center"></h3></h3>
+                  <div class="book-button">
+                    <a href="book-now">Book Now</a>
+                  </div>
+                 <!--  <ul class="list-unstyled list-inline pull-right">
+                     <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
+                     <li><button type="button" class="btn btn-success"><i class="fa fa-check"></i> Done!</button></li>
+                  </ul> -->
+               </div>
+      </div>  
 
-    {% recently_viewed_products current_product=product %}
 
-</article><!-- End of product page -->
 {% endblock content %}
 
-{% block extrascripts %}
-    {{ block.super }}
-{% endblock %}
+

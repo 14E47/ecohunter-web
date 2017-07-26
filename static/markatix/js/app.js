@@ -20,7 +20,7 @@ $(document).ready(function() {
     //     $(this).removeClass("active");
     // }
     // $(this).addClass("active");
-    
+
     $('[data-filter=".blog"]').click();
     $(".tabs-try li p").on("click", function() {
         $(".tabs-try li").toggleClass("active", false)
@@ -61,13 +61,37 @@ $(document).ready(function() {
 
 
 $(document).ready(
-    function () {
+    function() {
         $('[data-filter="blog"]').click()
     }
 );
+
 
 $('.view-more').click(function(e) {
     e.preventDefault();
     $(this).prev('p').slideToggle();
     $(this).html('close');
+});
+
+
+$(document).ready(function() {
+    $('#selectId').change(function() {
+        var selectVal = $("#selectId option:selected").val();
+        alert(selectVal);
+        $('form').attr('action', selectVal);
+    });
+
+});
+
+$(document).ready(function() {
+    $('#datetimepicker6').datetimepicker();
+    $('#datetimepicker7').datetimepicker({
+        useCurrent: false //Important! See issue #1075
+    });
+    $("#datetimepicker6").on("dp.change", function(e) {
+        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+    });
+    $("#datetimepicker7").on("dp.change", function(e) {
+        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+    });
 });

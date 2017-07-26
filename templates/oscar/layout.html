@@ -19,6 +19,8 @@
         <link rel="stylesheet" type="text/css" href="{% static "markatix/css/custom.css" %}">
         <link rel="stylesheet" type="text/css" href="{% static "markatix/css/responsive.css" %}">
         <link rel="stylesheet" type="text/css" href="{% static "markatix/css/fade-carousel.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "markatix/css/animate.css"%}">
+        <link rel="stylesheet" type="text/css" href="{% static "markatix/css/jquery.bxslider.css"%}">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     {% endif %}
     <link rel="stylesheet" href="{% static "oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css" %}" />
@@ -89,39 +91,17 @@
     <script type="text/javascript" src="{% static "markatix/js/jquery.js" %}"></script>
     <!-- Twitter Bootstrap -->
     <script type="text/javascript" src="{% static "markatix/js/bootstrap.min.js" %}"></script>
+    
     <!-- Oscar -->
     <script src="{% static "oscar/js/oscar/ui.js" %}" type="text/javascript" charset="utf-8"></script>
     <script src="{% static "oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.js" %}" type="text/javascript" charset="utf-8"></script>
     <script src="{% static "oscar/js/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.all.js" %}" type="text/javascript" charset="utf-8"></script>
     <script src="{% static "markatix/js/jquery.easing.min.js" %}"></script>
     <script src="{% static "markatix/js/scrolling-nav.js" %}"></script>
-    <script type="text/javascript">
-$(document).ready(function(){
-$('#selectId').change( function () {
-var selectVal = $("#selectId option:selected").val();
-alert(selectVal);
-$('form').attr('action', selectVal);
-});
+    <script src="{% static "markatix/js/jquery.bxslider.min.js" %}"></script>
+    <script src="{% static "markatix/js/bx-slider.js" %}"></script>
+    <script src="{% static "markatix/js/app.js" %}"></script>
 
-});
-</script>
-<script type="text/javascript">
-$(document).ready(function () {
-$('#datetimepicker6').datetimepicker();
-$('#datetimepicker7').datetimepicker({
-useCurrent: false //Important! See issue #1075
-});
-$("#datetimepicker6").on("dp.change", function (e) {
-$('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-});
-$("#datetimepicker7").on("dp.change", function (e) {
-$('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-});
-});
-</script>
-<script src="{% static "markatix/js/jquery.easing.min.js" %}"></script>
-<script src="{% static "markatix/js/bx-slider.js" %}"></script>
-<script src="{% static "markatix/js/app.js" %}"></script>
 {% endblock %}
 
 {% block extrascripts %}

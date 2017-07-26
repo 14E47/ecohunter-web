@@ -11,6 +11,12 @@
 {% block column_left %}
 {% endblock %}
 
+{% block extrascripts %}
+<script type="text/javascript">
+  
+</script>
+{% endblock %}
+
 {% block content %}
 <div class="img-banner" id="img-banner">
         <div class="container">
@@ -40,17 +46,15 @@
               </form>
                -->
               <form method="GET" id="form">
-               <div class="dropdown-details hidden-xs">
+               <div class="dropdown-details hidden-xs animated fadein">
                   <div class="dropdown-heading">
                      <h3 class="text-center">Find Your Flavour</h3>
                   </div>
                   <div class="dropdown-content">
                      <div class="col-md-2">
                         <div class="dropdown destinations text-center">
-                           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Destinations
-                           <span class="caret"></span></button>
                            {% category_tree as tree_categories %}
-                            <select id="selectId">
+                            <select id="selectId" class="btn-primary form-control">
                               {% for city in tree_categories %}
                                 <option value="{{city.0.get_absolute_url}}">{{city.0.name}}</option>
                               {% endfor %}
@@ -67,7 +71,7 @@
                      </div>
                      <div class="col-md-2">
                         <div class='input-group date' id='datetimepicker6'>
-                           <input type='text' class="form-control" />
+                           <input type='text' class="form-control" name="date_from" placeholder="Arrival Date" />
                            <span class="input-group-addon">
                               <span class="glyphicon glyphicon-calendar"></span>
                            </span>
@@ -75,7 +79,7 @@
                      </div>
                      <div class="col-md-2">
                         <div class='input-group date' id='datetimepicker7'>
-                           <input type='text' class="form-control" />
+                           <input type='text' class="form-control" name="date_to" placeholder="Departure Date" />
                            <span class="input-group-addon">
                            <span class="glyphicon glyphicon-calendar"></span>
                            </span>

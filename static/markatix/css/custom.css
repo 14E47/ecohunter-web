@@ -105,8 +105,8 @@ body {
 }
 .navbar-styling {
     padding-top: 1%;
-    padding-left: 9%;
-    padding-right: 6%;
+    padding-left: 8%;
+    padding-right: 5%;
     padding-bottom: 1%;
     transition: 1s all ease-in-out;
 }
@@ -236,6 +236,13 @@ Banner Dropdown Styling
     margin-top: 10px;
 }
 .dropdown .btn-primary {
+    background-color: #d7cec3;
+    border-color: #d7cec3;
+    font-size: 16px;
+    font-weight: 900;
+    width: 100%;
+}
+.btn-primary {
     background-color: #d7cec3;
     border-color: #d7cec3;
     font-size: 16px;
@@ -956,8 +963,9 @@ Destination Page Styling
     color: #fff;
 }
 .book-button {
-    margin-top: 45%;
-    margin-left: 18%;
+    margin-top: 4%;
+    text-align: -webkit-center;
+    text-align: -moz-center;
 }
 .book-button a {
     padding: 10px 40px 10px 40px;
@@ -1730,13 +1738,22 @@ Third page Tabs
     font-size: 12px;
     border-radius: 0%;
 }
-.datetimepicker {
-    padding: 4px;
-    margin-top: 1px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    direction: ltr;
-    min-width:160px !important;
-    width:auto !important;
+.desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
+{
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+.icon-i
+{
+    width: 40px;
+    height: auto;
+}
+.desti-styling
+{
+    padding: 1% 5% 0% 5%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5%;
+    background-color: #a38f72;
+    border-radius: 50px;
 }
