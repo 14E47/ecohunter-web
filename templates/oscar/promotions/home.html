@@ -46,7 +46,7 @@
               </form>
                -->
               <form method="GET" id="form">
-               <div class="dropdown-details hidden-xs animated fadein">
+               <div class="dropdown-details hidden-xs animated fadein" animation-duration="2s" animation-delay="2s" animation-iteration-count="infinite">
                   <div class="dropdown-heading">
                      <h3 class="text-center">Find Your Flavour</h3>
                   </div>
@@ -71,7 +71,7 @@
                      </div>
                      <div class="col-md-2">
                         <div class='input-group date' id='datetimepicker6'>
-                           <input type='text' class="form-control" name="date_from" placeholder="Arrival Date" />
+                           <input type='text' class="form-control" id="arr-date" name="date" placeholder="Arrival Date (MM/DD/YYY)" />
                            <span class="input-group-addon">
                               <span class="glyphicon glyphicon-calendar"></span>
                            </span>
@@ -79,7 +79,7 @@
                      </div>
                      <div class="col-md-2">
                         <div class='input-group date' id='datetimepicker7'>
-                           <input type='text' class="form-control" name="date_to" placeholder="Departure Date" />
+                           <input type='text' class="form-control" id="dep-date" name="date" placeholder="Departure Date(MM/DD/YYYY)" />
                            <span class="input-group-addon">
                            <span class="glyphicon glyphicon-calendar"></span>
                            </span>
@@ -105,7 +105,7 @@
                      </div>
                   </div>
                </div>
-             </form>
+              </form>
             </div>
          </div>
 </div>  
@@ -647,9 +647,8 @@
                </div>
             </div>
          </div>
-    </div>
-    
-    <div class="review" id="review">
+</div>
+<div class="review" id="review">
        <div class="container">
           <div class="row">
              <!-- <div class="col-md-12">
@@ -715,9 +714,8 @@
              </div>
           </div>
        </div>
-    </div>
-
-    <footer class="hidden-xs">
+</div>
+<footer class="hidden-xs">
          <div class="footer" id="footer">
             <div class="container">
                <div class="row">
@@ -781,8 +779,76 @@
             <!--/.container--> 
          </div>
          <!--/.footer-->
-    </footer>
-
+</footer>
+ <!--Start of Location Modal-->
+<div class="portfolio-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Find Your Flavour</h2>
+                            <hr class="star-primary">
+                            <div class="dropdown-content">
+                              <form method="GET" id="form">       
+                                <div class="col-md-2">
+                                  <div class="dropdown destinations text-center">
+                                     {% category_tree as tree_categories %}
+                                      <select id="selectId" class="btn-primary form-control">
+                                        {% for city in tree_categories %}
+                                          <option value="{{city.0.get_absolute_url}}">{{city.0.name}}</option>
+                                        {% endfor %}
+                                      </select>
+                                  </div>
+                                </div>
+                                <div class="col-md-2">
+                                  <div class='input-group date' id='datetimepicker6'>
+                                    <input class="form-control" id="arr-date" name="date"  placeholder="Arrival Date (MM/DD/YYY)" type="text"/>
+                                    <span class="input-group-addon">
+                                      <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="col-md-2">
+                                  <div class='input-group date' id='datetimepicker7'>
+                                    <input class="form-control" id="dep-date" name="date"  placeholder="Departure Date (MM/DD/YYY)" type="text"/>
+                                    <span class="input-group-addon">
+                                      <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                  </div>  
+                                </div>
+                                <div class="col-md-2">
+                                    <!-- <div class="dropdown month text-center">
+                                       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Month
+                                          <span class="caret"></span></button>
+                                          <ul class="dropdown-menu">
+                                             <li><a href="#">HTML</a></li>
+                                             <li><a href="#">CSS</a></li>
+                                             <li><a href="#">JavaScript</a></li>
+                                          </ul>
+                                       </div> -->
+                                    <input class="form-control" id="people" name="people" placeholder="No. Of People" type="number"/>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="button submit text-center">
+                                        <input class="btn btn-primary" type="submit"></input>
+                                    </div>
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!--End of Location Modal-->
 {% endblock content %}
 {% block extrastyles %}
 

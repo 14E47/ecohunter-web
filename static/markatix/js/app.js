@@ -83,6 +83,52 @@ $(document).ready(function() {
 
 });
 
+// $(document).ready(function(){
+//     debugger;
+//     var date_input= $('#arr-date'); //our date input has the name "date"
+//     var date_input1= $('#dep-date'); //our date input has the name "date"
+//     debugger;
+//     alert(date_input);
+//     var container= $('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+//     var options={
+//         format: 'mm/dd/yyyy',
+//         container: container,
+//         todayHighlight: true,
+//         autoclose: true,
+//     };
+//     $( "#datepicker6" ).datepicker(options);
+//     date_input1.datepicker(options);
+     
+// });
+ $(document).ready(function(){
+      var date_input=$('input[name="date"]'); //our date input has the name "date"
+
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'dd/mm/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    });
+
+//  $(document).ready(function () {
+//     $('#arr-date').datepicker({
+//         onSelect: function (dateText, inst) {
+//             $('#dep-date').datepicker('options', 'minDate', new Date(dateText));
+//         },
+//     });
+
+//     $('#dep-date').datepicker({
+//         onSelect: function (dateText, inst) {
+//             $('#arr-date').datepicker('options', 'maxDate', new Date(dateText));
+//         }
+//     });
+// });
+
+
+
 $(document).ready(function() {
     $('#datetimepicker6').datetimepicker();
     $('#datetimepicker7').datetimepicker({

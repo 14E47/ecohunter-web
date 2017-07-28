@@ -257,9 +257,9 @@ Banner Dropdown Styling
     font-size: 16px;
     font-weight: 900;
 }
-.dropdown-menu {
+/*.dropdown-menu {
     width: 100%;
-}
+}*/
 .dropdown-content {
     padding-bottom: 5%;
     padding-left: 4%;
