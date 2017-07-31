@@ -800,7 +800,7 @@
                                 <div class="col-md-2">
                                   <div class="dropdown destinations text-center">
                                      {% category_tree as tree_categories %}
-                                      <select id="selectId" class="btn-primary form-control">
+                                      <select id="MwselectId" class="btn-primary form-control">
                                         {% for city in tree_categories %}
                                           <option value="{{city.0.get_absolute_url}}">{{city.0.name}}</option>
                                         {% endfor %}

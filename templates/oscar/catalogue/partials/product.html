@@ -5,10 +5,10 @@
 {% load staticfiles %}
 {% block product %}
 <article class="product_pod">
-   <div class="places-dest margin-top">
+   <div class="places-dest">
       <div class="container-fluid">
          <div class="row margin">
-            <div class="col-md-4 margin">
+            <div class="margin">
                <div id="myCarousel" class="carousel slide no-padding product-carousel" data-ride="carousel" data-interval="false">
                   {% block product_image %}
                   <div class="image_container">
@@ -56,14 +56,12 @@
              {% endblock %}
              {% block product_price %}
                 <h4 class="desti-price"><i class="fa fa-bed"></i> 
-                    Starting From &#8377<span id="d-pirce"> 2750</span>
+                    Starting From &#8377<span id="d-pirce">2750
+                    </span>
                 </h4>
-              <!--   {% include "catalogue/partials/stock_record.html" %}
-                {% if not product.is_parent %}
-                {% include "catalogue/partials/add_to_basket_form_compact.html" %}
-                {% endif %} -->
             </div>     
              {% endblock %}
+            <!--  -->
             
          </div>
       </div>

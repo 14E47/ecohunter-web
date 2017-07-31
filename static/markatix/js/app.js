@@ -83,6 +83,15 @@ $(document).ready(function() {
 
 });
 
+$(document).ready(function() {
+    $('#MselectId').change(function() {
+        var selectVal = $("#MselectId option:selected").val();
+        alert(selectVal);
+        $('form').attr('action', selectVal);
+    });
+
+});
+
 // $(document).ready(function(){
 //     debugger;
 //     var date_input= $('#arr-date'); //our date input has the name "date"
@@ -129,15 +138,15 @@ $(document).ready(function() {
 
 
 
-$(document).ready(function() {
-    $('#datetimepicker6').datetimepicker();
-    $('#datetimepicker7').datetimepicker({
-        useCurrent: false //Important! See issue #1075
-    });
-    $("#datetimepicker6").on("dp.change", function(e) {
-        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-    });
-    $("#datetimepicker7").on("dp.change", function(e) {
-        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-    });
-});
+// $(document).ready(function() {
+//     $('#datetimepicker6').datetimepicker();
+//     $('#datetimepicker7').datetimepicker({
+//         useCurrent: false //Important! See issue #1075
+//     });
+//     $("#datetimepicker6").on("dp.change", function(e) {
+//         $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+//     });
+//     $("#datetimepicker7").on("dp.change", function(e) {
+//         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+//     });
+// });

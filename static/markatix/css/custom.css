@@ -52,7 +52,17 @@ body {
     background-color: #fff !important;
 }
 */
+body
+{  
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 3px 3px;
 
+}
 .no-padding {
     padding: 0px !important;
 }
@@ -105,7 +115,7 @@ body {
 }
 .navbar-styling {
     padding-top: 1%;
-    padding-left: 8%;
+    padding-left: 9%;
     padding-right: 5%;
     padding-bottom: 1%;
     transition: 1s all ease-in-out;
@@ -123,14 +133,14 @@ body {
     transition: 1s all ease-in-out;
 }
 .navbar-right > * {
-    padding-top: 12%;
+    padding-top: 9%;
     height: 77px;
     background-color: #a38f72;
     transition: 1s all ease-in-out;
 }
 .navbar-right-1 > * {
     height: 55px;
-    padding-top: 5%;
+    padding-top: 0%;
     transition: 1s all ease-in-out;
 }
 .nav-contact > a {
@@ -288,6 +298,7 @@ Banner Dropdown Styling
     transition: 0.4s all ease-in-out;
     border-radius: 3px;
 }
+
 /*----------------------
 Experiences Text Styling
 ----------------------*/
@@ -1221,7 +1232,7 @@ label.form-invalid:after {
 [type="checkbox"]:checked,
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
-    position: absolute;
+    /*position: absolute;*/
     left: -9999px;
 }
 [type="checkbox"]:not(:checked) + label,
@@ -1475,7 +1486,10 @@ Footer Styling
 /*--------------------------------
 Fitler Button and DropDown Styling
 ---------------------------------*/
-
+.dp
+{
+    width: 100%;
+}
 .filter-btn>li>a {
     padding: 1% 4% 1% 4%;
     background-color: #a38f72;
@@ -1515,13 +1529,45 @@ Fitler Button and DropDown Styling
     margin: 5%;
     text-align: left;
 }
+.align
+{
+    -webkit-padding-start: 40px;   
+}
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);  
+  opacity:1;
+}
+  
+.dropdown-menu {
+  opacity:.3;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;  
+  animation-fill-mode: forwards; 
+  -webkit-transform: scale(1, 0);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+
+.caret-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid;
+    
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}
 /*-----------------------------
 Places Destinations Second Page
 ------------------------------*/
 
-.places-dest {
+/*.places-dest {
     margin-left: 1.5%;
-}
+}*/
 .container .title {
     color: #1a1a1a;
     1 text-align: center;
@@ -1647,6 +1693,104 @@ Places Destinations Second Page
 .featured-img-banner
 {
     margin-top: 5%;
+}
+/*-----------------------------
+About Us Page
+------------------------------*/
+.team{
+    padding:75px 0;
+}
+h3.description{
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #999;
+    border-bottom: 1px solid rgba(0, 0, 0,0.1);
+    padding-bottom: 5px;
+}
+.profile{
+    margin-top: 25px;
+}
+.profile h1{
+    font-weight: normal;
+    font-size: 20px;
+    margin:10px 0 0 0;
+}
+.profile h2{
+    font-size: 14px;
+    font-weight: lighter;
+    margin-top: 5px;
+}
+.profile .img-box{
+    opacity: 1;
+    display: block;
+    position: relative;
+}
+.profile .img-box:after{
+    content:"";
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.img-box ul{
+    position: absolute;
+    z-index: 2;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
+    padding-left: 0px;
+    height: 0px;
+    margin:0px;
+    opacity: 0;
+}
+.profile .img-box:after, .img-box ul, .img-box ul li{
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.img-box ul i{
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+.img-box ul li{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #88C425;
+    margin: 2px;
+    padding: 5px;
+    display: inline-block;
+}
+.img-box a{
+    color:#fff;
+}
+.img-box:hover:after{
+    opacity: 1;
+}
+.img-box:hover ul{
+    opacity: 1;
+}
+.img-box ul a{
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.img-box a:hover li{
+    border-color: #fff;
+    color: #88C425;
+}
+a{
+    color:#88C425;
+}
+a:hover{
+    text-decoration:none;
+    color:#519548;
+}
+i.red{
+    color:#BC0213;
 }
 /*-----------------------------
 Accordian Vertical Side Filter

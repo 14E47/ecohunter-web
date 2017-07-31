@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% load staticfiles category_tags debug_tags %}
+{% load i18n %}
+
+{% block navigation %}
+    {% include "partials/nav_primary.html" with expand_dropdown=1 %}
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block column_left %}
+{% endblock %}
+
+{% block content %}
+<section class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="col-lg-12">
+        <h3 class="description text-center">ABOUT US</h3>
+        <div class="row pt-md">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 profile">
+              <p class="text-center">Some of the About Us pages I am about to show you will make you weep because they are so beautiful. Some not so much. But it is important to note that I haven’t included any pages on here purely because they look nice. This last dot point is all about that Blue-Shirt Trust; as long as the design doesn’t detract from the message I’m cool with however it looks.</p>
+            </div>
+          </div>
+          <h3 class="description text-center">OUR TEAM</h3>
+          <div class="row pt-md">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="http://nabeel.co.in/files/bootsnipp/team/1.jpg" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+              <h1>Marrie Doi</h1>
+              <h2>Co-founder/ Operations</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="http://nabeel.co.in/files/bootsnipp/team/2.jpg" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+              <h1>Christopher Di</h1>
+              <h2>Co-founder/ Projects</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="http://nabeel.co.in/files/bootsnipp/team/3.jpg" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+              <h1>Heather H</h1>
+              <h2>Co-founder/ Marketing</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+              <div class="img-box">
+                <img src="http://nabeel.co.in/files/bootsnipp/team/4.jpg" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+              <h1>John Doe</h1>
+              <h2>Designer</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
