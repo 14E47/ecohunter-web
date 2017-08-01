@@ -7,6 +7,8 @@
 {% load product_tags %}
 {% load display_tags %}
 {% load i18n %}
+{% load debug_tags %}
+{% load thumbnail %}
 {% load purchase_info_tags %}
 
 {% block title %}
@@ -50,7 +52,6 @@
 {% endblock %}
 
 {% block content %}
-
       <ul class="bxslider">
         <li><img src="{% static "markatix/img/27.jpg" %}" class="img-responsive" /></li>
         <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>
@@ -77,7 +78,7 @@
                     <img src="{% static "markatix/img/icons/001-open-door.png" %}" class="img-responsive icon-i">
                   </div>
                   <div class="desti-property-icon-heading">
-                    <p id="d-prop-heading">Entire home/apt</p>
+                    <p id="d-prop-heading">{{product.attr.abcd12}}</p>
                   </div>
                 </div>
             </div>
@@ -87,7 +88,7 @@
                     <img src="{% static "markatix/img/icons/002-home.png" %}" class="img-responsive icon-i">
                   </div>
                   <div class="desti-property-guest-count">
-                    <p id="d-prop-guest-count">4 guests</p>
+                    <p id="d-prop-guest-count">{{product.attr.dcvd123}} guests</p>
                   </div>
                 </div>
             </div>
@@ -97,7 +98,7 @@
                     <img src="{% static "markatix/img/icons/003-users.png" %}" class="img-responsive icon-i">
                   </div>
                   <div class="desti-bedroom-icon-heading">
-                    <p id="d-prop-bed-count">2 Bedroom</p>
+                    <p id="d-prop-bed-count">{{product.attr.qwer123}} Bedroom</p>
                   </div>
                 </div>
             </div>
@@ -107,7 +108,7 @@
                     <img src="{% static "markatix/img/icons/004-bed.png" %}" class="img-responsive icon-i">
                   </div>
                   <div class="desti-beds-invent-heading">
-                    <p id="d-prop-invent-count">2 Beds</p>
+                    <p id="d-prop-invent-count">{{product.attr.wqwe123}} Beds</p>
                   </div>
                 </div>
             </div>
@@ -139,9 +140,9 @@
                </div>
       </div>
       <div class="tab-content">
-               <div id="menu1" class="tab-pane fade active in">
+               <div id="menu1" class="tab-pane fade active in text-center">
                   <h3 class="text-center">The Experience</h3>
-                  <p class="text-center">Some content in Experience.</p>
+                  <p class="text-center">{{ product.description | safe}}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
                   </ul> -->
@@ -156,7 +157,7 @@
                </div>
                <div id="menu3" class="tab-pane fade">
                   <h3 class="text-center">Accomodation</h3>
-                  <p class="text-center">Some content in Accomodation.</p>
+                  <p class="text-center">{{ product.accomodation | safe}}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
                      <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>

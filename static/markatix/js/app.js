@@ -92,61 +92,27 @@ $(document).ready(function() {
 
 });
 
-// $(document).ready(function(){
-//     debugger;
-//     var date_input= $('#arr-date'); //our date input has the name "date"
-//     var date_input1= $('#dep-date'); //our date input has the name "date"
-//     debugger;
-//     alert(date_input);
-//     var container= $('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-//     var options={
-//         format: 'mm/dd/yyyy',
-//         container: container,
-//         todayHighlight: true,
-//         autoclose: true,
-//     };
-//     $( "#datepicker6" ).datepicker(options);
-//     date_input1.datepicker(options);
-     
-// });
- $(document).ready(function(){
-      var date_input=$('input[name="date"]'); //our date input has the name "date"
+var nowTemp = new Date();
+var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+ 
+var checkin = $('#dpd1').datepicker({
+  onRender: function(date) {
+    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+  }
+}).on('changeDate', function(ev) {
+  if (ev.date.valueOf() > checkout.date.valueOf()) {
+    var newDate = new Date(ev.date)
+    newDate.setDate(newDate.getDate() + 1);
+    checkout.setValue(newDate);
+  }
+  checkin.hide();
+  $('#dpd2')[0].focus();
+}).data('datepicker');
+var checkout = $('#dpd2').datepicker({
+  onRender: function(date) {
+    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+  }
+}).on('changeDate', function(ev) {
+  checkout.hide();
+}).data('datepicker');
 
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'dd/mm/yyyy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-    });
-
-//  $(document).ready(function () {
-//     $('#arr-date').datepicker({
-//         onSelect: function (dateText, inst) {
-//             $('#dep-date').datepicker('options', 'minDate', new Date(dateText));
-//         },
-//     });
-
-//     $('#dep-date').datepicker({
-//         onSelect: function (dateText, inst) {
-//             $('#arr-date').datepicker('options', 'maxDate', new Date(dateText));
-//         }
-//     });
-// });
-
-
-
-// $(document).ready(function() {
-//     $('#datetimepicker6').datetimepicker();
-//     $('#datetimepicker7').datetimepicker({
-//         useCurrent: false //Important! See issue #1075
-//     });
-//     $("#datetimepicker6").on("dp.change", function(e) {
-//         $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-//     });
-//     $("#datetimepicker7").on("dp.change", function(e) {
-//         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-//     });
-// });

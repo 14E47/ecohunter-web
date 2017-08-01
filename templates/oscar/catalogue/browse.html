@@ -6,6 +6,16 @@
 {% load product_tags %}
 
 {% load i18n %}
+
+ {% block extrastyles %}
+  <style>
+    .dropdown-details-1
+    {
+      margin-top: -29.9%;
+    }
+  </style>
+ {% endblock %}
+
 <!-- 
 {% block title %}
     {% if summary %}{{ summary }} |{% endif %} {{ block.super }}

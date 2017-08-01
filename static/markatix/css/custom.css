@@ -794,10 +794,10 @@ Join The Network Styling
     margin: 3% 5% 5% -10%;
     position: absolute;
 }
-.fa-facebook,
-.fa-youtube,
-.fa-instagram,
-.fa-twitter {
+span.fa-facebook,
+span.fa-youtube,
+span.fa-instagram,
+span.fa-twitter {
     font-size: 14px;
     color: #000;
     padding: 10px;
@@ -1539,7 +1539,7 @@ Fitler Button and DropDown Styling
   opacity:1;
 }
   
-.dropdown-menu {
+.dp {
   opacity:.3;
   -webkit-transform-origin: top;
   transform-origin: top;

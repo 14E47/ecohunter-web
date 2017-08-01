@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.conf import settings
+from django.views.generic.base import TemplateView
 
 from django.contrib import admin
 
@@ -30,8 +31,10 @@ urlpatterns = [
     # Nonetheless, it's often useful for debugging.
     url(r'^admin/', include(admin.site.urls)),
     url(r'^booking/', include(booking_url)),
-
+    url(r'^about/$', TemplateView.as_view(template_name='about-us.html'), name="about-us"),
+        url(r'^contact/$', TemplateView.as_view(template_name='contact-us.html'), name="about-us"),
     url(r'', include(application.urls)),
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = 'Ecohunter'

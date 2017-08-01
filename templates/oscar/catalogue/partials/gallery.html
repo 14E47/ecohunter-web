@@ -6,6 +6,14 @@
     {# use length rather then count as the images get queried anyways #}
 
     {% if all_images|length > 1 %}
+      <ul class="bxslider">
+          {% for image in all_images %}
+            <li>
+                <img src="{{ image.original.url }}" alt="{{ product.get_title }}" class="img-responsive" />
+            </li>
+        {% endfor %}
+      </ul>
+        <br><br>
     <!-- <ul class="bxslider">
         {% for image in all_images %}
             <li>
