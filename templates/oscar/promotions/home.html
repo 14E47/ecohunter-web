@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% load staticfiles category_tags debug_tags %}
-{% load i18n %}
+{% load i18n customtag %}
 
 {% block navigation %}
     {% include "partials/nav_primary.html" with expand_dropdown=1 %}
@@ -180,6 +180,10 @@
                   </div>
                </div>
             </div> -->
+            {% top_products as products %}
+            {% for product in products %}
+              <p>{{ product.title }}</p>
+            {% endfor %}
             <div class="row">
               <div class="col-xs-6 col-md-2 margin-mobile padding-mobile
               ">
