@@ -513,7 +513,7 @@ Recommend A Place Styling
     position: relative;
     /*  width: 90%;*/
     /*  max-width: 400px;*/
-    
+    height: 350px;
     margin: auto;
     overflow: hidden;
 }
@@ -770,8 +770,8 @@ Join The Network Styling
 }
 .join-data {
     background-color: #ccc;
-    margin-left: 20px;
-    margin-right: 20px;
+/*    margin-left: 20px;
+    margin-right: 20px;*/
 }
 .reviewer-img>img {
     border-radius: 50%;
