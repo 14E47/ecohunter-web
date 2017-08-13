@@ -20,10 +20,10 @@
                         <div class="item active">
                            <a href="{{ product.get_absolute_url }}">
                               <div class="content-overlay"></div>
-                              <img src="{{ image.original.url }}" alt="{{ product.get_title }}" class="content-image img-responsive img-size">
+                              <img src="{{ image.original }}" alt="{{ product.get_title }}" class="content-image img-responsive img-size">
                               <div class="content-details fadeIn-bottom">
-                                 <h3 class="content-title">This is a title</h3>
-                                 <p class="content-text">This is a short description</p>
+                                 <h3 class="content-title">{{ product.get_title }}</h3>
+                                 <p class="content-text">{{ image.caption }}</p>
                               </div>
                            </a>
                         </div>

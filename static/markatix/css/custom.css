@@ -596,7 +596,7 @@ Recommend A Place Styling
     text-transform: uppercase;
     position: absolute;
     top: 25%;
-    left: 18%;
+    /* left: 18%; */
 }
 .content-details-1 p {
     color: #fff;
