@@ -1017,9 +1017,13 @@ Destination Page Styling
     background: transparent;
     margin-bottom: 0px !important;
 }
-.bxslider li img {
+.bxslider li{
     width: 100%;
-    height: 350px;
+    height: 450px;
+}
+.bxslider>li>img{
+    width:100%;
+    overflow:hidden;
 }
 .experience-tab-heading a>h5 {
     margin-bottom: 0px;
