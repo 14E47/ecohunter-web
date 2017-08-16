@@ -3,14 +3,14 @@ $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
         $(".navbar-brand").addClass("navbar-brand-1");
-        $(".navbar-styling").addClass("navbar-styling-1");
+        $(".navbar-styling").addClass("navbar-styling-2");
         $(".navbar-right").addClass("navbar-right-1");
         $(".dropdown-details").addClass("dropdown-details-1");
         $(".dropdown-heading").addClass("dropdown-heading-1");
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
         $(".navbar-brand").removeClass("navbar-brand-1");
-        $(".navbar-styling").removeClass("navbar-styling-1");
+        $(".navbar-styling").removeClass("navbar-styling-2");
         $(".navbar-right").removeClass("navbar-right-1");
         $(".dropdown-details").removeClass("dropdown-details-1");
         $(".dropdown-heading").removeClass("dropdown-heading-1");
