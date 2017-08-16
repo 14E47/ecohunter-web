@@ -56,9 +56,7 @@ $(document).ready(function() {
         var itemlength = $('#myCarousel .item').length;
         var triggerheight = Math.round(boxheight / itemlength + 1);
         $('#myCarousel .list-group-item').outerHeight(triggerheight);
-    });
-    // Select all links with hashes
-    $('a[href*="#"]')
+        $('a[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')
     .not('[href="#0"]')
@@ -77,7 +75,7 @@ $(document).ready(function() {
             // Only prevent default if animation is actually gonna happen
             event.preventDefault();
             $('html, body').animate({
-            scrollTop: target.offset().top - (3*$('.header').height())
+            scrollTop: target.offset().top - 100
             }, 700, function() {
             // Callback after animation
             // Must change focus!
@@ -93,14 +91,22 @@ $(document).ready(function() {
         }
         }
     });
+    });
+    // Select all links with hashes
+    
+    $('[data-filter="blog"]').click();
+     $('#selectId').change(function() {
+        var selectVal = $("#selectId option:selected").val();
+        alert(selectVal);
+        $('form').attr('action', selectVal);
+    });
+     $('#MselectId').change(function() {
+        var selectVal = $("#MselectId option:selected").val();
+        alert(selectVal);
+        $('form').attr('action', selectVal);
+    });
 });
 
-
-$(document).ready(
-    function() {
-        $('[data-filter="blog"]').click()
-    }
-);
 
 
 $('.view-more').click(function(e) {
@@ -109,24 +115,6 @@ $('.view-more').click(function(e) {
     $(this).html('close');
 });
 
-
-$(document).ready(function() {
-    $('#selectId').change(function() {
-        var selectVal = $("#selectId option:selected").val();
-        alert(selectVal);
-        $('form').attr('action', selectVal);
-    });
-
-});
-
-$(document).ready(function() {
-    $('#MselectId').change(function() {
-        var selectVal = $("#MselectId option:selected").val();
-        alert(selectVal);
-        $('form').attr('action', selectVal);
-    });
-
-});
 
 var nowTemp = new Date();
 var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
