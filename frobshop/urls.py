@@ -19,9 +19,10 @@ from django.conf import settings
 from django.views.generic.base import TemplateView
 
 from django.contrib import admin
+from experience import urls as experience_urls
 
 from oscar.app import application
-
+from experience import urls as experience_urls
 from booking import urls as booking_url
 
 urlpatterns = [
@@ -34,6 +35,7 @@ urlpatterns = [
     url(r'^about/$', TemplateView.as_view(template_name='about-us.html'), name="about-us"),
         url(r'^contact/$', TemplateView.as_view(template_name='contact-us.html'), name="about-us"),
     url(r'', include(application.urls)),
+    url(r'^experience/', include(experience_urls)),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -1,0 +1,197 @@
+{% extends "layout.html" %}
+
+{% load history_tags %}
+{% load currency_filters %}
+{% load reviews_tags %}
+{% load staticfiles %}
+{% load product_tags %}
+{% load display_tags %}
+{% load i18n %}
+{% load debug_tags %}
+{% load thumbnail %}
+{% load purchase_info_tags %}
+
+{% block title %}
+    {{ product.title }} | {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ product.description|default:""|striptags }}
+{% endblock %}
+
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+    <li>
+        <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+    </li>
+    {% with category=product.categories.all.0 %}
+        {% for c in category.get_ancestors_and_self %}
+        <li>
+            <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+        </li>
+        {% endfor %}
+        <li class="active">{{ product.title }}</li>
+
+        {% get_back_button as backbutton %}
+        {% if backbutton %}
+            <li class="pull-right">
+                <a href="{{ backbutton.url }}">
+                    <i class="icon-arrow-left"></i> {{ backbutton.title }}
+                </a>
+            </li>
+        {% endif %}
+    {% endwith %}
+</ul>
+{% endblock %}
+
+{% block header %}
+{% endblock header %}
+
+{% block extrascripts %}
+
+{% endblock %}
+
+{% block content %}
+      <ul class="bxslider">
+      <!-- <p>{{images}}</p> -->
+        <!-- {% with product.images.all as images %} -->
+        {% for image in images %}  
+          <li><img src="{{ image.original.url }}" class="img-responsive" /></li>
+          <li><img src="{{ image.original.url }}" class="img-responsive" /></li>
+        {% endfor %}
+        <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>
+        <li><img src="{% static "markatix/img/29.jpg" %}" class="img-responsive" /></li>
+        <li><img src="{% static "markatix/img/30.jpg" %}" class="img-responsive" /></li>
+        {% endwith %}
+      </ul>
+      <div class="explore-ecohunter" id="explore-ecohunter">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="customized-heading-3">
+                  <h3>{{ product.title }}</h3>
+                  <!-- <h2>{{ titles.1 }}</h2> -->
+                  <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="dest-itenary-info">
+        <div class="col-md-8 col-md-offset-2 text-center desti-styling">
+          <div class="desti-decrib">
+            <div class="col-md-3">
+                <div class="desti-property-av">
+                  <div class="desti-property-icon">
+                    <img src="{% static "markatix/img/icons/Activity.png" %}" class="img-responsive icon-i">
+                  </div>
+                  <div class="desti-property-icon-heading">
+                    <p id="d-prop-heading">Duration<br>1.5 days</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="desti-guest-av">
+                  <div class="desti-property-guest-icon">
+                    <img src="{% static "markatix/img/icons/Duration.png" %}" class="img-responsive icon-i">
+                  </div>
+                  <div class="desti-property-guest-count">
+                    <p id="d-prop-guest-count">Seats Available <br>25 seats </p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="desti-bedroom-av">
+                  <div class="desti-bedroom-icon">
+                    <img src="{% static "markatix/img/icons/Seats_Available.png" %}" class="img-responsive icon-i">
+                  </div>
+                  <div class="desti-bedroom-icon-heading">
+                    <p id="d-prop-bed-count">Slots Available<br>2 slots </p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="desti-beds-invent-av">
+                  <div class="desti-beds-invent-icon">
+                    <img src="{% static "markatix/img/icons/Slots_Available.png" %}" class="img-responsive icon-i">
+                  </div>
+                  <div class="desti-beds-invent-heading">
+                    <p id="d-prop-invent-count">Activity type<br>Endurance</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="process">
+               <div class="process-row nav nav-tabs">
+                  <div class="process-step">
+                    <a href="#menu1">
+                     <button type="button" class="btn btn-info btn-circle smoothscroll"><i class="fa fa-info fa-3x"></i></button>
+                     </a>
+                    <p><small>The<br />Experience</small></p>
+                  </div>
+                 
+                 
+                  <div class="process-step">
+                    <a href = "#menu2">
+                     <button type="button" class="btn btn-default btn-circle smoothscroll"><i class="fa fa-file-text-o fa-3x"></i></button>
+                     </a>
+                    <p><small><br />Activities</small></p>
+                  </div>
+                 
+                  <div class="process-step">
+                    <a href = "#menu3">
+                     <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3"><i class="fa fa-image fa-3x"></i></button>
+                     </a>
+                    <p><small><br />Accomodation</small></p>
+                  </div>
+                 
+                 
+                  <div class="process-step">
+                    <a href= "#menu4">
+                     <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu4"><i class="fa fa-cogs fa-3x"></i></button>
+                      </a>
+                    <p><small>Practical<br />Info</small></p>
+                  </div>
+                
+                  <div class="process-step">
+                     <a href="book-now"><button type="button" class="btn btn-default btn-circle" href="book-now"><i class="fa fa-check fa-3x"></i></button></a>
+                     <p><small>Book<br />Now</small></p>
+                  </div>
+               </div>
+      </div>
+      <div class="container" style="padding: 40px;">
+               <div id="menu1" class="text-center smoothscroll">
+                  <h3  class="text-center">The Experience</h3>
+                  <p class="text-center">{{ product.description | safe }}</p>
+                  <!-- <ul class="list-unstyled list-inline pull-right">
+                     <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                  </ul> -->
+               </div>
+               <div id="menu2" class="det smoothscroll">
+                  <h3  class="text-center">Activities</h3>
+                  <p class="text-center">{{ product.activities | safe }}</p>
+               </div>
+               <div id="menu3" class=" smoothscroll">
+                  <h3 class="text-center">Accomodation</h3>
+                  <p class="text-center">{{ product.accomodation | safe }}</p>
+                  <!-- <ul class="list-unstyled list-inline pull-right">
+                     <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
+                     <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                  </ul> -->
+               </div>
+               <div id="menu4" class="smoothscroll">
+                  <h3 class="text-center">Practical Info</h3>
+                  <p class="text-center">{{ product.practical | safe }}</p>
+               </div>
+              <div id="menu5" class="">
+                  <h3 class="text-center"></h3>
+                  <div class="book-button">
+                    <a href="book-now">Book Now</a>
+                  </div>
+               </div>
+      </div>  
+
+
+{% endblock content %}
+
+
