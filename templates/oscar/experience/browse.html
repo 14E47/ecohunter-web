@@ -1,0 +1,306 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% load basket_tags %}
+{% load promotion_tags %}
+{% load category_tags %}
+{% load product_tags debug_tags %}
+
+{% load i18n %}
+
+ {% block extrastyles %}
+  <style>
+    .dropdown-details-1
+    {
+      margin-top: -29.9%;
+    }
+  </style>
+ {% endblock %}
+
+<!-- 
+{% block title %}
+    {% if summary %}{{ summary }} |{% endif %} {{ block.super }}
+{% endblock %}
+
+{% block headertext %}{{ summary }}{% endblock %}
+ -->
+<!-- {% block breadcrumbs %}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+        </li>
+        <li class="active">{{ summary }}</li>
+    </ul>
+{% endblock breadcrumbs %} -->
+
+<!-- {% block column_left %}
+    {% category_tree as tree_categories %}
+    {% if tree_categories %}
+        <h4>{% trans "Show results for" %}</h4>
+        <div class="side_categories">
+            <ul class="nav nav-list">
+                {% for tree_category, info in tree_categories %}
+                    <li>
+                        <a href="{{ tree_category.get_absolute_url }}">
+                            {% if tree_category.pk == category.pk %}
+                                <strong>{{ tree_category.name }}</strong>
+                            {% else %}
+                                {{ tree_category.name }}
+                            {% endif %}
+                        </a>
+
+                        {% if info.has_children %}<ul>{% else %}</li>{% endif %}
+                        {% for n in info.num_to_close %}
+                            </ul></li>
+                        {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    {% if has_facets %}
+        <h4>{% trans "Refine by" %}</h4>
+        <div class="side_categories">
+            {% for field, data in facet_data.items %}
+                {% if data.results %}
+                    {% include 'search/partials/facet.html' with name=data.name items=data.results %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %} -->
+{% block content %}
+    <div class="featured-img-banner">
+        <img src="{% static "markatix/img/29.jpg" %}" class="img-responsive">
+    </div>
+    <!-- <div class="banner-dropdown" id="banner-dropdown">
+         <div class="container">
+            <div class="row">
+              <form method="GET" id="form">
+               <div class="dropdown-details hidden-xs animated fadein">
+                  <div class="dropdown-heading">
+                     <h3 class="text-center">Find Your Flavour</h3>
+                  </div>
+                  <div class="dropdown-content">
+                     <div class="col-md-2">
+                        <div class="dropdown destinations text-center">
+                           {% category_tree as tree_categories %}
+                            <select id="selectId" class="btn-primary form-control">
+                              {% for city in tree_categories %}
+                                <option value="{{city.0.get_absolute_url}}">{{city.0.name}}</option>
+                              {% endfor %}
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class='input-group date' id='datetimepicker6'>
+                           <input type='text' class="form-control" id="arr-date" name="date" placeholder="Arrival Date (MM/DD/YYY)" />
+                           <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class='input-group date' id='datetimepicker7'>
+                           <input type='text' class="form-control" id="dep-date" name="date" placeholder="Departure Date(MM/DD/YYYY)" />
+                           <span class="input-group-addon">
+                           <span class="glyphicon glyphicon-calendar"></span>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <input class="form-control" id="people" name="people" placeholder="No. Of Guests" type="number"/>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="button submit text-center">
+                           <input class="btn btn-primary" type="submit"></input>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+              </form>
+            </div>
+         </div>
+    </div> 
+    <div class="filter-dropdown hidden-xs">
+         <div class="container">
+            <div class="row">
+               <div class="filter-btn">
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter"></i> Filter <span class="caret"></span></a>
+                     <ul class="dropdown-menu dp" role="menu">
+                        <div class="col-md-3">
+                           <li class="filter-heading">
+                              <p>Price</p>
+                           </li>
+                           <li class="divider"></li>
+                           <ul style="list-style-type: none;">
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 2000-4000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 4000-6000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 6000-8000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 10000 & above</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-3">
+                           <li class="filter-heading">
+                              <p>Amenities</p>
+                           </li>
+                           <li class="divider"></li>
+                           <ul style="list-style-type: none;">
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 2000-4000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 4000-6000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 6000-8000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 10000 & above</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-3">
+                           <li class="filter-heading">
+                              <p>Hotel Type</p>
+                           </li>
+                           <li class="divider"></li>
+                           <ul style="list-style-type: none;">
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 2000-4000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 4000-6000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 6000-8000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 10000 & above</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-3">
+                           <li class="filter-heading">
+                              <p>Star Rating</p>
+                           </li>
+                           <li class="divider"></li>
+                           <ul style="list-style-type: none;">
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 2000-4000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 4000-6000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 6000-8000</li>
+                              <li class="price-filter-heading align"><input type="checkbox" name="price-1"> &#8377 10000 & above</li>
+                           </ul>
+                        </div>
+                     </ul>
+                  </li>
+               </div>
+            </div>
+         </div>
+    </div> -->
+<!--     <form method="get" class="form-horizontal">
+        {# Render other search params in a hidden block #}
+        <div style="display:none">
+            {% for value in selected_facets %}
+                <input name="selected_facets" value="{{ value }}" />
+            {% endfor %}
+            {{ form.q }}
+        </div>
+
+        {% if paginator.count %}
+            {% if paginator.num_pages > 1 %}
+                {% blocktrans with start=page_obj.start_index end=page_obj.end_index count num_results=paginator.count %}
+                    <strong>{{ num_results }}</strong> result - showing <strong>{{ start }}</strong> to <strong>{{ end }}</strong>.
+                {% plural %}
+                    <strong>{{ num_results }}</strong> results - showing <strong>{{ start }}</strong> to <strong>{{ end }}</strong>.
+                {% endblocktrans %}
+            {% else %}
+                {% blocktrans count num_results=paginator.count %}
+                    <strong>{{ num_results }}</strong> result.
+                {% plural %}
+                    <strong>{{ num_results }}</strong> results.
+                {% endblocktrans %}
+            {% endif %}
+            {% if form %}
+                <div class="pull-right">
+                    {% include "partials/form_field.html" with field=form.sort_by %}
+                </div>
+            {% endif %}
+        {% else %}
+            <p>
+                {% trans "<strong>0</strong> results." %}
+            </p>
+        {% endif %}
+    </form>-->
+    <img src="{{ experiences.images.0.image.url }}"/>
+    {% if experiences %}
+        <section>
+            <div>
+                {% for experience in experiences %}
+                    <li class="col-xs-12 col-sm-4 col-md-4col-lg-3" style="list-style-type: none;">{{ experience.product_title }}</li>
+                {% endfor %}
+                {% include "partials/pagination.html" %}
+            </div>
+        </section>
+    {% else %}
+        <p class="nonefound">{% trans "No products found." %}</p>
+    {% endif %}
+     <div class="filter-mobile-btn hidden-lg">
+        <a href="" data-toggle="modal" data-target="#myModal-filter"><i class="fa fa-sliders"></i> Filter</a>
+      </div>
+      <!--End of Filter Button-->
+      <!--Start of Filter Modal-->
+      <div class="portfolio-modal modal fade" id="myModal-filter" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+               <div class="lr">
+                  <div class="rl">
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="modal-body">
+                        <h2>Filter</h2>
+                        <hr class="star-primary">
+                        <form class="form-horizontal">
+                            <!-- Multiple Checkboxes -->
+                            <div class="form-group">
+                              <h4 class="col-md-12 control-label" for="checkboxes">Room Type</h4>
+                              <div class="col-md-8">
+                                <div class="checkbox">
+                                  <label for="checkboxes-0">
+                                    <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                                    <span id="d-private">Private Room</span>
+                                  </label>
+                                  <p class="d-room-qoute">Enjoy Your Privacy</p>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="checkboxes-1">
+                                    <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                                    <span id="d-entire">Entire Home</span>
+                                  </label>
+                                  <p class="d-room-qoute">You have your own place</p>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="checkboxes-2">
+                                    <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                                    <span id="d-shared">Shared Room</span>
+                                  </label>
+                                  <p class="d-room-qoute">Share Your Privacy</p>
+                                </div>
+                              </div>
+                              <hr class="star-primary">
+                              <h4 class="col-md-12 control-label" for="checkboxes">Price Range</h4>
+                              <p class="price-quote">Lorem Ipsum</p>
+                              <div class="des-price">  
+                                    <select id="selectbasic" name="selectbasic" class="form-control">
+                                      <option value="1">Option one</option>
+                                      <option value="2">Option two</option>
+                                    </select>
+                                    <select id="selectbasic" name="selectbasic" class="form-control">
+                                      <option value="1">Option one</option>
+                                      <option value="2">Option two</option>
+                                    </select>
+                              </div>
+                              <h4 class="col-md-12 control-label" for="checkboxes">Price Range</h4>
+                              <p class="price-quote">Lorem Ipsum</p>
+                            </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--End of Filter Modal-->
+{% endblock content %}
+
+{% block onbodyload %}
+    {{ block.super }}
+    oscar.search.init();
+{% endblock %}
