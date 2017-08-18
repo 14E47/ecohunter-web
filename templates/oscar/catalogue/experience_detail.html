@@ -79,7 +79,7 @@
             <div class="col-md-3">
                 <div class="desti-property-av">
                   <div class="desti-property-icon">
-                    <img src="{% static "markatix/img/icons/001-open-door.png" %}" class="img-responsive icon-i">
+                    <img src="{% static "markatix/img/icons/001-duration.png" %}" class="img-responsive icon-i">
                   </div>
                   <div class="desti-property-icon-heading">
                     <p id="d-prop-heading">{{product.attr.abcd12}}</p>
@@ -89,7 +89,7 @@
             <div class="col-md-3">
                 <div class="desti-guest-av">
                   <div class="desti-property-guest-icon">
-                    <img src="{% static "markatix/img/icons/002-home.png" %}" class="img-responsive icon-i">
+                    <img src="{% static "markatix/img/icons/002-seats.png" %}" class="img-responsive icon-i">
                   </div>
                   <div class="desti-property-guest-count">
                     <p id="d-prop-guest-count">{{product.attr.dcvd123}} guests</p>
@@ -99,7 +99,7 @@
             <div class="col-md-3">
                 <div class="desti-bedroom-av">
                   <div class="desti-bedroom-icon">
-                    <img src="{% static "markatix/img/icons/003-users.png" %}" class="img-responsive icon-i">
+                    <img src="{% static "markatix/img/icons/003-slots.png" %}" class="img-responsive icon-i">
                   </div>
                   <div class="desti-bedroom-icon-heading">
                     <p id="d-prop-bed-count">{{product.attr.qwer123}} Bedroom</p>
@@ -109,7 +109,7 @@
             <div class="col-md-3">
                 <div class="desti-beds-invent-av">
                   <div class="desti-beds-invent-icon">
-                    <img src="{% static "markatix/img/icons/004-bed.png" %}" class="img-responsive icon-i">
+                    <img src="{% static "markatix/img/icons/004-activity.png" %}" class="img-responsive icon-i">
                   </div>
                   <div class="desti-beds-invent-heading">
                     <p id="d-prop-invent-count">{{product.attr.wqwe123}} Beds</p>
@@ -140,7 +140,7 @@
                     <a href = "#menu3">
                      <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3"><i class="fa fa-image fa-3x"></i></button>
                      </a>
-                    <p><small><br />Accomodation</small></p>
+                    <p><small><br />Why to Enroll?</small></p>
                   </div>
                  
                  
@@ -148,7 +148,7 @@
                     <a href= "#menu4">
                      <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu4"><i class="fa fa-cogs fa-3x"></i></button>
                       </a>
-                    <p><small>Practical<br />Info</small></p>
+                    <p><small>Booking<br />Details</small></p>
                   </div>
                 
                   <div class="process-step">
@@ -170,7 +170,7 @@
                   <p class="text-center">{{ product.activities | safe }}</p>
                </div>
                <div id="menu3" class=" smoothscroll">
-                  <h3 class="text-center">Accomodation</h3>
+                  <h3 class="text-center">Why to Enroll</h3>
                   <p class="text-center">{{ product.accomodation | safe }}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
@@ -178,7 +178,7 @@
                   </ul> -->
                </div>
                <div id="menu4" class="smoothscroll">
-                  <h3 class="text-center">Practical Info</h3>
+                  <h3 class="text-center">Booking Details</h3>
                   <p class="text-center">{{ product.practical | safe }}</p>
                </div>
               <div id="menu5" class="">

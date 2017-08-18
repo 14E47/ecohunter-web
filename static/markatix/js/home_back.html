@@ -12,6 +12,9 @@
 {% endblock %}
 
 {% block extrascripts %}
+<script type="text/javascript">
+  
+</script>
 {% endblock %}
 
 {% block content %}
@@ -108,7 +111,7 @@
             </div>
          </div>
 </div>  
-<div class="top6" id="top6">
+<div class="experintial-stays" id="experintial-stays">
          <div class="container">
             <div class="row">
                <div class="customized-heading-1">
@@ -117,100 +120,93 @@
                   <h6>popular places based on audience stay</h6>
                </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
+               <div class="col-sm-12">
+                  <div class="container-fluid">
+                     <div class="row">
+                        <div class="custom-carousel" id="custom-carousel">
+                           <div class="col-xs-12 col-sm-12 col-md-12">
+                              <div class=" carousel-showmanymoveone slide" id="itemslider">
+                                 <div class="carousel-inner">
+                                    <div class="item">
+                                       <div class="col-xs-12 col-sm-6 col-md-2">
+                                          <img src="img/slider/01.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-1">
+                                          <img src="img/slider/02.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-2">
+                                          <img src="img/slider/01.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-3">
+                                          <img src="img/slider/04.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-4">
+                                          <img src="img/slider/05.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-5">
+                                          <img src="img/slider/06.jpg" class="img-responsive">
+                                       </div>
+                                    </div>
+                                    <div class="item active">
+                                       <div class="col-xs-12 col-sm-6 col-md-2">
+                                          <img src="img/slider/04.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-1">
+                                          <img src="img/slider/06.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-2">
+                                          <img src="img/slider/02.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-3">
+                                          <img src="img/slider/01.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-4">
+                                          <img src="img/slider/05.jpg" class="img-responsive ">
+                                       </div>
+                                       <div class="col-xs-12 col-sm-6 col-md-2 cloneditem-5">
+                                          <img src="img/slider/02.jpg" class="img-responsive ">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="slider-control">
+                                    <a class="left carousel-control" href="#itemslider" data-slide="prev">‹</a>
+                                    <a class="right carousel-control" href="#itemslider" data-slide="next">›</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+            
+         <div class="row">
               {% top_products as products %}
-               <div id = "mob" class="col-md-3 padding-change-1">
-                  <div class="recom-place-1" id="place-1">
-                     <div class="content-1">
-                        <a href="{{ products.0.get_absolute_url }}">
-                           <div class="content-overlay-1"></div>
-                           {% with image=products.0.primary_image %}
-                           <img class="content-image-1" src="{{ image.original.url }}" class="img-responsive" alt="{{ products.0.get_title }}">
-                           {% endwith %}
-                           <div class="content-details-1 fadeIn-bottom-1">
-                              <h3 class="content-title">{{ products.0.get_title }}</h3>
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-                  <div class="recom-place-2" id="place-2">
-                     <div class="content-1">
-                        <a href="{{ products.1.get_absolute_url }}">
-                           <div class="content-overlay-1"></div>
-                           {% with image=products.1.primary_image %}
-                           <img class="content-image-1" src="{{ image.original.url }}" class="img-responsive" alt="{{ products.1.get_title }}">
-                           {% endwith %}
-                           <div class="content-details-1 fadeIn-bottom-1">
-                              <h3 class="content-title">{{ products.1.get_title }}</h3>
-                              <!-- <p class="content-text">This is a short description</p> -->
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4  padding-change-2">
-                  <div class="recom-place-3">
-                     <div class="content-1">
-                        <a href="{{ products.2.get_absolute_url }}">
-                           <div class="content-overlay-1 content-overlay-2"></div>
-                           {% with image=products.2.primary_image %}
-                           <img class="content-image-2" src="{{ image.original.url }}" class="img-responsive" alt="{{ products.2.get_title }}">
-                           {% endwith %}
-                           <div class="content-details-1 content-details-2  fadeIn-bottom-1">
-                              <h3 class="content-title">{{ products.2.get_title }}</h3>
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-3  padding-change-3 hidden-xs">
-                  <div class="recom-place-4">
-                     <div class="content-1">
-                        <a href="{{ products.3.get_absolute_url }}">
-                           <div class="content-overlay-1"></div>
-                           {% with image=products.3.primary_image %}
-                           <img class="content-image-1" src="{{ image.original.url }}" class="img-responsive" alt="{{ products.3.get_title }}">
-                           {% endwith %}
-                           <div class="content-details-1 fadeIn-bottom-1">
-                              <h3 class="content-title">{{ products.3.get_title }}</h3>
-                              <!-- <p class="content-text">This is a short description</p> -->
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-                  <div class="recom-place-5">
-                     <div class="content-1">
-                        <a href="{{ products.4.get_absolute_url }}">
-                           <div class="content-overlay-1"></div>
-                           {% with image=products.4.primary_image %}
-                           <img class="content-image-1" src="{{ image.original.url }}" class="img-responsive" alt="{{ products.4.get_title }}">
-                           {% endwith %}
-                           <div class="content-details-1 fadeIn-bottom-1">
-                              <h3 class="content-title">{{ products.4.get_title }}</h3>
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-2  padding-change-4 hidden-xs">
-                  <div class="recom-place-6">
-                     <div class="content-1">
-                        <a href="{{ products.5.get_absolute_url }}">
-                           <div class="content-overlay-1 content-overlay-2"></div>
-                           {% with image=products.5.primary_image %}                           
-                           <img class="content-image-2" src="{{ image.original.url }}" class="img-responsive" alt="{{ products.5.get_title }}">
-                           {% endwith %}
-                           <div class="content-details-1 content-details-3  fadeIn-bottom-1">
-                              <h3 class="content-title">{{ products.5.get_title }}</h3>
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-               </div>
+              {% for product in products %}
+                <div class="col-xs-6 col-md-2 margin-mobile padding-mobile">
+                  <div class="content-1">
+                   <a href="{{ product.get_absolute_url }}">
+                      <div class="content-overlay-1"></div>
+                      {% block product_image %}
+                        {% with image=product.primary_image %}
+                        <img src="{{ image.original.url }}" alt="{{ product.get_title }}" class="img-responsive" style="height: 100%;">
+                        {% endwith %}
+                      {% endblock %}
+                      <div class="content-details-1 fadeIn-bottom-1">
+                        {% block product_title %}
+                          <h3 class="content-title">{{ product.get_title }}</h3>
+                        {% endblock %}
+                         <!--<p class="content-text">This is a short description</p> -->
+                      </div>
+                   </a>
+                  </div> 
+                </div>
+              {% endfor %} 
             </div>
          </div>
 </div>
- <div class="recommend-place" id="recommend-place">
+<div class="recommend-place" id="recommend-place">
          <div class="container">
             <div class="row">
                <div class="customized-heading-2">
@@ -221,8 +217,90 @@
                   <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6>
                </div>
             </div>
+            <div class="row">
+               <div class="col-md-3 padding-change-1">
+                  <div class="recom-place-1">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1"></div>
+                           <img class="content-image-1" src="{% static "markatix/img/04.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="recom-place-2">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1"></div>
+                           <img class="content-image-1" src="{% static "markatix/img/05.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4  padding-change-2">
+                  <div class="recom-place-3">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1 content-overlay-2"></div>
+                           <img class="content-image-2" src="{% static "markatix/img/06.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 content-details-2  fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3  padding-change-3 hidden-xs">
+                  <div class="recom-place-4">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1"></div>
+                           <img class="content-image-1" src="{% static "markatix/img/07.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="recom-place-5">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1"></div>
+                           <img class="content-image-1" src="{% static "markatix/img/08.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-2  padding-change-4 hidden-xs">
+                  <div class="recom-place-6">
+                     <div class="content-1">
+                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                           <div class="content-overlay-1 content-overlay-2"></div>
+                           <img class="content-image-2" src="{% static "markatix/img/09.jpg" %}" class="img-responsive">
+                           <div class="content-details-1 content-details-3  fadeIn-bottom-1">
+                              <h3 class="content-title">This is a title</h3>
+                              <!-- <p class="content-text">This is a short description</p> -->
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
-</div> 
+</div>
 <div class="experieces-text" id="experieces-text">
          <div class="container">
             <div class="row">

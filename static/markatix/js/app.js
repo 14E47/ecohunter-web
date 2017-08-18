@@ -1,4 +1,29 @@
 $(document).ready(function() {
+    var checkMod = function(){
+    if($(window).width() < 769){    
+            $('#mob').removeClass("padding-change-1").addClass("padding-change-2");
+            $('#mob').removeClass("col-md-3").addClass("col-md-4");
+            $('#place-1').removeClass("recom-place-1").addClass("recom-place-3");
+            $('#place-2').removeClass("recom-place-2").addClass("recom-place-3");
+            $('#place-1').find('.content-overlay-1').addClass("content-overlay-2");
+            $('#place-2').find('.content-overlay-1').addClass("content-overlay-2");
+            $('#place-1').find('.content-image-1').addClass("content-image-2");
+            $('#place-2').find('.content-image-1').addClass("content-image-2");
+        }
+        else{
+            $('#mob').removeClass("padding-change-2").addClass("padding-change-1");
+            $('#mob').removeClass("col-md-4").addClass("col-md-3");
+            $('#place-1').removeClass("recom-place-3").addClass("recom-place-1");
+            $('#place-2').removeClass("recom-place-3").addClass("recom-place-2");
+            $('#place-1').find('.content-overlay-1').removeClass("content-overlay-2");
+            $('#place-2').find('.content-overlay-1').removeClass("content-overlay-2");
+            $('#place-1').find('.content-image-1').removeClass("content-image-2");
+            $('#place-2').find('.content-image-1').removeClass("content-image-2");
+        }
+    }
+    $(window).resize(checkMod);
+     // Call once on initial load
+     checkMod ();
 
     $(".filter-button").click(function() {
         var value = $(this).attr('data-filter');

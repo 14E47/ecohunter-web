@@ -508,7 +508,7 @@ Recommend A Place Styling
 .recom-place-2 >img {
     height: 180px;
 }
-.recommend-place .col-md-3 {} .background-img-2 {
+.background-img-2 {
     color: #000;
     padding: 4%;
     background-image: url(../img/2.png);
@@ -525,7 +525,7 @@ Recommend A Place Styling
     position: relative;
     /*  width: 90%;*/
     /*  max-width: 400px;*/
-    height: 350px;
+    /* height: 350px; */
     margin: auto;
     overflow: hidden;
 }
@@ -561,7 +561,7 @@ Recommend A Place Styling
 }
 .content-details-1 {
     position: absolute;
-    text-align: center;
+    /* text-align: center; */
     padding-left: 1em;
     padding-right: 1em;
     width: 100%;
@@ -592,12 +592,12 @@ Recommend A Place Styling
 }
 .content-1 .content-details-1 {
     top: 50%;
-    left: 50%;
+     left: 50%; 
     opacity: 1;
 }
 .content-1:hover .content-details-1 {
     top: 50%;
-    left: 50%;
+     left: 50%; 
     opacity: 0;
 }
 .content-details-1 h3 {
@@ -608,7 +608,6 @@ Recommend A Place Styling
     text-transform: uppercase;
     position: absolute;
     top: 25%;
-    /* left: 18%; */
 }
 .content-details-1 p {
     color: #fff;
