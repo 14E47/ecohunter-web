@@ -5,6 +5,15 @@ from django.utils.text import slugify
 
 class Experience(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
+    product_title = models.CharField(max_length=50,default=None)
+    duration = models.CharField(max_length=50,default=None)
+    seats = models.CharField(max_length=50, default=None)
+    slot = models.CharField(max_length=50, default=None)
+    activity = models.CharField(max_length=50, default=None)
+    the_experience = models.TextField(blank=True, null=True)
+    the_activity = models.TextField(blank=True, null=True)
+    Accomodation = models.TextField(blank=True, null=True)
+    practical = models.TextField(blank=True, null=True)
 
     class Meta:
         verbose_name = "experience"

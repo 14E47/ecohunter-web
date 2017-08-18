@@ -180,9 +180,27 @@ Banner Image Styling
     margin-top: -10%;
     margin-left: 70%;
 }
-.banner-text h4 {
-    font-weight: 900;
+@media screen and (max-width: 769px) {
+    .banner-text{
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .banner-text a {
+        color: #88C425 !important;
+    }
+    .banner-text>h4 {
+    color: #222 !important;
+    } 
+    #experience_repeat .col-md-2:nth-child(4), #experience_repeat .col-md-2:nth-child(5), #experience_repeat .col-md-2:nth-child(6){
+        display: none;
+    }
 }
+
+ .banner-text>h4 {
+    font-weight: 900;
+    color: #fff;
+} 
 .banner-text a {
     text-decoration: none;
     color: #fff;
@@ -334,6 +352,10 @@ Experiences Text Styling
 .experieces-text p {
     color: #000;
     padding: 0% 10% 2% 10%;
+}
+.mobile-padding-1{
+    padding: 10px inherit 10px inherit;
+    margin-top: 10px;
 }
 /*-------------------------------------------
 Carousel & Banner Styling/Dependent Carousel
