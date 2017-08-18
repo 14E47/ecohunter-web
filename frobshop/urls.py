@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^booking/', include(booking_url)),
     url(r'^about/$', TemplateView.as_view(template_name='about-us.html'), name="about-us"),
-        url(r'^contact/$', TemplateView.as_view(template_name='contact-us.html'), name="about-us"),
+    url(r'^contact/$', TemplateView.as_view(template_name='contact-us.html'), name="contact-us"),
     url(r'', include(application.urls)),
     url(r'^experience/', include(experience_urls)),
     
