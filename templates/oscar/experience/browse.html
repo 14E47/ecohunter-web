@@ -221,6 +221,8 @@
             <div>
                 {% for experience in experiences %}
                     <li class="col-xs-12 col-sm-4 col-md-4col-lg-3" style="list-style-type: none;">{{ experience.product_title }}</li>
+                     <img src="{{experience.product_image.url}}" alt="{{ experience.product_image.url }}">
+
                 {% endfor %}
                 {% include "partials/pagination.html" %}
             </div>

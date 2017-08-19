@@ -14,6 +14,7 @@ class Experience(models.Model):
     the_activity = models.TextField(blank=True, null=True)
     Accomodation = models.TextField(blank=True, null=True)
     practical = models.TextField(blank=True, null=True)
+    product_image = models.ImageField(default=None)
 
     class Meta:
         verbose_name = "experience"
