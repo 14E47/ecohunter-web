@@ -33,7 +33,6 @@ class Experience(models.Model):
     def save(self, *args, **kwargs):
         if not self.id:
             self.slug = slugify(self.images)
-            self.slug = slugify(self.name)
         super(Experience, self).save(*args, **kwargs)
 
 class ExperienceImage(models.Model):
