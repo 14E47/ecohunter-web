@@ -265,6 +265,10 @@
          </div>
 </div>
 
+          {% wordpress_feeds as product %}
+              {% for products in product %}
+              <h1>{{products}} </h1>
+          {% endfor %} 
 <div class="explore-world" id="explore-world">
          <div class="container">
             <div class="row">

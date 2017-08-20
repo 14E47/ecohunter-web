@@ -64,6 +64,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'frobshop.urls'
 
+BLOG_MAX_LENGTH = 5
+BLOG_URL = "http://ecohunters.in"
+
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
 
 TEMPLATES = [
