@@ -24,6 +24,28 @@ $(document).ready(function() {
     $(window).resize(checkMod);
      // Call once on initial load
      checkMod ();
+    
+    var heightNav = $('.primary-nav').outerHeight();
+    var heightHeader = $('#exp-header').outerHeight();
+    var heightExpNav = $('#exp-nav').outerHeight();
+    var totalTop = heightHeader + heightNav;
+    var totalNewTop = totalTop + heightExpNav + 54;
+     $('#exp-nav').affix({
+        offset: {
+          top: totalTop
+        }
+    });
+    $(window).scroll(function() {
+        if($('#exp-nav').affix().offset().top >= totalNewTop && $('#exp-nav').affix().offset().top > ( $("#exp-header").offset().top + heightHeader)){
+            $('.hide-scroll').hide();
+        }
+        else{ 
+            $('.hide-scroll').show();
+        }
+    });
+    $('.smoothscroll').click(function(){
+        $('.hide-scroll').hide();
+    });
 
     $(".filter-button").click(function() {
         var value = $(this).attr('data-filter');
@@ -100,7 +122,7 @@ $(document).ready(function() {
             // Only prevent default if animation is actually gonna happen
             event.preventDefault();
             $('html, body').animate({
-            scrollTop: target.offset().top - 100
+            scrollTop: target.offset().top - 154
             }, 700, function() {
             // Callback after animation
             // Must change focus!

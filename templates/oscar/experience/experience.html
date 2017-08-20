@@ -52,146 +52,183 @@
 {% endblock %}
 
 {% block content %}
-      <ul class="bxslider">
-      <!-- <p>{{images}}</p> -->
-        <!-- {% with product.images.all as images %} -->
-        {% for image in images %}  
-          <li><img src="{{ image.original.url }}" class="img-responsive" /></li>
-          <li><img src="{{ image.original.url }}" class="img-responsive" /></li>
-        {% endfor %}
-        <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>
-        <li><img src="{% static "markatix/img/29.jpg" %}" class="img-responsive" /></li>
-        <li><img src="{% static "markatix/img/30.jpg" %}" class="img-responsive" /></li>
+<section id="exp-header" class="container experience-detail" style="margin-top: 120px; margin-bottom: 1em">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 exp-image">
+      <!-- <img src="{{experience.product_image.url}}" class="img-responsive center-block"> -->
+      <div id="exp_carousel" class="carousel slide center-block" data-ride="carousel">
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="{{experience.product_image.url}}" alt="{{experience.product_title}}" style="width: 100%;">
+          </div>
+          {% with experience.images as images %}
+          {% for image in images %}  
+          <div class="item">
+            <img src="{{ image.image.url }}" alt="{{experience.product_title}}">
+          </div>
+          {% endfor %}
+          
+        </div>
+        <!-- Left and right controls -->
+        {% if images %}
+        <a class="left carousel-control" href="#exp_carousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#exp_carousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        {% endif %}
         {% endwith %}
-      </ul>
-      <div class="explore-ecohunter" id="explore-ecohunter">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="customized-heading-3">
-                  <h3>{{ product.title }}</h3>
-                  <!-- <h2>{{ titles.1 }}</h2> -->
-                  <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
-               </div>
-            </div>
-         </div>
       </div>
-      <div class="dest-itenary-info">
-        <div class="col-md-8 col-md-offset-2 text-center desti-styling">
-          <div class="desti-decrib">
-            <div class="col-md-3">
-                <div class="desti-property-av">
-                  <div class="desti-property-icon">
-                    <img src="{% static "markatix/img/icons/Activity.png" %}" class="img-responsive icon-i">
+        
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 exp-image-detail">
+        <h1 class="text-center">{{experience.product_title}}</h1>
+        <hr>
+        <div class="dest-itenary-info">
+          <div class="col-md-12 col-sm-12 text-center desti-styling">
+            <div class="desti-decrib">
+              <div class="col-md-3 col-sm-3">
+                  <div class="desti-property-av">
+                    <div class="desti-property-icon">
+                      <img src="{% static "markatix/img/icons/001-duration.png" %}" class="img-responsive icon-i">
+                    </div>
+                    <div class="desti-property-icon-heading">
+                      <p id="d-prop-heading"><strong>{{experience.duration}}</strong></p>
+                    </div>
                   </div>
-                  <div class="desti-property-icon-heading">
-                    <p id="d-prop-heading">Duration<br>1.5 days</p>
+              </div>
+              <div class="col-md-3 col-sm-3">
+                  <div class="desti-guest-av">
+                    <div class="desti-property-guest-icon">
+                      <img src="{% static "markatix/img/icons/002-seats.png" %}" class="img-responsive icon-i">
+                    </div>
+                    <div class="desti-property-guest-count">
+                      <p id="d-prop-guest-count"><strong>{{experience.seats}}</strong> seats</p>
+                    </div>
                   </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="desti-guest-av">
-                  <div class="desti-property-guest-icon">
-                    <img src="{% static "markatix/img/icons/Duration.png" %}" class="img-responsive icon-i">
+              </div>
+              <div class="col-md-3 col-sm-3">
+                  <div class="desti-bedroom-av">
+                    <div class="desti-bedroom-icon">
+                      <img src="{% static "markatix/img/icons/003-slots.png" %}" class="img-responsive icon-i">
+                    </div>
+                    <div class="desti-bedroom-icon-heading">
+                      <p id="d-prop-bed-count"><strong>{{experience.slots}}</strong> Slots</p>
+                    </div>
                   </div>
-                  <div class="desti-property-guest-count">
-                    <p id="d-prop-guest-count">Seats Available <br>25 seats </p>
+              </div>
+              <div class="col-md-3 col-sm-3">
+                  <div class="desti-beds-invent-av">
+                    <div class="desti-beds-invent-icon">
+                      <img src="{% static "markatix/img/icons/004-activity.png" %}" class="img-responsive icon-i">
+                    </div>
+                    <div class="desti-beds-invent-heading">
+                      <p id="d-prop-invent-count"><strong>{{experience.activity}}</strong> activity</p>
+                    </div>
                   </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="desti-bedroom-av">
-                  <div class="desti-bedroom-icon">
-                    <img src="{% static "markatix/img/icons/Seats_Available.png" %}" class="img-responsive icon-i">
-                  </div>
-                  <div class="desti-bedroom-icon-heading">
-                    <p id="d-prop-bed-count">Slots Available<br>2 slots </p>
-                  </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="desti-beds-invent-av">
-                  <div class="desti-beds-invent-icon">
-                    <img src="{% static "markatix/img/icons/Slots_Available.png" %}" class="img-responsive icon-i">
-                  </div>
-                  <div class="desti-beds-invent-heading">
-                    <p id="d-prop-invent-count">Activity type<br>Endurance</p>
-                  </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>  
-      <div class="process">
-               <div class="process-row nav nav-tabs">
-                  <div class="process-step">
-                    <a href="#menu1">
-                     <button type="button" class="btn btn-info btn-circle smoothscroll"><i class="fa fa-info fa-3x"></i></button>
-                     </a>
-                    <p><small>The<br />Experience</small></p>
-                  </div>
-                 
-                 
-                  <div class="process-step">
-                    <a href = "#menu2">
-                     <button type="button" class="btn btn-default btn-circle smoothscroll"><i class="fa fa-file-text-o fa-3x"></i></button>
-                     </a>
-                    <p><small><br />Activities</small></p>
-                  </div>
-                 
-                  <div class="process-step">
-                    <a href = "#menu3">
-                     <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3"><i class="fa fa-image fa-3x"></i></button>
-                     </a>
-                    <p><small><br />Accomodation</small></p>
-                  </div>
-                 
-                 
-                  <div class="process-step">
-                    <a href= "#menu4">
-                     <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu4"><i class="fa fa-cogs fa-3x"></i></button>
-                      </a>
-                    <p><small>Practical<br />Info</small></p>
-                  </div>
-                
-                  <div class="process-step">
-                     <a href="book-now"><button type="button" class="btn btn-default btn-circle" href="book-now"><i class="fa fa-check fa-3x"></i></button></a>
-                     <p><small>Book<br />Now</small></p>
-                  </div>
-               </div>
+        <div id="exp-experience" class ="col-md-12">
+          <h3 class="text-center">The Experience</h3>
+          <p>{{ experience.the_experience }}</p>
+        </div> 
+    </div>
+  </div>
+</section>
+<section id="exp-nav" class="container-fluid" style="background-color: #fff;">
+  <div class="process">
+    <div class="process-row nav nav-tabs">   
+        <div class="process-step">
+          <a href = "#menu2">
+          <button type="button" class="btn btn-default btn-circle smoothscroll"><i class="fa fa-file-text-o fa-3x"></i></button>
+          </a>
+          <p class="hide-scroll"><small><br />Activities</small></p>
+        </div>
+      
+        <div class="process-step">
+          <a href = "#menu3">
+          <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3"><i class="fa fa-image fa-3x"></i></button>
+          </a>
+          <p class="hide-scroll"><small><br />Why to Enroll?</small></p>
+        </div>
+      
+      
+        <div class="process-step">
+          <a href= "#menu4">
+          <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu4"><i class="fa fa-cogs fa-3x"></i></button>
+            </a>
+          <p class="hide-scroll"><small>Booking <br />Details</small></p>
+        </div>
+      
+        <div class="process-step">
+          <a href="book-now"><button type="button" class="btn btn-default btn-circle" href="book-now"><i class="fa fa-check fa-3x"></i></button></a>
+          <p class="hide-scroll"><small>Book<br />Now</small></p>
+        </div>
+    </div>
+  </div>
+</section>
+<section class="exp-detail container">
+  <div id="menu2" class="det smoothscroll">
+      <h3  class="text-center">Activities</h3>
+      <p class="text-center">{{ experience.the_activity | safe }}</p>
+      <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
+        
+        Here's affix at it's best.
+        
+        The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+        <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
+          
+          Here's affix at it's best.
+          
+          The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+  </div>
+  <div id="menu3" class=" smoothscroll">
+    <h3 class="text-center">Why to Enroll</h3>
+    <p class="text-center">{{ experience.Accomodation | safe }}</p>
+    <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
+      
+      Here's affix at it's best.
+      
+      The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+      <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
+        
+        Here's affix at it's best.
+        
+        The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+        <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
+          
+          Here's affix at it's best.
+          
+          The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+  </div>
+  <div id="menu4" class="smoothscroll">
+    <h3 class="text-center">Booking Details</h3>
+    <p class="text-center">{{ experience.practical | safe }}</p>
+    <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
+      
+      Here's affix at it's best.
+      
+      The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+      <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
+        
+        Here's affix at it's best.
+        
+        The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+  </div>
+  <div id="menu5" class="">
+      <h3 class="text-center"></h3>
+      <div class="book-button">
+        <a href="book-now">Book Now</a>
       </div>
-      <div class="container" style="padding: 40px;">
-               <div id="menu1" class="text-center smoothscroll">
-                  <h3  class="text-center">The Experience</h3>
-                  <p class="text-center">{{ product.description | safe }}</p>
-                  <!-- <ul class="list-unstyled list-inline pull-right">
-                     <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
-                  </ul> -->
-               </div>
-               <div id="menu2" class="det smoothscroll">
-                  <h3  class="text-center">Activities</h3>
-                  <p class="text-center">{{ product.activities | safe }}</p>
-               </div>
-               <div id="menu3" class=" smoothscroll">
-                  <h3 class="text-center">Accomodation</h3>
-                  <p class="text-center">{{ product.accomodation | safe }}</p>
-                  <!-- <ul class="list-unstyled list-inline pull-right">
-                     <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
-                     <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
-                  </ul> -->
-               </div>
-               <div id="menu4" class="smoothscroll">
-                  <h3 class="text-center">Practical Info</h3>
-                  <p class="text-center">{{ product.practical | safe }}</p>
-               </div>
-              <div id="menu5" class="">
-                  <h3 class="text-center"></h3>
-                  <div class="book-button">
-                    <a href="book-now">Book Now</a>
-                  </div>
-               </div>
-      </div>  
-
-
+    </div>
+</section>
 {% endblock content %}
 
 

@@ -1919,6 +1919,7 @@ Third page Tabs
     font-size: 12px;
     border-radius: 0%;
 }
+
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
 {
     text-align: -webkit-center;
@@ -1937,4 +1938,68 @@ Third page Tabs
     margin-bottom: 5%;
     background-color: #a38f72;
     border-radius: 50px;
+}
+
+.experience-detail{
+    background: none;
+
+}
+.exp-image{
+    background: none;
+    height: 460px;
+    overflow: hidden;
+}
+.exp-image-detail hr{
+    margin: 10px 0 10px 0;
+}
+.exp-image-detail .desti-styling{
+    border-radius: 10px;
+}
+.exp-experience{
+    text-align: justify;
+}
+@media screen and (max-width: 769px){
+    .exp-image{
+        height: auto;
+    }
+    .exp-image-detail .col-sm-12{
+        width: 100%;
+    }
+    .exp-image-detail .desti-styling{
+        border-radius: 10px;
+        padding: 1%;
+    }
+    .exp-image-detail .col-sm-3{
+        width: 20%;
+        display: inline-block;
+        margin: 0;
+        padding: 5px 0 0 0 ;
+    }
+    .exp-image-detail .icon-i{
+        vertical-align: top;
+        width: 25px;
+    }
+    #exp-nav .btn-circle {
+        width: 60px;
+        height: 30px;
+        text-align: center;
+        font-size: 6px;
+        border-radius: 0%;
+    }
+    
+}
+.exp-detail{
+    background: none;
+}
+#exp-nav.affix {
+    position: fixed;
+    top: 54px;
+    width: 100%;
+    z-index:10;
+}
+@media screen and (max-width: 769px){
+    #exp-nav.affix {
+        position: fixed;
+        top: 77px;
+    }
 }

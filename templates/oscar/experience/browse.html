@@ -215,20 +215,47 @@
             </p>
         {% endif %}
     </form>-->
-    <img src="{{ experiences.images.0.image.url }}"/>
+    <!-- <img src="{{ experiences.images.0.image.url }}"/> -->
     {% if experiences %}
-        <section>
-            <div>
-                {% for experience in experiences %}
-                    <li class="col-xs-12 col-sm-4 col-md-4col-lg-3" style="list-style-type: none;">{{ experience.product_title }}</li>
-                     <img src="{{experience.product_image.url}}" alt="{{ experience.product_image.url }}">
-
-                {% endfor %}
-                {% include "partials/pagination.html" %}
+        <section style="margin-top: 4em;">
+            {% for experience in experiences %}
+            <div class="col-sm-4 col-md-2 col-lg-2">  
+                {% with image=experience.product_image %}
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="{{ experience.get_absolute_url }}">
+                            <div class="content-overlay"></div>
+                            <img src="{{ image.url }}" alt="{{ experience.product_title }}" class="content-image img-responsive img-size">
+                            <div class="content-details fadeIn-bottom">
+                            <h3 class="content-title">{{ experience.product_title }}</h3>
+                            <p class="content-text">{{ image.caption }}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>                  
+                {% endwith %}
+                <div class="desti-descrip">   
+                    <div class="desti-price-name">
+                        <h4 class="destin-name"><i class="fa fa-shield"></i> 
+                            <span id="d-name">
+                                <a href="{{ experience.get_absolute_url }}" title="{{ experience.product_title }}">{{ experience.product_title|truncatewords:4 }}
+                                </a>
+                            </span>
+                        </h4>
+                        <h4 class="desti-price"><i class="fa fa-bed"></i> 
+                            Starting From &#8377<span id="d-pirce">2750
+                            </span>
+                        </h4>
+                    </div>     
+                    <!--  -->
+                    
+                </div> 
             </div>
+            {% endfor %}
+            {% include "partials/pagination.html" %}
         </section>
     {% else %}
-        <p class="nonefound">{% trans "No products found." %}</p>
+        <p class="nonefound">{% trans "No experiences found." %}</p>
     {% endif %}
      <div class="filter-mobile-btn hidden-lg">
         <a href="" data-toggle="modal" data-target="#myModal-filter"><i class="fa fa-sliders"></i> Filter</a>

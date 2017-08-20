@@ -30,11 +30,6 @@ class Experience(models.Model):
         images = ExperienceImage.objects.filter(experience=self)
         return images
 
-    def name(self):
-        name = ExperienceName.objects.filter(experience=self)
-        return name
-
-
     def save(self, *args, **kwargs):
         if not self.id:
             self.slug = slugify(self.images)

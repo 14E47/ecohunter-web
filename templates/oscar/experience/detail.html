@@ -27,11 +27,12 @@
 {% endblock breadcrumbs %}
 
 {% block content %}
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-9"><p>{{ experience.description|safe }}</p></div>
             {% if experience.images %}
                 <div class="col-sm-3"><img src="{{ experience.images.0.image.url }}" alt="{{ category.name }}" class="img-responsive" /></div>
             {% endif %}
-        </div>
+            </div>
+        </div> -->
     {{ block.super }}
 {% endblock %}
