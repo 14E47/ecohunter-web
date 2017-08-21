@@ -1,7 +1,11 @@
 from __future__ import unicode_literals
-
+from django.contrib.sites.models import Site
+from django.conf import settings
 from django.db import models
 from django.utils.text import slugify
+from django.urls import get_script_prefix
+from django.utils.encoding import iri_to_uri
+from django.core.urlresolvers import reverse
 
 class Experience(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
@@ -24,7 +28,8 @@ class Experience(models.Model):
         return '%s' % self.slug
 
     def get_absolute_url(self):
-        return self.slug
+        return "/experience/%s" % self.slug
+
 
     def images(self):
         images = ExperienceImage.objects.filter(experience=self)

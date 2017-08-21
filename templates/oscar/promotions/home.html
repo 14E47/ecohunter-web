@@ -240,6 +240,7 @@
             </div>
             <div class="row" id="experience_repeat">
               {% top_products as products %}
+              {% top_experiences as experiences %}
               {% for product in products %}
                 <div class="col-md-2 mobile-padding-1">
                   <div class="content-1">
@@ -265,10 +266,7 @@
          </div>
 </div>
 
-          {% wordpress_feeds as product %}
-              {% for products in product %}
-              <h1>{{products}} </h1>
-          {% endfor %} 
+{% wordpress_feeds as feeds %}        
 <div class="explore-world" id="explore-world">
          <div class="container">
             <div class="row">
@@ -295,14 +293,15 @@
                      <!--   <li class="four"><a href="#">Quatro</a></li> -->
                   </ul>
                   <div class="row">
+                      
                      <div class="col-md-6 padding-change-5">
                         <div class="explore-world exp-1 filter blog">
                            <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                              <a href="{{ feeds.0.link | safe}}">
                                  <div class="content-overlay-1"></div>
-                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <img class="content-image-3" src="{{feeds.0.image.rendered}}" class="img-responsive">
                                  <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
+                                    <h3 class="content-title">{{ feeds.0.title | safe}}</h3>
                                     <!-- <p class="content-text">This is a short description</p> -->
                                  </div>
                               </a>
@@ -322,11 +321,11 @@
                         </div>
                         <div class="explore-world exp-2 filter blog">
                            <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                              <a href="{{ feeds.1.link | safe}}">
                                  <div class="content-overlay-1 temporary-1"></div>
-                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/02.jpg" %}" class="img-responsive">
+                                 <img class="content-image-4" src="{{feeds.1.image.rendered}}" class="img-responsive">
                                  <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
+                                    <h3 class="content-title">{{ feeds.1.title | safe}}</h3>
                                     <!-- <p class="content-text">This is a short description</p> -->
                                  </div>
                               </a>
@@ -346,11 +345,11 @@
                         </div>
                         <div class="explore-world exp-3 filter blog">
                             <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                              <a href="{{ feeds.2.link | safe}}">
                                  <div class="content-overlay-1 temporary-1"></div>
-                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/03.jpg" %}" class="img-responsive">
+                                 <img class="content-image-4" src="{{feeds.2.image.rendered}}" class="img-responsive">
                                  <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
+                                    <h3 class="content-title">{{ feeds.2.title | safe}}</h3>
                                     <!-- <p class="content-text">This is a short description</p> -->
                                  </div>
                               </a>
@@ -373,11 +372,11 @@
                      <div class="col-md-6 padding-change-5">
                         <div class="explore-world exp-4 filter blog hidden-xs">
                            <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                              <a href="{{ feeds.3.link | safe}}">
                                  <div class="content-overlay-1 temporary"></div>
-                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/02.jpg" %}" class="img-responsive">
+                                 <img class="content-image-4" src="{{feeds.3.image.rendered}}" class="img-responsive">
                                  <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
+                                    <h3 class="content-title">{{ feeds.3.title | safe}}</h3>
                                     <!-- <p class="content-text">This is a short description</p> -->
                                  </div>
                               </a>
@@ -397,11 +396,11 @@
                         </div>
                         <div class="explore-world exp-5 filter blog hidden-xs">
                            <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                              <a href="{{ feeds.4.link | safe}}">
                                  <div class="content-overlay-1 temporary"></div>
-                                 <img class="content-image-4" src="{% static "markatix/img/explore-world/05.jpg" %}" class="img-responsive">
+                                 <img class="content-image-4" src="{{feeds.4.image.rendered}}" class="img-responsive">
                                  <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
+                                    <h3 class="content-title">{{ feeds.4.title | safe}}</h3>
                                     <!-- <p class="content-text">This is a short description</p> -->
                                  </div>
                               </a>
@@ -421,11 +420,11 @@
                         </div>
                         <div class="explore-world exp-6 filter adjust-margin blog hidden-xs">
                            <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                              <a href="{{ feeds.5.link | safe}}">
                                  <div class="content-overlay-1"></div>
-                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <img class="content-image-3" src="{{feeds.5.image.rendered}}" class="img-responsive">
                                  <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
+                                    <h3 class="content-title">{{ feeds.5.title | safe}}</h3>
                                     <!-- <p class="content-text">This is a short description</p> -->
                                  </div>
                               </a>
@@ -469,23 +468,6 @@
 <div class="review" id="review">
        <div class="container">
           <div class="row">
-             <!-- <div class="col-md-12">
-                <div class="col-md-3">
-                   <div class="reviewer-img">
-                      <img src="img/10.jpg" class="img-responsive">
-                   </div>
-                </div>
-                <div class="col-md-9">
-                   <div class="review-txt">
-                      <div class="review-heading">
-                         <h3>Black&Wood <span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>
-                      </div>
-                      <div class="review-content">
-                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                      </div>
-                   </div>
-                </div>
-              </div> -->
              <div class="col-md-8 col-md-offset-2">
                  <div class="customized-heading-2">
                     <div class="background-img-3">
@@ -540,19 +522,21 @@
                   <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
                      <h3> Destinations </h3>
                      <ul>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="{{ products.0.get_absolute_url }}"> {{ products.0.get_title }} </a> </li>
+                        <li> <a href="{{ products.1.get_absolute_url }}"> {{ products.1.get_title }}  </a> </li>
+                        <li> <a href="{{ products.2.get_absolute_url }}"> {{ products.2.get_title }}  </a> </li>
+                        <li> <a href="{{ products.3.get_absolute_url }}"> {{ products.3.get_title }}  </a> </li>
                      </ul>
                   </div>
                   <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                     <h3> Expriences </h3>
+                     <h3> Experiences </h3>
                      <ul>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        {% if experiences %}
+                        <li> <a href="{{ experiences.0.get_absolute_url }}"> {{ experiences.0.product_title }} </a> </li>
+                        <li> <a href="{{ experiences.1.get_absolute_url }}"> {{ experiences.1.product_title }} </a> </li>
+                        <li> <a href="{{ experiences.2.get_absolute_url }}"> {{ experiences.2.product_title }} </a> </li>
+                        <li> <a href="{{ experiences.3.get_absolute_url }}"> {{ experiences.3.product_title }} </a> </li>
+                        {% endif %}
                      </ul>
                   </div>
                   <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
@@ -565,7 +549,7 @@
                      </ul>
                   </div>
                   <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                     <h3> Refund & Returns </h3>
+                     <h3> Refund &amp; Returns </h3>
                      <ul>
                         <li> <a href="#"> Lorem Ipsum </a> </li>
                         <li> <a href="#"> Lorem Ipsum </a> </li>

@@ -631,6 +631,12 @@ Recommend A Place Styling
     position: absolute;
     top: 25%;
 }
+.blog .content-details-1 h3{
+    font-size: 16px !important;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+}
 .content-details-1 p {
     color: #fff;
     font-size: 0.8em;
