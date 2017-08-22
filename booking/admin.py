@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import Booking
+from .models import Booking
 from experience.models import Experience ,ExperienceImage
 # Register your models here.
 

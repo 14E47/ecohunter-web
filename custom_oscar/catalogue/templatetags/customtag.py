@@ -23,8 +23,7 @@ def wordpress_feeds():
     BLOG_URL = getattr(settings, 'BLOG_URL', None)
 
     response = requests.get(BLOG_URL + "/blog/wp-json/wp/v2/posts")
-    response_data = response.content
-    data = json.loads(response_data)
+    data = response.json()
 
     feeds = []
     for index in data:
