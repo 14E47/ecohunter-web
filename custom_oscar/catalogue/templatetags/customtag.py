@@ -26,7 +26,7 @@ def wordpress_feeds():
     data = response.json()
 
     feeds = []
-    for index in data:
+    for index in data[:6]:
         feed = {}
         image = index['featured_media']
         i_image = requests.get(BLOG_URL + "/blog/wp-json/wp/v2/media/"+str(image))
