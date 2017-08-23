@@ -11,4 +11,5 @@ class ExperienceImageInline(admin.TabularInline):
 class ExperienceImageAdmin(admin.ModelAdmin):
     inlines = [ExperienceImageInline]
 
+admin.site.register(Booking)
 admin.site.register(Experience ,ExperienceImageAdmin)
