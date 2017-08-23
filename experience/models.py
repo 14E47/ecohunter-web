@@ -24,7 +24,7 @@ class Experience(models.Model):
         verbose_name = "experience"
         verbose_name_plural = "experience"
 
-    def __unicode__(self):
+    def __str__(self):
         return '%s' % self.product_title
 
     def get_absolute_url(self):

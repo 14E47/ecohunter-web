@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from .models import Booking
 #from experience.models import Experience ,ExperienceImage
 # Register your models here.
@@ -12,4 +11,4 @@ class ExperienceImageInline(admin.TabularInline):
 class ExperienceImageAdmin(admin.ModelAdmin):
     inlines = [ExperienceImageInline]
 
-admin.site.register(Experience, ExperienceImageAdmin)
+admin.site.register(Experience ,ExperienceImageAdmin)

@@ -214,18 +214,17 @@
                 {% trans "<strong>0</strong> results." %}
             </p>
         {% endif %}
-    </form>-->
-    <!-- <img src="{{ experiences.0.images.0.image.url }}"/> -->
+    </form>
     {% if experiences %}
         <section style="margin-top: 4em;">
             {% for experience in experiences %}
             <div class="col-sm-4 col-md-2 col-lg-2">  
-                {% with image=experience.product_image %}
+                {% with image=experiences.images %}
                 <div class="carousel-inner">
                     <div class="item active">
                         <a href="{{ experience.get_absolute_url }}">
                             <div class="content-overlay"></div>
-                            <img src="{{ image.url }}" alt="{{ experience.product_title }}" class="content-image img-responsive img-size">
+                            <img src="{{ experience.images.0.image.url }} "ali="{{ experience.images.0.image.url }}" class="content-image img-responsive img-size">
                             <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">{{ experience.product_title }}</h3>
                             <p class="content-text">{{ image.caption }}</p>

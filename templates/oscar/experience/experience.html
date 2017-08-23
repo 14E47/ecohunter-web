@@ -61,7 +61,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img src="{{experience.product_image.url}}" alt="{{experience.product_title}}" style="width: 100%;">
+            <img src="{{ experience.images.0.image.url }}" alt="{{experience.product_title}}" style="width: 100%;">
           </div>
           {% with experience.images as images %}
           {% for image in images %}  
