@@ -18,17 +18,13 @@ class Experience(models.Model):
     the_activity = models.TextField(blank=True, null=True)
     Accomodation = models.TextField(blank=True, null=True)
     practical = models.TextField(blank=True, null=True)
-    product_image = models.ImageField(default=None)
-
-
+#    product_image = models.ImageField(default=None)
 
     class Meta:
         verbose_name = "experience"
         verbose_name_plural = "experience"
 
     def __unicode__(self):
-        import pdb
-        pdb.set_trace()
         return '%s' % self.product_title
 
     def get_absolute_url(self):

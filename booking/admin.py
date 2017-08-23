@@ -1,18 +1,15 @@
 from django.contrib import admin
 
 from .models import Booking
-from experience.models import Experience ,ExperienceImage
+#from experience.models import Experience ,ExperienceImage
 # Register your models here.
 
-admin.site.register(Booking)
+from experience.models import Experience, ExperienceImage
 
-class ExperienceAdmin(admin.ModelAdmin):
-    list_display = ('product_title', 'slug', 'duration', 'seats', 'slot')
-
-admin.site.register(Experience, ExperienceAdmin)   
-
+class ExperienceImageInline(admin.TabularInline):
+    model = ExperienceImage
 
 class ExperienceImageAdmin(admin.ModelAdmin):
-    list_display = ['image']
+    inlines = [ExperienceImageInline]
 
-admin.site.register(ExperienceImage, ExperienceImageAdmin)
+admin.site.register(Experience, ExperienceImageAdmin)
