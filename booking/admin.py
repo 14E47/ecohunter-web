@@ -5,5 +5,14 @@ from experience.models import Experience ,ExperienceImage
 # Register your models here.
 
 admin.site.register(Booking)
-admin.site.register(Experience)
-admin.site.register(ExperienceImage)
+
+class ExperienceAdmin(admin.ModelAdmin):
+    list_display = ('product_title', 'slug', 'duration', 'seats', 'slot')
+
+admin.site.register(Experience, ExperienceAdmin)   
+
+
+class ExperienceImageAdmin(admin.ModelAdmin):
+    list_display = ['image']
+
+admin.site.register(ExperienceImage, ExperienceImageAdmin)

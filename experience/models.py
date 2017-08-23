@@ -8,8 +8,8 @@ from django.utils.encoding import iri_to_uri
 from django.core.urlresolvers import reverse
 
 class Experience(models.Model):
-    slug = models.SlugField(max_length=100, unique=True)
-    product_title = models.CharField(max_length=50,default=None)
+    slug = models.SlugField(max_length=50, unique=True)
+    product_title = models.CharField(max_length=50, unique=True)
     duration = models.CharField(max_length=50,default=None)
     seats = models.CharField(max_length=50, default=None)
     slot = models.CharField(max_length=50, default=None)
@@ -20,12 +20,16 @@ class Experience(models.Model):
     practical = models.TextField(blank=True, null=True)
     product_image = models.ImageField(default=None)
 
+
+
     class Meta:
         verbose_name = "experience"
         verbose_name_plural = "experience"
 
     def __unicode__(self):
-        return '%s' % self.slug
+        import pdb
+        pdb.set_trace()
+        return '%s' % self.product_title
 
     def get_absolute_url(self):
         return "/experience/%s" % self.slug
@@ -37,7 +41,7 @@ class Experience(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.id:
-            self.slug = slugify(self.images)
+            self.slug = slugify(self.product_title)
         super(Experience, self).save(*args, **kwargs)
 
 class ExperienceImage(models.Model):
