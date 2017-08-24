@@ -55,19 +55,15 @@
 <section id="exp-header" class="container experience-detail" style="margin-top: 120px; margin-bottom: 1em">
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12 exp-image">
-      <!-- <img src="{{experience.product_image.url}}" class="img-responsive center-block"> -->
       <div id="exp_carousel" class="carousel slide center-block" data-ride="carousel">
     
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-          <div class="item active">
-            <img src="{{ experience.images.0.image.url }}" alt="{{experience.product_title}}" style="width: 100%;">
-          </div>
-          {% with experience.images as images %}
-          {% for image in images %}  
-          <div class="item">
-            <img src="{{ image.image.url }}" alt="{{experience.product_title}}">
-          </div>
+        {% with experience.images as images %}
+
+          {% for image in images %} 
+         
+          <div class="item  {% if forloop.counter0 == 0 %} active {% endif %} "><img src="{{ image.image.url }}" alt="{{experience.product_title}}"></div>
           {% endfor %}
           
         </div>
@@ -178,50 +174,17 @@
   <div id="menu2" class="det smoothscroll">
       <h3  class="text-center">Activities</h3>
       <p class="text-center">{{ experience.the_activity | safe }}</p>
-      <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
-        
-        Here's affix at it's best.
-        
-        The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
-        <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
-          
-          Here's affix at it's best.
-          
-          The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+      
   </div>
   <div id="menu3" class=" smoothscroll">
     <h3 class="text-center">Why to Enroll</h3>
     <p class="text-center">{{ experience.Accomodation | safe }}</p>
-    <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
-      
-      Here's affix at it's best.
-      
-      The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
-      <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
-        
-        Here's affix at it's best.
-        
-        The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
-        <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
-          
-          Here's affix at it's best.
-          
-          The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
+    
   </div>
   <div id="menu4" class="smoothscroll">
     <h3 class="text-center">Booking Details</h3>
     <p class="text-center">{{ experience.practical | safe }}</p>
-    <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
-      
-      Here's affix at it's best.
-      
-      The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
-      <p>I was absolutely frustrated with the way this works, every time doing some custom calculation and building the offset off the the heights of the elements above the desired affix.
-        
-        Here's affix at it's best.
-        
-        The normal boostrap affix doesn't take the items natural offset top position into account, you have to manually pass it in as an attribute. This takes care of that, and accounts for the offset top changing on window resize.</p>
-  </div>
+      </div>
   <div id="menu5" class="">
       <h3 class="text-center"></h3>
       <div class="book-button">
