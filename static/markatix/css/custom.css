@@ -774,7 +774,11 @@ hr {
 /*------------------------
 Join The Network Styling
 ------------------------*/
+.recommend-btn {
+    color: #000;
+    padding: 5%;
 
+}
 .join-the-network {
     margin-top: 3%;
 }
@@ -799,13 +803,22 @@ Join The Network Styling
 .join-btn {
     margin-left: 25%;
 }
-.join-btn a {
+.join-btn a{
     padding: 10px 50px 10px 50px;
     border: 2px solid #fff;
     border-radius: 50px;
     text-decoration: none;
     color: #fff;
     font-weight: 900;
+}
+.recommend-btn a {
+    padding: 10px 100px 10px 100px;
+    border: 2px solid #e8e8e8;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #121212;
+    font-weight: 900;
+    background-color: #e8e8e8;
 }
 .join-data {
     background-color: #ccc;

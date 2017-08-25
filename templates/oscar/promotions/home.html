@@ -22,7 +22,7 @@
                   <img src="{% static "markatix/img/01.png" %}" class="img-responsive">
                   <div class="banner-text">
                      <h4>Romantic Gateways from Bangalore</h4>
-                     <a href="#">Know More <span class="arrow-right"><i class="fa fa-arrow-right"></span></i></a>
+                     <a href="/about">Know More <span class="arrow-right"><i class="fa fa-arrow-right"></span></i></a>
                   </div>
                </div>
             </div>
@@ -218,6 +218,9 @@
                      <h3>Do It</h3>
                      <h2>Yourself</h2>
                   </div>
+                  <div class="recommend-btn">
+                      <a href="/accounts/login">Recommend Experiences</a>
+                   </div>
                   <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6>
                </div>
             </div>
@@ -239,22 +242,17 @@
                </div>
             </div>
             <div class="row" id="experience_repeat">
-              {% top_products as products %}
               {% top_experiences as experiences %}
-              {% for product in products %}
+              {% for experience in experiences %}
                 <div class="col-md-2 mobile-padding-1">
                   <div class="content-1">
-                   <a href="{{ product.get_absolute_url }}">
+                   <a href="{{ experience.get_absolute_url }}">
                       <div class="content-overlay-1"></div>
-                      {% block product_image %}
-                        {% with image=product.primary_image %}
-                        <img src="{{ image.original.url }}" alt="{{ product.get_title }}" class="img-responsive" style="height: 280px">
+                        {% with image=experience.images.0 %}
+                        <img src="{{ image.image.url }}" alt="{{ experience.product_title }}" class="img-responsive" style="height: 280px">
                         {% endwith %}
-                      {% endblock %}
                       <div class="content-details-1 fadeIn-bottom-1">
-                        {% block product_title %}
-                          <h3 class="content-title">{{ product.get_title }}</h3>
-                        {% endblock %}
+                          <h3 class="content-title">{{experience.product_title}}</h3>
                          <!--<p class="content-text">This is a short description</p> -->
                       </div>
                    </a>
@@ -458,7 +456,7 @@
                         <h6>Smart Places requires smart partners. Join the Ecohunters Network <a href="#">Readmore</a></h6>
                      </div>
                      <div class="join-btn">
-                        <a href="#">Sign Up</a>
+                        <a href="/accounts/login">Sign Up</a>
                      </div>
                   </div>
                </div>

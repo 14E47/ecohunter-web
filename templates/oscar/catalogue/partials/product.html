@@ -57,8 +57,21 @@
              {% endblock %}
              {% block product_price %}
                 <h4 class="desti-price"><i class="fa fa-bed"></i> 
-                    Starting From &#8377<span id="d-pirce">2750
-                    </span>
+                    {% purchase_info_for_product request product as session %}
+                    
+                    {% if session.price.exists %}
+                        {% if session.price.excl_tax == 0 %}
+                    {#        <p class="price_color">{% trans "Free" %}</p>#}
+                        {% elif session.price.is_tax_known %}
+                            {{ session.price.incl_tax|multiply:request.session.currency_factor|currency:request.session.currency_code }}
+                        {% else %}
+                            {{ session.price.excl_tax|multiply:request.session.currency_factor|currency:request.session.currency_code }}
+                        {% endif %}
+                    {% else %}
+                        <p class="price_color">&nbsp;</p>
+                    {% endif %}
+                    <!-- Starting From &#8377<span id="d-pirce">2750
+                    </span> -->
                 </h4>
             </div>     
              {% endblock %}
