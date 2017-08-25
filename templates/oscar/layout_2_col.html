@@ -5,6 +5,9 @@
 Keep the same header and footer as the standard layout template but override the 
 main content area to split it into a sidebar and a content block
 {% endcomment %}
+{% block navigation %}
+    {% include "partials/nav_accounts.html" %}
+{% endblock %}
 {% block content_wrapper %}
 <div class="container-fluid page">
     <div class="page_inner">
