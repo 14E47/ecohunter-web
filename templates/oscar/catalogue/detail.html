@@ -152,8 +152,9 @@
                   </div>
                 
                   <div class="process-step">
-                     <a href="book-now"><button type="button" class="btn btn-default btn-circle" href="book-now"><i class="fa fa-check fa-3x"></i></button></a>
-                     <p><small>Book<br />Now</small></p>
+                      {% block product_basket_form %}
+                          {% include "catalogue/partials/add_to_basket_form_custom.html" %}
+                      {% endblock %}
                   </div>
                </div>
       </div>
@@ -180,12 +181,6 @@
                <div id="menu4" class="smoothscroll">
                   <h3 class="text-center">Practical Info</h3>
                   <p class="text-center">{{ product.practical | safe }}</p>
-               </div>
-              <div id="menu5" class="">
-                  <h3 class="text-center"></h3>
-                  <div class="book-button">
-                    <a href="book-now">Book Now</a>
-                  </div>
                </div>
       </div>  
 

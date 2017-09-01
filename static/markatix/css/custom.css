@@ -496,7 +496,7 @@ Recommend A Place Styling
     font-size: 40px;
     margin-top: 0px;
 }
-.customized-heading-2 h6 {
+.customized-heading-2 p {
     color: #a38f72 !important;
     text-transform: capitalize;
     width: 100%;
@@ -1030,7 +1030,7 @@ Destination Page Styling
     text-align: -webkit-center;
     text-align: -moz-center;
 }
-.book-button a {
+.book-button form button, .book-button span {
     padding: 10px 40px 10px 40px;
     color: #fff;
     background-color: #a28e75;

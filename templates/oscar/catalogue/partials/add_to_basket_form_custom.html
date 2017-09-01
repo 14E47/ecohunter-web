@@ -9,8 +9,10 @@
     <form action="{% url 'basket:add' pk=product.pk %}" method="post">
         {% csrf_token %}
         {{ basket_form.as_p }}
-        <button type="submit" class="book-button" data-loading-text="{% trans 'Adding...' %}">{% trans "Book Now" %}</button>
+        <button type="button" class="btn btn-default btn-circle"><i class="fa fa-check fa-3x"></i></button>
+        <p><small>Book<br />Now</small></p>
     </form>
 {% else %}
-    <span class="disabled book-button">{% trans "Book Now" %}</span>
+    <button type="button" class="btn btn-default btn-circle"><i class="fa fa-check fa-3x"></i></button>
+        <p><small>Book<br />Now</small></p>
 {% endif %}
