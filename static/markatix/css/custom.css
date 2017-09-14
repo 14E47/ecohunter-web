@@ -71,7 +71,7 @@ body
 }
 .navbar-brand {
     padding-top: 12px;
-    background-color: #5b685a;
+    background-color: #ffffff;
     height: 77px;
     transition: 1s all ease-in-out;
     width: 130px;
@@ -147,7 +147,7 @@ body
 .navbar-right > * {
     padding-top: 9%;
     height: 77px;
-    background-color: #a38f72;
+    background-color: #FFFFFF;
     transition: 1s all ease-in-out;
 }
 .navbar-right-1 > * {
@@ -157,8 +157,8 @@ body
 }
 .nav-contact > a {
     font-weight: 400;
-    font-size: 18px;
-    color: #fff !important;
+    font-size: 16px;
+    color: #b48b50 !important;
     width: 130px;
     text-align: center;
 }
@@ -812,13 +812,13 @@ Join The Network Styling
     font-weight: 900;
 }
 .recommend-btn a {
-    padding: 10px 100px 10px 100px;
+    padding: 10px 150px 10px 150px;
     border: 2px solid #e8e8e8;
     border-radius: 50px;
     text-decoration: none;
-    color: #121212;
+    color: #FFFFFF;
     font-weight: 900;
-    background-color: #e8e8e8;
+    background-color: #b48b50;
 }
 .join-data {
     background-color: #ccc;
@@ -1763,6 +1763,9 @@ h3.description{
     border-bottom: 1px solid rgba(0, 0, 0,0.1);
     padding-bottom: 5px;
 }
+p.text-center{
+    font-size: 18px;
+}
 .profile{
     margin-top: 25px;
 }
@@ -1839,7 +1842,7 @@ h3.description{
     color: #88C425;
 }
 a{
-    color:#88C425;
+    color:#000;
 }
 a:hover{
     text-decoration:none;
