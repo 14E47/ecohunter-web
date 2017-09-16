@@ -237,7 +237,7 @@ Banner Dropdown Styling
 }
 .dropdown-heading > h3 {
     position: relative;
-    font-size: 30px;
+    font-size: 15px;
     z-index: 1;
     overflow: hidden;
     text-align: center;
@@ -301,12 +301,13 @@ Banner Dropdown Styling
     width: 100%;
 }*/
 .dropdown-content {
-    padding-bottom: 5%;
+    padding-bottom: 4%;
     padding-left: 4%;
 }
 .dropdown-content>* {
     margin-left: 1%;
     margin-right: 1%;
+    font-size: 10px;
 }
 .submit .btn-primary {
     width: 100%;
@@ -317,7 +318,7 @@ Banner Dropdown Styling
     border-radius: 50px;
 }
 .equal-btn>* {
-    height: 35px;
+    height: 20px;
 }
 .dropdown-details-1 {
     position: fixed;
@@ -434,7 +435,7 @@ Experintial Stays Styling
     padding: 5%;
 }
 .customized-heading-1 h3 {
-    color: #a38f72 !important;
+    color: #a38f72 !important;-
     margin-bottom: 0px;
 }
 .customized-heading-1 h2 {
@@ -444,6 +445,10 @@ Experintial Stays Styling
     margin-top: 0px;
 }
 .customized-heading-1 h6 {
+    color: #a38f72 !important;
+    text-transform: capitalize;
+}
+.customized-heading-1 p {
     color: #a38f72 !important;
     text-transform: capitalize;
 }
