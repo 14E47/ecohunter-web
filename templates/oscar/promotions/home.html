@@ -19,11 +19,22 @@
         <div class="container">
             <div class="row">
                <div class="banner-details">
+{#                   <ul class="bxslider">#}
+{#                        {% with product.images.all as images %}#}
+{#                        {% for image in images %}#}
+{#                            <li><img src="{{ image.original.url }}" class="img-responsive" /></li>#}
+{#                        {% endfor %}#}
+{#                            <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>#}
+{#                            <li><img src="{% static "markatix/img/29.jpg" %}" class="img-responsive" /></li>#}
+{#                            <li><img src="{% static "markatix/img/30.jpg" %}" class="img-responsive" /></li>#}
+{#                        {% endwith %}#}
+{#                   </ul>#}
+
                   <img src="{% static "markatix/img/biker-blatt.jpg" %}" class="img-responsive">
-                  <div class="banner-text">
-                     <h4>Romantic Gateways from Bangalore</h4>
-                     <a href="/about">Know More <span class="arrow-right"><i class="fa fa-arrow-right"></span></i></a>
-                  </div>
+                    <div class="banner-text">
+                        <h4>Romantic Gateways from Bangalore</h4>
+                        <a href="/about">Know More <span class="arrow-right"><i class="fa fa-arrow-right"></span></i></a>
+                    </div>
                </div>
             </div>
         </div>
@@ -148,7 +159,7 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-4  padding-change-2">
+               <div class="col-md-6  padding-change-2">
                   <div class="recom-place-3">
                      <div class="content-1">
                         <a href="{{ products.2.get_absolute_url }}">
@@ -192,24 +203,26 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-2  padding-change-4 hidden-xs">
-                  <div class="recom-place-6">
-                     <div class="content-1">
-                        <a href="{{ products.5.get_absolute_url }}">
-                           <div class="content-overlay-1 content-overlay-2"></div>
-                           {% with image=products.5.primary_image %}                           
-                           <img class="content-image-2" src="{{ image.original.url }}" class="img-responsive" alt="{{ products.5.get_title }}">
-                           {% endwith %}
-                           <div class="content-details-1 content-details-3  fadeIn-bottom-1">
-                              <h3 class="content-title">{{ products.5.get_title }}</h3>
-                           </div>
-                        </a>
-                     </div>
-                  </div>
-               </div>
+{#               <div class="col-md-2  padding-change-4 hidden-xs">#}
+{#                  <div class="recom-place-6">#}
+{#                     <div class="content-1">#}
+{#                        <a href="{{ products.5.get_absolute_url }}">#}
+{#                           <div class="content-overlay-1 content-overlay-2"></div>#}
+{#                           {% with image=products.5.primary_image %}                           #}
+{#                           <img class="content-image-2" src="{{ image.original.url }}" class="img-responsive" alt="{{ products.5.get_title }}">#}
+{#                           {% endwith %}#}
+{#                           <div class="content-details-1 content-details-3  fadeIn-bottom-1">#}
+{#                              <h3 class="content-title">{{ products.5.get_title }}</h3>#}
+{#                           </div>#}
+{#                        </a>#}
+{#                     </div>#}
+{#                  </div>#}
+{#               </div>#}
             </div>
          </div>
 </div>
+
+
  <div class="recommend-place" id="recommend-place">
          <div class="container">
             <div class="row">
@@ -292,7 +305,34 @@
                   </ul>
                   <div class="row">
 
-                     <div class="col-md-3 padding-change-5">
+
+                     <div class="col-md-6 padding-change-5">
+                        <div class="explore-world exp-1 filter blog">
+                           <div class="content-1">
+                              <a href="{{ feeds.0.link | safe}}">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{{feeds.0.image.rendered}}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">{{ feeds.0.title | safe}}</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-1 filter craft-post hidden-xs">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+
+
                         <div class="explore-world exp-2 filter blog">
                            <div class="content-1">
                               <a href="{{ feeds.1.link | safe}}">
@@ -344,32 +384,6 @@
                      </div>
 
                      <div class="col-md-6 padding-change-5">
-                        <div class="explore-world exp-1 filter blog">
-                           <div class="content-1">
-                              <a href="{{ feeds.0.link | safe}}">
-                                 <div class="content-overlay-1"></div>
-                                 <img class="content-image-3" src="{{feeds.0.image.rendered}}" class="img-responsive">
-                                 <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">{{ feeds.0.title | safe}}</h3>
-                                    <!-- <p class="content-text">This is a short description</p> -->
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="explore-world exp-1 filter craft-post hidden-xs">
-                           <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
-                                 <div class="content-overlay-1"></div>
-                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
-                                 <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
-                                    <!-- <p class="content-text">This is a short description</p> -->
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-3 padding-change-5">
                         <div class="explore-world exp-4 filter blog hidden-xs">
                            <div class="content-1">
                               <a href="{{ feeds.3.link | safe}}">
@@ -418,30 +432,30 @@
                               </a>
                            </div>
                         </div>
-{#                        <div class="explore-world exp-6 filter adjust-margin blog hidden-xs">#}
-{#                           <div class="content-1">#}
-{#                              <a href="{{ feeds.5.link | safe}}">#}
-{#                                 <div class="content-overlay-1"></div>#}
-{#                                 <img class="content-image-3" src="{{feeds.5.image.rendered}}" class="img-responsive">#}
-{#                                 <div class="content-details-1 fadeIn-bottom-1">#}
-{#                                    <h3 class="content-title">{{ feeds.5.title | safe}}</h3>#}
-{#                                    <!-- <p class="content-text">This is a short description</p> -->#}
-{#                                 </div>#}
-{#                              </a>#}
-{#                           </div>#}
-{#                        </div>#}
-{#                        <div class="explore-world exp-6 filter adjust-margin craft-post">#}
-{#                           <div class="content-1">#}
-{#                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">#}
-{#                                 <div class="content-overlay-1"></div>#}
-{#                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">#}
-{#                                 <div class="content-details-1 fadeIn-bottom-1">#}
-{#                                    <h3 class="content-title">This is a title</h3>#}
-{#                                    <!-- <p class="content-text">This is a short description</p> -->#}
-{#                                 </div>#}
-{#                              </a>#}
-{#                           </div>#}
-{#                        </div>#}
+                        <div class="explore-world exp-6 filter adjust-margin blog hidden-xs">
+                           <div class="content-1">
+                              <a href="{{ feeds.5.link | safe}}">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{{feeds.5.image.rendered}}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">{{ feeds.5.title | safe}}</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-6 filter adjust-margin craft-post">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
