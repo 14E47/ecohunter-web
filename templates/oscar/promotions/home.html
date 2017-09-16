@@ -114,7 +114,7 @@
                <div class="customized-heading-1">
                   <h3>top experiential</h3>
                   <h2>stays</h2>
-                  <h6>popular places based on audience stay</h6>
+                  <p>popular places based on audience stay</p>
                </div>
             </div>
             <div class="row">
@@ -264,7 +264,7 @@
          </div>
 </div>
 
-{% wordpress_feeds as feeds %}        
+{#{% wordpress_feeds as feeds %}#}
 <div class="explore-world" id="explore-world">
          <div class="container">
             <div class="row">
@@ -291,32 +291,8 @@
                      <!--   <li class="four"><a href="#">Quatro</a></li> -->
                   </ul>
                   <div class="row">
-                      
-                     <div class="col-md-6 padding-change-5">
-                        <div class="explore-world exp-1 filter blog">
-                           <div class="content-1">
-                              <a href="{{ feeds.0.link | safe}}">
-                                 <div class="content-overlay-1"></div>
-                                 <img class="content-image-3" src="{{feeds.0.image.rendered}}" class="img-responsive">
-                                 <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">{{ feeds.0.title | safe}}</h3>
-                                    <!-- <p class="content-text">This is a short description</p> -->
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="explore-world exp-1 filter craft-post hidden-xs">
-                           <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
-                                 <div class="content-overlay-1"></div>
-                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
-                                 <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
-                                    <!-- <p class="content-text">This is a short description</p> -->
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
+
+                     <div class="col-md-3 padding-change-5">
                         <div class="explore-world exp-2 filter blog">
                            <div class="content-1">
                               <a href="{{ feeds.1.link | safe}}">
@@ -365,9 +341,35 @@
                               </a>
                            </div>
                         </div>
-
                      </div>
+
                      <div class="col-md-6 padding-change-5">
+                        <div class="explore-world exp-1 filter blog">
+                           <div class="content-1">
+                              <a href="{{ feeds.0.link | safe}}">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{{feeds.0.image.rendered}}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">{{ feeds.0.title | safe}}</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="explore-world exp-1 filter craft-post hidden-xs">
+                           <div class="content-1">
+                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
+                                 <div class="content-overlay-1"></div>
+                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
+                                 <div class="content-details-1 fadeIn-bottom-1">
+                                    <h3 class="content-title">This is a title</h3>
+                                    <!-- <p class="content-text">This is a short description</p> -->
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-3 padding-change-5">
                         <div class="explore-world exp-4 filter blog hidden-xs">
                            <div class="content-1">
                               <a href="{{ feeds.3.link | safe}}">
@@ -416,30 +418,30 @@
                               </a>
                            </div>
                         </div>
-                        <div class="explore-world exp-6 filter adjust-margin blog hidden-xs">
-                           <div class="content-1">
-                              <a href="{{ feeds.5.link | safe}}">
-                                 <div class="content-overlay-1"></div>
-                                 <img class="content-image-3" src="{{feeds.5.image.rendered}}" class="img-responsive">
-                                 <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">{{ feeds.5.title | safe}}</h3>
-                                    <!-- <p class="content-text">This is a short description</p> -->
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="explore-world exp-6 filter adjust-margin craft-post">
-                           <div class="content-1">
-                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">
-                                 <div class="content-overlay-1"></div>
-                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">
-                                 <div class="content-details-1 fadeIn-bottom-1">
-                                    <h3 class="content-title">This is a title</h3>
-                                    <!-- <p class="content-text">This is a short description</p> -->
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
+{#                        <div class="explore-world exp-6 filter adjust-margin blog hidden-xs">#}
+{#                           <div class="content-1">#}
+{#                              <a href="{{ feeds.5.link | safe}}">#}
+{#                                 <div class="content-overlay-1"></div>#}
+{#                                 <img class="content-image-3" src="{{feeds.5.image.rendered}}" class="img-responsive">#}
+{#                                 <div class="content-details-1 fadeIn-bottom-1">#}
+{#                                    <h3 class="content-title">{{ feeds.5.title | safe}}</h3>#}
+{#                                    <!-- <p class="content-text">This is a short description</p> -->#}
+{#                                 </div>#}
+{#                              </a>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                        <div class="explore-world exp-6 filter adjust-margin craft-post">#}
+{#                           <div class="content-1">#}
+{#                              <a href="https://unsplash.com/photos/HkTMcmlMOUQ">#}
+{#                                 <div class="content-overlay-1"></div>#}
+{#                                 <img class="content-image-3" src="{% static "markatix/img/explore-world/01.jpg" %}" class="img-responsive">#}
+{#                                 <div class="content-details-1 fadeIn-bottom-1">#}
+{#                                    <h3 class="content-title">This is a title</h3>#}
+{#                                    <!-- <p class="content-text">This is a short description</p> -->#}
+{#                                 </div>#}
+{#                              </a>#}
+{#                           </div>#}
+{#                        </div>#}
                      </div>
                   </div>
                </div>
