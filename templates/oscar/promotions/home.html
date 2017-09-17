@@ -19,18 +19,18 @@
         <div class="container">
             <div class="row">
                <div class="banner-details">
-{#                   <ul class="bxslider">#}
-{#                        {% with product.images.all as images %}#}
-{#                        {% for image in images %}#}
-{#                            <li><img src="{{ image.original.url }}" class="img-responsive" /></li>#}
-{#                        {% endfor %}#}
-{#                            <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>#}
-{#                            <li><img src="{% static "markatix/img/29.jpg" %}" class="img-responsive" /></li>#}
-{#                            <li><img src="{% static "markatix/img/30.jpg" %}" class="img-responsive" /></li>#}
-{#                        {% endwith %}#}
-{#                   </ul>#}
+                   <ul class="bxslider">
+                        {% with product.images.all as images %}
+                        {% for image in images %}
+                            <li><img src="{{ image.original.url }}" class="img-responsive" /></li>
+                        {% endfor %}
+                            <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>
+                            <li><img src="{% static "markatix/img/29.jpg" %}" class="img-responsive" /></li>
+                            <li><img src="{% static "markatix/img/30.jpg" %}" class="img-responsive" /></li>
+                        {% endwith %}
+                   </ul>
 
-                  <img src="{% static "markatix/img/biker-blatt.jpg" %}" class="img-responsive">
+{#                  <img src="{% static "markatix/img/biker-blatt.jpg" %}" class="img-responsive">#}
                     <div class="banner-text">
                         <h4>Romantic Gateways from Bangalore</h4>
                         <a href="/about">Know More <span class="arrow-right"><i class="fa fa-arrow-right"></span></i></a>
