@@ -67,10 +67,18 @@
          <div class="container-fluid">
             <div class="row">
                <div class="customized-heading-3">
-                  <h3><i><img src="{% static "markatix/img/icons/001-open-door.png" %}" class="img-responsive icon-i"></i>{{ product.title }}</h3>
+                  <h3>{{ product.title }}</h3>
                   <!-- <h2>{{ titles.1 }}</h2> -->
                   <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
                </div>
+                <div class="text-center">
+                    <div class="desti-property-icon">
+                        <img src="{% static "markatix/img/icons/001-open-door.png" %}" class="img-responsive icon-i">
+                    </div>
+                    <div class="desti-property-icon-heading">
+                        <p id="d-prop-heading">{{product.attr.abcd12}}</p>
+                    </div>
+                </div>
             </div>
          </div>
       </div>
@@ -123,10 +131,10 @@
 {#      </div>#}
 
     <!-- HOTEL MAIN PAGE -->
-      <div class="process">
-{#      <div class="process hidden-xs animated fadein" animation-duration="2s" animation-delay="2s" animation-iteration-count="infinite">#}
-            <div class="dropdown-details hidden-xs animated fadein">
-               <div class="process-row nav nav-tabs">
+{#    <div class="dropdown-details hidden-xs animated fadein">#}
+{#        <div class="process">#}
+    <div class="process hidden-xs animated fadein" animation-iteration-count="infinite">
+            <div class="process-row nav nav-tabs">
                   <div class="process-step">
                     <a href="#menu1">
                      <button type="button" class="btn btn-info btn-circle smoothscroll"><i class="fa fa-info fa-3x"></i></button>
@@ -162,15 +170,16 @@
                           {% include "catalogue/partials/add_to_basket_form_custom.html" %}
                       {% endblock %}
                   </div>
-               </div>
+{#               </div>#}
             </div>
-      </div>
+    </div>
 
     <!--HOTEL PAGE TEXT INPUT -->
 
       <div class="container" style="padding: 40px; font-size: 38px">
                <div id="menu1" class="text-center smoothscroll">
                    <h3  class="text-center"><u>The Experience</u></h3>
+                   <br>
                   <h5 class="text-center">{{ product.description | safe }}</h5>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
@@ -178,10 +187,12 @@
                </div>
                <div id="menu2" class="det smoothscroll">
                    <h3  class="text-center"><u>Activities</u></h3>
+                   <br>
                   <h5 class="text-center">{{ product.activities | safe }}</h5>
                </div>
                <div id="menu3" class=" smoothscroll">
                    <h3 class="text-center"><u>Accomodation</u></h3>
+                   <br>
                   <h5 class="text-center">{{ product.accomodation | safe }}</h5>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
@@ -190,6 +201,7 @@
                </div>
                <div id="menu4" class="smoothscroll">
                    <h3 class="text-center"><u>Practical Info</u></h3>
+                   <br>
                   <h5 class="text-center">{{ product.practical | safe }}</h5>
                </div>
       </div>  

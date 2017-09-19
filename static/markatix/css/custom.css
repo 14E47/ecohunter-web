@@ -166,7 +166,7 @@ body
     color: #fff !important;
 }
 .navbar-brand:hover {
-    background-color: #5b685a !important;
+    background-color: #FFFFFF !important;
 }
 /*------------------
 Banner Image Styling
@@ -223,15 +223,14 @@ Banner Image Styling
     margin-left: 10px;
 }
 .img-banner {
-    margin-top: 5%;
+    /*margin-top: 5%;*/
 }
 /*----------------------
 Banner Dropdown Styling
 -----------------------*/
-/*.banner-dropdown {*/
-    /*margin-top: 5%;*/
-/*}*/
-
+.banner-dropdown {
+    margin-top: 5%;
+}
 .dropdown {
     list-style-type: none;
 }
