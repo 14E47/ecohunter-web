@@ -66,11 +66,6 @@
       <div class="explore-ecohunter" id="explore-ecohunter">
          <div class="container-fluid">
             <div class="row">
-               <div class="customized-heading-3">
-                  <h3>{{ product.title }}</h3>
-                  <!-- <h2>{{ titles.1 }}</h2> -->
-                  <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
-               </div>
                 <div class="text-center">
                     <div class="desti-property-icon">
                         <img src="{% static "markatix/img/icons/001-open-door.png" %}" class="img-responsive icon-i">
@@ -78,6 +73,11 @@
                     <div class="desti-property-icon-heading">
                         <p id="d-prop-heading">{{product.attr.abcd12}}</p>
                     </div>
+                </div>
+                <div class="customized-heading-3">
+                    <h3>{{ product.title }}</h3>
+                    <!-- <h2>{{ titles.1 }}</h2> -->
+                    <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
                 </div>
             </div>
          </div>
@@ -139,25 +139,23 @@
                     <a href="#menu1">
                      <button type="button" class="btn btn-info btn-circle smoothscroll"><i class="fa fa-info fa-3x"></i></button>
                      </a>
-                    <p><small>The<br />Experience</small></p>
+                    <p><small>The<br>Experience</small></p>
                   </div>
-                 
-                 
+
                   <div class="process-step">
                     <a href = "#menu2">
                      <button type="button" class="btn btn-default btn-circle smoothscroll"><i class="fa fa-file-text-o fa-3x"></i></button>
                      </a>
                     <p><small><br />Activities</small></p>
                   </div>
-                 
+
                   <div class="process-step">
                     <a href = "#menu3">
                      <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3"><i class="fa fa-image fa-3x"></i></button>
                      </a>
                     <p><small><br />Accomodation</small></p>
                   </div>
-                 
-                 
+
                   <div class="process-step">
                     <a href= "#menu4">
                      <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu4"><i class="fa fa-cogs fa-3x"></i></button>
@@ -180,7 +178,7 @@
 
                <div id="menu1" class="text-center smoothscroll">
                    <h3  class="text-center"><u>The Experience</u></h3>
-                  <h5 class="text-center">{{ product.description | safe }}</h5>
+                  <p class="text-center">{{ product.description | safe }}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
                   </ul> -->
@@ -188,12 +186,12 @@
 
                <div id="menu2" class="det smoothscroll">
                    <h3  class="text-center"><u>Activities</u></h3>
-                  <h5 class="text-center">{{ product.activities | safe }}</h5>
+                  <p class="text-center">{{ product.activities | safe }}</p>
                </div>
 
                <div id="menu3" class=" smoothscroll">
                    <h3 class="text-center"><u>Accomodation</u></h3>
-                  <h5 class="text-center">{{ product.accomodation | safe }}</h5>
+                  <p class="text-center">{{ product.accomodation | safe }}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
                      <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
