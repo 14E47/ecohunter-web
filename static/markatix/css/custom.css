@@ -1952,11 +1952,15 @@ a.process-step {
     margin-top: 4px;
 }
 .btn-circle {
-    width: 120px;
+    /*width: 120px;*/
+    width: 240px;
     height: 60px;
     text-align: center;
     font-size: 12px;
     border-radius: 0%;
+}
+.descriptiontext .smoothscroll {
+    border: solid 1px;
 }
 
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
