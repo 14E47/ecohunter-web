@@ -1920,7 +1920,7 @@ Third page Tabs
 }
 .sticky {
   position: fixed;
-  top: 0;
+  top: 20px;
   width: 100%
 }
 .process {
