@@ -1943,8 +1943,7 @@ Third page Tabs
 .process-step {
     display: table-cell;
     text-align: center;
-    /*position: relative;*/
-    position: fixed;
+    position: relative;
 }
 .process-step p {
     margin-top: 4px;
