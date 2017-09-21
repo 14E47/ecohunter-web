@@ -1924,7 +1924,7 @@ Third page Tabs
 .process {
     display: table;
     width: 100%;
-    position: relative;
+    /*position: relative;*/
 }
 .process-row {
     display: table-row;
@@ -1946,7 +1946,7 @@ Third page Tabs
 .process-step {
     display: table-cell;
     text-align: center;
-    position: relative;
+    /*position: relative;*/
 }
 .process-step p {
     margin-top: 4px;
