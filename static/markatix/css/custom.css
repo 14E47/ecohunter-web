@@ -1918,8 +1918,10 @@ Third page Tabs
 .process-step .btn:focus {
     outline: none;
 }
-.positionfixer{
-    position: static;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 .process {
     display: table;

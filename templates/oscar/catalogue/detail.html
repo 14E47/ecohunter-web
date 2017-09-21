@@ -132,7 +132,7 @@
 
     <!-- HOTEL MAIN PAGE -->
 {#    <div class="dropdown-details hidden-xs animated fadein">#}
-      <div class="positionfixer">
+      <div class="sticky">
         <div class="process">
             <div class="process-row nav nav-tabs">
                   <div class="process-step">
@@ -208,4 +208,26 @@
 
 {% endblock content %}
 
+{% block extrascripts %}
+    <script>
+        $(window).scroll(function() {
+          // get the scroll position
+          var height = $(window).scrollTop();
 
+          // Output the height for debug
+          console.log(height);
+
+          if (height > 100) {
+            // make the nav bar stick at the top
+            $("nav").addClass("sticky");
+            $("container").addClass("smoothscroll");
+          }
+          else {
+            // reset the nav bar
+            $("nav").removeClass("sticky");
+            $("container").removeClass("smoothscroll");
+          }
+        });
+
+    </script>
+{% endblock %}
