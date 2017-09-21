@@ -1962,11 +1962,7 @@ Third page Tabs
 .descriptiontext {
     border: solid 1px;
 }
-.descnav {
-    background-color: #000;
-    color: #FFFFFF;
-    border: 1px;
-}
+
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
 {
     text-align: -webkit-center;
