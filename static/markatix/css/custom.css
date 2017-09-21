@@ -1953,9 +1953,9 @@ Third page Tabs
 }
 .btn-circle {
     /*width: 120px;*/
-    width: 20%;
+    width: 100%;
     /*height: 60px;*/
-    height: 100px;
+    height: 60px;
     text-align: center;
     font-size: 12px;
     border-radius: 0%;
