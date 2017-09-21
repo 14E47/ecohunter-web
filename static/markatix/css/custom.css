@@ -1920,7 +1920,8 @@ Third page Tabs
 .process {
     display: table;
     width: 100%;
-    position: relative;
+    /*position: relative;*/
+    position: fixed;
 }
 .process-row {
     display: table-row;
