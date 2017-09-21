@@ -1951,12 +1951,12 @@ Third page Tabs
     border-color: transparent;
 }
 .process-step p {
-    margin-top: 1px;
+    margin-top: 3px;
 }
 .btn-circle {
     /*width: 120px;*/
-    width: 220px;
-    height: 60px;
+    width: 230px;
+    height: 70px;
     /*height: 60px;*/
     text-align: center;
     font-size: 12px;
