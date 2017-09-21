@@ -1945,21 +1945,21 @@ Third page Tabs
     text-align: center;
     position: relative;
 }
-a.process-step {
-    border-color: #FFFFFF;
+.process-step > a {
+    border: none;
 }
 .process-step p {
     margin-top: 4px;
 }
 .btn-circle {
     /*width: 120px;*/
-    width: 240px;
+    width: 120px;
     height: 60px;
     text-align: center;
     font-size: 12px;
     border-radius: 0%;
 }
-.descriptiontext .smoothscroll {
+.descriptiontext {
     border: solid 1px;
 }
 
