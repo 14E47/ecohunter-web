@@ -1924,7 +1924,8 @@ Third page Tabs
     position: relative;
 }
 .process-row {
-    display: table-row;
+    /*display: table-row;*/
+    display: table-column;
 }
 .process-step button[disabled] {
     opacity: 1 !important;
