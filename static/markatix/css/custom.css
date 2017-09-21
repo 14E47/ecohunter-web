@@ -1920,11 +1920,11 @@ Third page Tabs
 .process {
     display: table;
     width: 100%;
-    /*position: relative;*/
-    position: fixed;
+    position: relative;
 }
 .process-row {
     display: table-row;
+    position: fixed;
 }
 .process-step button[disabled] {
     opacity: 1 !important;
