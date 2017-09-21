@@ -1945,8 +1945,8 @@ Third page Tabs
     text-align: center;
     position: relative;
 }
-.process-step a {
-    border-color: transparent;
+a.process-step {
+    border-color: #FFFFFF;
 }
 .process-step p {
     margin-top: 4px;
