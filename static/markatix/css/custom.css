@@ -1941,7 +1941,8 @@ Third page Tabs
     z-index: 0;
 }
 .process-step {
-    display: table-cell;
+    /*display: table-cell;*/
+    display: inline-table;
     text-align: center;
     position: relative;
 }
@@ -1949,7 +1950,7 @@ Third page Tabs
     border: none;
 }
 .process-step p {
-    margin-top: 4px;
+    margin-top: 1px;
 }
 .btn-circle {
     /*width: 120px;*/
