@@ -1924,8 +1924,7 @@ Third page Tabs
     position: relative;
 }
 .process-row {
-    /*display: table-row;*/
-    display: table-column;
+    display: table-row;
 }
 .process-step button[disabled] {
     opacity: 1 !important;
@@ -1956,7 +1955,7 @@ Third page Tabs
 }
 .btn-circle {
     /*width: 120px;*/
-    width: 240px;
+    width: 220px;
     height: 60px;
     /*height: 60px;*/
     text-align: center;
