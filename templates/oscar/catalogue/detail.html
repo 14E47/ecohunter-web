@@ -226,9 +226,10 @@
 
     <!--HOTEL PAGE TEXT INPUT -->
 
-      <div class="container" style="padding: 40px; font-size: 38px">
+      <div class="container" style="padding: 40px; font-size: 38px; border: solid 1px">
 
-               <div id="menu1" class="text-center smoothscroll">
+{#               <div id="menu1" class="text-center smoothscroll">#}
+               <div id="menu1" class="smoothscroll">
                    <h3  class="text-center"><u>The Experience</u></h3>
                   <p class="text-center">{{ product.description | safe }}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
@@ -236,7 +237,8 @@
                   </ul> -->
                </div>
 
-               <div id="menu2" class="det smoothscroll">
+{#               <div id="menu2" class="det smoothscroll">#}
+               <div id="menu2" class="smoothscroll">
                    <h3  class="text-center"><u>Activities</u></h3>
                   <p class="text-center">{{ product.activities | safe }}</p>
                </div>
