@@ -1954,15 +1954,12 @@ Third page Tabs
 }
 .btn-circle {
     /*width: 120px;*/
-    width: 240px;
+    width: 120px;
     /*height: 60px;*/
     height: 60px;
     text-align: center;
     font-size: 12px;
     border-radius: 0%;
-}
-.descriptiontext {
-    border: solid 1px;
 }
 
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon

@@ -183,6 +183,8 @@
 
     <!-- HOTEL MAIN PAGE -->
 {#    <div class="dropdown-details hidden-xs animated fadein">#}
+<div class="container">
+    <div class="row">
       <div id="site-navigation" class="main-navigation">
         <div class="process">
             <div class="process-row nav nav-tabs">
@@ -228,16 +230,15 @@
                           {% include "catalogue/partials/add_to_basket_form_custom.html" %}
                       {% endblock %}
                   </div>
-               </div>
             </div>
         </div>
       </div>
-
+    </div>
 
 
     <!--HOTEL PAGE TEXT INPUT -->
-<div class="descriptiontext">
-      <div class="container" style="padding: 40px 0 20px 0; font-size: 38px">
+    <div class="row">
+      <div class="container" style="padding: 40px 0 20px 0; font-size: 38px; border: solid 1px">
 
 {#               <div id="menu1" class="text-center smoothscroll">#}
                <div id="menu1" class="smoothscroll">
@@ -267,7 +268,8 @@
                    <h3 class="text-center"><u>Practical Info</u></h3>
                   <h5 class="text-center">{{ product.practical | safe }}</h5>
                </div>
-      </div>  
+      </div>
+    </div>
 </div>
 
 {% endblock content %}
