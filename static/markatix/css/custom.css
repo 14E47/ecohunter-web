@@ -1945,7 +1945,6 @@ Third page Tabs
     display: inline-table;
     text-align: center;
     position: relative;
-    width: 100%;
 }
 .process-step > a {
     border: none;
@@ -1956,8 +1955,8 @@ Third page Tabs
 }
 .btn-circle {
     /*width: 120px;*/
-    /*width: 120px;*/
-    /*height: 60px;*/
+    width: 240px;
+    height: 60px;
     /*height: 60px;*/
     text-align: center;
     font-size: 12px;
