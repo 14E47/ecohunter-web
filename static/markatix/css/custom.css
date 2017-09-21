@@ -1933,8 +1933,7 @@ Third page Tabs
 .process-row:before {
     top: 30px;
     bottom: 0;
-    /*position: absolute;*/
-    position: fixed;
+    position: absolute;
     content: " ";
     width: 100%;
     height: 1px;
@@ -1944,7 +1943,8 @@ Third page Tabs
 .process-step {
     display: table-cell;
     text-align: center;
-    position: relative;
+    /*position: relative;*/
+    position: fixed;
 }
 .process-step p {
     margin-top: 4px;
