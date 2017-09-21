@@ -187,21 +187,21 @@
         <div class="process">
             <div class="process-row nav nav-tabs">
                   <div class="process-step">
-                      <a href="menu1">
+                      <a href="#menu1">
                           <button type="button" class="btn btn-info btn-circle smoothscroll"><i class="fa fa-info fa-3x"></i></button>
                       </a>
                       <p><small>The<br>Experience</small></p>
                   </div>
 
                   <div class="process-step">
-                      <a href = "menu2">
+                      <a href = "#menu2">
                           <button type="button" class="btn btn-default btn-circle smoothscroll"><i class="fa fa-file-text-o fa-3x"></i></button>
                       </a>
                       <p><small><br />Activities</small></p>
                   </div>
 
                   <div class="process-step">
-                      <a href = "menu3">
+                      <a href = "#menu3">
                           <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3"><i class="fa fa-image fa-3x"></i></button>
                       </a>
                       <p><small><br />Accomodation</small></p>
@@ -209,7 +209,7 @@
                   </div>
 
                   <div class="process-step">
-                      <a href= "menu4">
+                      <a href= "#menu4">
                           <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu4"><i class="fa fa-cogs fa-3x"></i></button>
                       </a>
                       <p><small>Practical<br />Info</small></p>
@@ -226,8 +226,8 @@
       </div>
 
     <!--HOTEL PAGE TEXT INPUT -->
-
-      <div class="container" style="padding: 40px; font-size: 38px; border: solid 1px">
+<div class="descriptiontext" style="border: solid">
+      <div class="container" style="padding: 40px 0 20px 0; font-size: 38px">
 
 {#               <div id="menu1" class="text-center smoothscroll">#}
                <div id="menu1" class="smoothscroll">
@@ -258,7 +258,7 @@
                   <h5 class="text-center">{{ product.practical | safe }}</h5>
                </div>
       </div>  
-
+</div>
 
 {% endblock content %}
 
