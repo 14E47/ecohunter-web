@@ -1931,7 +1931,7 @@ Third page Tabs
     filter: alpha(opacity=100) !important;
 }
 .process-row:before {
-    top: 10px;
+    top: 30px;
     bottom: 0;
     position: absolute;
     content: " ";
