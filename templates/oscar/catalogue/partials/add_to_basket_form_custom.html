@@ -9,10 +9,14 @@
     <form action="{% url 'basket:add' pk=product.pk %}" method="post">
         {% csrf_token %}
         {{ basket_form.as_p }}
-        <button type="button" class="btn btn-default btn-circle"><i class="fa fa-check fa-3x"></i></button>
-        <p><small>Book Now</small></p>
+        <button type="button" class="btn btn-default btn-circle">
+            <i class="fa fa-check fa-3x"></i>
+            <p><small>Book Now</small></p>
+        </button>
     </form>
 {% else %}
-    <button type="button" class="btn btn-default btn-circle"><i class="fa fa-check fa-3x"></i></button>
+    <button type="button" class="btn btn-default btn-circle">
+        <i class="fa fa-check fa-3x"></i>
         <p><small>Book Now</small></p>
+    </button>
 {% endif %}
