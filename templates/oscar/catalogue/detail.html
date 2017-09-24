@@ -226,6 +226,15 @@
                   </div>
 
                   <div class="process-step">
+                      <a href= "#menu5">
+                          <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu5">
+                              <i class="fa fa-rupee fa-3x"></i>
+                              <p><small>Price</small></p>
+                          </button>
+                      </a>
+                  </div>
+
+                  <div class="process-step">
                       {% block product_basket_form %}
                           {% include "catalogue/partials/add_to_basket_form_custom.html" %}
                       {% endblock %}
@@ -267,6 +276,11 @@
                <div id="menu4" class="smoothscroll">
                    <h3 class="text-center"><u>Practical Info</u></h3>
                    <p class="text-center">{{ product.practical | safe }}</p>
+               </div>
+
+               <div id="menu5" class="smoothscroll">
+                   <h3 class="text-center"><u>Price</u></h3>
+                   <p class="text-center">{{ product.price | safe }}</p>
                </div>
       </div>
     </div>
