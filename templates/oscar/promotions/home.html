@@ -54,68 +54,68 @@
               </form>
                -->
               <form method="GET" id="form">
-               <div class="dropdown-details hidden-xs animated fadein" animation-duration="2s" animation-delay="2s" animation-iteration-count="infinite">
-                  <div class="dropdown-heading">
-                     <h3 class="text-center">Find Your Flavour</h3>
-                  </div>
+                   <div class="dropdown-details hidden-xs animated fadein" animation-duration="2s" animation-delay="2s" animation-iteration-count="infinite">
+                      <div class="dropdown-heading">
+                         <h3 class="text-center">Find Your Flavour</h3>
+                      </div>
 
-                  <div class="dropdown-content">
-                     <div class="col-md-2">
-                        <div class="dropdown destinations text-center">
-                           {% category_tree as tree_categories %}
-                            <select id="selectId" class="btn-primary form-control">
-                              {% for city in tree_categories %}
-                                <option value="{{city.0.get_absolute_url}}">{{city.0.name}}</option>
-                              {% endfor %}
-                            </select>
-                           <!-- 
-                           {% category_tree as tree_categories %}
-                           <ul class="dropdown-menu">
-                              {% for city in tree_categories %}
-                                <li><a href="{{city.0.get_absolute_url}}">{{city.0.name}}</a></li>
-                              {% endfor %}
-                           </ul>
-                           -->
-                        </div>
-                     </div>
-                     <div class="col-md-2">
-                        <div class='input-group date' id='datetimepicker6'>
-                           <!-- <input type='text' class="form-control" id="arr-date" name="date" placeholder="Arrival Date (MM/DD/YYY)" /> -->
-                           <input class="form-control" type="text" id="dpd1" placeholder="Arrival Date (MM/DD/YYY)"/>
-                           <span class="input-group-addon">
-                              <span class="glyphicon glyphicon-calendar"></span>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="col-md-2">
-                        <div class='input-group date' id='datetimepicker7'>
-                        <!--<input type='text' class="form-control" id="dep-date" name="date" placeholder="Departure Date(MM/DD/YYYY)" /> -->
-                           <input class="form-control" type="text" id="dpd2" placeholder="Departure Date(MM/DD/YYYY)"/>
-                           <span class="input-group-addon">
-                              <span class="glyphicon glyphicon-calendar"></span>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="col-md-2">
-                      <!-- <div class="dropdown month text-center">
-                           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Month
-                              <span class="caret"></span></button>
-                              <ul class="dropdown-menu">
-                                 <li><a href="#">HTML</a></li>
-                                 <li><a href="#">CSS</a></li>
-                                 <li><a href="#">JavaScript</a></li>
-                              </ul>
-                           </div> -->
-                        <input class="form-control" id="people" name="people" placeholder="No. Of People" type="number"/>
-                     </div>
-                     <div class="col-md-2">
-                        <div class="button submit text-center">
-                           <input class="btn btn-primary" type="submit"></input>
-                           <!-- <button class="btn btn-primary" type="button">Submit</button> -->
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                      <div class="dropdown-content">
+                         <div class="col-md-2">
+                            <div class="dropdown destinations text-center">
+                               {% category_tree as tree_categories %}
+                                <select id="selectId" class="btn-primary form-control">
+                                  {% for city in tree_categories %}
+                                    <option value="{{city.0.get_absolute_url}}">{{city.0.name}}</option>
+                                  {% endfor %}
+                                </select>
+    {#                           <!-- #}
+    {#                           {% category_tree as tree_categories %}#}
+    {#                           <ul class="dropdown-menu">#}
+    {#                              {% for city in tree_categories %}#}
+    {#                                <li><a href="{{city.0.get_absolute_url}}">{{city.0.name}}</a></li>#}
+    {#                              {% endfor %}#}
+    {#                           </ul>#}
+    {#                           -->#}
+                            </div>
+                         </div>
+                         <div class="col-md-2">
+                            <div class='input-group date' id='datetimepicker6'>
+                               <!-- <input type='text' class="form-control" id="arr-date" name="date" placeholder="Arrival Date (MM/DD/YYY)" /> -->
+                               <input class="form-control" type="text" id="dpd1" placeholder="Arrival Date (MM/DD/YYY)"/>
+                               <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar"></span>
+                               </span>
+                            </div>
+                         </div>
+                         <div class="col-md-2">
+                            <div class='input-group date' id='datetimepicker7'>
+                            <!--<input type='text' class="form-control" id="dep-date" name="date" placeholder="Departure Date(MM/DD/YYYY)" /> -->
+                               <input class="form-control" type="text" id="dpd2" placeholder="Departure Date(MM/DD/YYYY)"/>
+                               <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar"></span>
+                               </span>
+                            </div>
+                         </div>
+                         <div class="col-md-2">
+                          <!-- <div class="dropdown month text-center">
+                               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Month
+                                  <span class="caret"></span></button>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="#">HTML</a></li>
+                                     <li><a href="#">CSS</a></li>
+                                     <li><a href="#">JavaScript</a></li>
+                                  </ul>
+                               </div> -->
+                            <input class="form-control" id="people" name="people" placeholder="No. Of People" type="number"/>
+                         </div>
+                         <div class="col-md-2">
+                            <div class="button submit text-center">
+                               <input class="btn btn-primary" type="submit">
+                               <!-- <button class="btn btn-primary" type="button">Submit</button> -->
+                            </div>
+                         </div>
+                      </div>
+                   </div>
               </form>
             </div>
          </div>
