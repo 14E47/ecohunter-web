@@ -1961,9 +1961,14 @@ Third page Tabs
     text-align: center;
     font-size: 12px;
     border-radius: 0%;
-    background-color: #c0c0c0;
+    background-color: #CCCCCC;
 }
 .btn-price {
+    width: 195px;
+    height: 70px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 0%;
     background-color: #b48b50;
 }
 .btn-price:hover {
