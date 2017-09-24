@@ -1963,6 +1963,12 @@ Third page Tabs
     border-radius: 0%;
     background-color: #c0c0c0;
 }
+.btn-price {
+    background-color: #b48b50;
+}
+.btn-price:hover {
+    background-color: #b28340;
+}
 
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
 {
