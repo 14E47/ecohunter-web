@@ -189,7 +189,7 @@
         <div class="process">
             <div class="process-row nav nav-tabs">
                   <div class="process-step">
-                      <a href="#menu1" style="border: hidden">
+                      <a href="#menu1">
                           <button type="button" class="btn btn-default btn-circle smoothscroll">
                               <i class="fa fa-info fa-3x"></i>
                               <p><small>The Experience</small></p>
@@ -247,10 +247,10 @@
 
     <!--HOTEL PAGE TEXT INPUT -->
     <div class="row">
-      <div class="container" style="padding: 40px 13px 20px 13px; font-size: 38px; border: solid 1px">
+      <div class="container" style="padding: 40px 13px 20px 13px; border: solid 1px">
 
 {#               <div id="menu1" class="text-center smoothscroll">#}
-               <div id="menu1" class="smoothscroll">
+               <div id="menu1" class="smoothscroll descriptiontext">
                    <h3  class="text-center"><u>The Experience</u></h3>
                    <p class="text-center">{{ product.description | safe }}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
@@ -259,12 +259,12 @@
                </div>
 
 {#               <div id="menu2" class="det smoothscroll">#}
-               <div id="menu2" class="smoothscroll">
+               <div id="menu2" class="smoothscroll descriptiontext">
                    <h3  class="text-center"><u>Activities</u></h3>
                    <p class="text-center">{{ product.activities | safe }}</p>
                </div>
 
-               <div id="menu3" class=" smoothscroll">
+               <div id="menu3" class=" smoothscroll descriptiontext">
                    <h3 class="text-center"><u>Accomodation</u></h3>
                    <p class="text-center">{{ product.accomodation | safe }}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
@@ -273,12 +273,12 @@
                   </ul> -->
                </div>
 
-               <div id="menu4" class="smoothscroll">
+               <div id="menu4" class="smoothscroll descriptiontext">
                    <h3 class="text-center"><u>Practical Info</u></h3>
                    <p class="text-center">{{ product.practical | safe }}</p>
                </div>
 
-               <div id="menu5" class="smoothscroll">
+               <div id="menu5" class="smoothscroll descriptiontext">
                    <h3 class="text-center"><u>Prices</u></h3>
                    <p class="text-center">{{ product.price | safe }}</p>
                </div>

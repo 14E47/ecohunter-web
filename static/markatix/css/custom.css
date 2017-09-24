@@ -1946,7 +1946,7 @@ Third page Tabs
     text-align: center;
     position: relative;
 }
-.process-step > a {
+.process-step>a:active {
     border: none;
     border-color: transparent;
 }
@@ -1976,7 +1976,13 @@ Third page Tabs
     background-color: #b28340;
     border-color: #b28340;
 }
-
+.descriptiontext>h3 {
+    /*color: #a38f72;*/
+    font-size: 38px;
+}
+.descriptiontext>p {
+    font-size: 18px;
+}
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
 {
     text-align: -webkit-center;
