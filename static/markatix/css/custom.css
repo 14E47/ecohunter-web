@@ -1970,9 +1970,11 @@ Third page Tabs
     font-size: 12px;
     border-radius: 0%;
     background-color: #b48b50;
+    border-color: #b48b50;
 }
 .btn-price:hover {
     background-color: #b28340;
+    border-color: #b28340;
 }
 
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
