@@ -182,7 +182,7 @@ Banner Image Styling
 }
 .banner-details .bxslider > li{
     width: 100%;
-    height: 300px;
+    height: 450px;
     padding: 0 0 0 0;
 }
 .banner-details .bxslider > li > img{
@@ -244,8 +244,7 @@ Banner Dropdown Styling
     transition: 0.4s all ease-in-out;
 }
 .dropdown-heading > h3 {
-    /*position: relative;*/
-    position: static;
+    position: relative;
     font-size: 15px;
     z-index: 1;
     overflow: hidden;
