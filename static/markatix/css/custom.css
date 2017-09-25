@@ -1979,12 +1979,12 @@ Third page Tabs
     background-color: #b28340;
     border-color: #b28340;
 }
-h3.descriptiontext {
+.descriptiontext h3 {
     /*color: #a38f72;*/
     font-size: 35px;
     color: #b48b50;
 }
-p.descriptiontext {
+.descriptiontext p {
     font-size: 18px;
 }
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
