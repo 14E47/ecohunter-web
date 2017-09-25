@@ -230,7 +230,7 @@ Banner Dropdown Styling
 -----------------------*/
 .banner-dropdown {
     margin-top: 5%;
-    position: fixed;
+    position: static;
 }
 .dropdown {
     list-style-type: none;
