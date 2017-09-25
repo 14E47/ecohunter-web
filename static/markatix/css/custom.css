@@ -174,7 +174,7 @@ Banner Image Styling
 
 .banner-details > img {
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 .banner-text {
     margin-top: -10%;
@@ -926,7 +926,8 @@ Destination Page Styling
     padding: 5%;
 }
 .customized-heading-3>h3 {
-    color: #a38f72 !important;
+    /*color: #a38f72 !important;*/
+    color: #b48b50;
     margin-bottom: 0px;
     font-weight: 900;
 }
