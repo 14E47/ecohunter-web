@@ -247,7 +247,7 @@ Banner Dropdown Styling
     position: relative;
     font-size: 15px;
     z-index: 1;
-    overflow: hidden;
+    /*overflow: hidden;*/
     text-align: center;
     color: #a08f72;
     font-weight: 900;
@@ -258,7 +258,7 @@ Banner Dropdown Styling
 .dropdown-heading > h3:before {
     position: absolute;
     top: 51%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 48%;
     right: -14%;
     height: 1px;
@@ -268,7 +268,7 @@ Banner Dropdown Styling
 .dropdown-heading > h3:after {
     position: absolute;
     top: 51%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 54%;
     left: -20%;
     height: 1px;
