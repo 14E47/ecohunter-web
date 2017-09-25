@@ -256,8 +256,7 @@ Banner Dropdown Styling
     /*earlier it was padding: 4% 5% 4% 5%;*/
 }
 .dropdown-heading > h3:before {
-    /*position: absolute;*/
-    position: static;
+    position: absolute;
     top: 51%;
     overflow: hidden;
     width: 48%;
