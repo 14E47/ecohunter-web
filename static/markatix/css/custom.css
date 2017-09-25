@@ -230,6 +230,7 @@ Banner Dropdown Styling
 -----------------------*/
 .banner-dropdown {
     margin-top: 5%;
+    position: fixed;
 }
 .dropdown {
     list-style-type: none;
@@ -241,7 +242,7 @@ Banner Dropdown Styling
     padding: 1px;
     /*ealier it was 5px */
     position: fixed;
-    /*transition: 0.4s all ease-in-out;*/
+    transition: 0.4s all ease-in-out;
 }
 .dropdown-heading > h3 {
     position: relative;
