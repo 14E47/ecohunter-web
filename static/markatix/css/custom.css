@@ -1961,7 +1961,8 @@ Third page Tabs
     text-align: center;
     font-size: 12px;
     border-radius: 0%;
-    background-color: #EEE8E8;
+    /*background-color: #EEE8E8;*/
+    background-color: #FFFFFF;
 }
 .btn-price {
     width: 195px;
@@ -1969,6 +1970,7 @@ Third page Tabs
     text-align: center;
     font-size: 12px;
     border-radius: 0%;
+    color: #FFFFFF;
     background-color: #b48b50;
     border-color: #b48b50;
 }
@@ -1979,6 +1981,7 @@ Third page Tabs
 .descriptiontext>h3 {
     /*color: #a38f72;*/
     font-size: 35px;
+    color: #b48b50;
 }
 .descriptiontext>p {
     font-size: 18px;
