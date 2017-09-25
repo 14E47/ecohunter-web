@@ -243,14 +243,6 @@ Banner Dropdown Styling
 
     transition: 0.4s all ease-in-out;
 }
-.dropdown-details-alpha {
-    background-color: #222222;
-    /*ealier it was #eae3db */
-
-    padding: 1px;
-    /*ealier it was 5px */
-
-    transition: 0.4s all ease-in-out;
 .dropdown-heading > h3 {
     position: relative;
     font-size: 15px;
