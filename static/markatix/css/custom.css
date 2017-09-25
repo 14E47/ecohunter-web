@@ -182,7 +182,7 @@ Banner Image Styling
 }
 .banner-details .bxslider > li{
     width: 100%;
-    height: 430px;
+    height: 300px;
     padding: 0 0 0 0;
 }
 .banner-details .bxslider > li > img{
@@ -230,7 +230,6 @@ Banner Dropdown Styling
 -----------------------*/
 .banner-dropdown {
     margin-top: 5%;
-    position: static;
 }
 .dropdown {
     list-style-type: none;
@@ -241,7 +240,7 @@ Banner Dropdown Styling
     
     padding: 1px;
     /*ealier it was 5px */
-    position: fixed;
+
     transition: 0.4s all ease-in-out;
 }
 .dropdown-heading > h3 {
@@ -927,8 +926,7 @@ Destination Page Styling
     padding: 5%;
 }
 .customized-heading-3>h3 {
-    /*color: #a38f72 !important;*/
-    color: #b48b50;
+    color: #a38f72 !important;
     margin-bottom: 0px;
     font-weight: 900;
 }
@@ -1980,12 +1978,12 @@ Third page Tabs
     background-color: #b28340;
     border-color: #b28340;
 }
-.descriptiontext h3 {
+.descriptiontext>h3 {
     /*color: #a38f72;*/
     font-size: 35px;
     color: #b48b50;
 }
-.descriptiontext p {
+.descriptiontext>p {
     font-size: 18px;
 }
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
