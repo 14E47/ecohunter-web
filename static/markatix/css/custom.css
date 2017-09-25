@@ -240,8 +240,8 @@ Banner Dropdown Styling
     
     padding: 1px;
     /*ealier it was 5px */
-    /*position: fixed;*/
-    transition: 0.4s all ease-in-out;
+    position: fixed;
+    /*transition: 0.4s all ease-in-out;*/
 }
 .dropdown-heading > h3 {
     position: relative;
@@ -256,8 +256,7 @@ Banner Dropdown Styling
     /*earlier it was padding: 4% 5% 4% 5%;*/
 }
 .dropdown-heading > h3:before {
-    /*position: absolute;*/
-    position: fixed;
+    position: absolute;
     top: 51%;
     overflow: hidden;
     width: 48%;
