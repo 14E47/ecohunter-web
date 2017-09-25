@@ -926,7 +926,8 @@ Destination Page Styling
     padding: 5%;
 }
 .customized-heading-3>h3 {
-    color: #a38f72 !important;
+    /*color: #a38f72 !important;*/
+    color: #b48b50;
     margin-bottom: 0px;
     font-weight: 900;
 }
@@ -1978,12 +1979,12 @@ Third page Tabs
     background-color: #b28340;
     border-color: #b28340;
 }
-.descriptiontext>h3 {
+h3.descriptiontext {
     /*color: #a38f72;*/
     font-size: 35px;
     color: #b48b50;
 }
-.descriptiontext>p {
+p.descriptiontext {
     font-size: 18px;
 }
 .desti-property-icon , .desti-property-guest-icon , .desti-bedroom-icon , .desti-beds-invent-icon
