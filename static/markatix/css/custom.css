@@ -235,6 +235,7 @@ Banner Dropdown Styling
     list-style-type: none;
 }
 .dropdown-details {
+    position: static;
     background-color: #222222;
     /*ealier it was #eae3db */
     
@@ -244,8 +245,7 @@ Banner Dropdown Styling
     transition: 0.4s all ease-in-out;
 }
 .dropdown-heading > h3 {
-    /*position: relative;*/
-    position: static;
+    position: relative;
     font-size: 15px;
     z-index: 1;
     overflow: hidden;
