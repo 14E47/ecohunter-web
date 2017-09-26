@@ -242,7 +242,7 @@ Banner Dropdown Styling
     padding: 1px;
     /*ealier it was 5px */
 
-    transition: 0s all ease-in-out;
+    /*transition: 0.4s all ease-in-out;*/
 }
 .dropdown-heading > h3 {
     position: relative;
