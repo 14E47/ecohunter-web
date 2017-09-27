@@ -223,7 +223,7 @@ Banner Image Styling
     margin-left: 10px;
 }
 .img-banner {
-    /*margin-top: 5%;*/
+    margin-top: 5%;
 }
 /*----------------------
 Banner Dropdown Styling
@@ -234,7 +234,7 @@ Banner Dropdown Styling
 .dropdown {
     list-style-type: none;
 }
-.dropdown-details {
+.dropdown-details-alpha {
     position: static;
     background-color: #222222;
     /*ealier it was #eae3db */
@@ -242,7 +242,7 @@ Banner Dropdown Styling
     padding: 1px;
     /*ealier it was 5px */
 
-    /*transition: 0.4s all ease-in-out;*/
+    transition: 0.4s all ease-in-out;
 }
 .dropdown-heading > h3 {
     position: relative;
