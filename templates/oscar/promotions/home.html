@@ -24,6 +24,7 @@
                         {% for image in images %}
                             <li><img src="{{ image.original.url }}" class="img-responsive" /></li>
                         {% endfor %}
+                            <li><img src="{% static "markatix/img/thought_banner.jpg" %}" class="img-responsive" /></li>
                             <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>
                             <li><img src="{% static "markatix/img/29.jpg" %}" class="img-responsive" /></li>
                             <li><img src="{% static "markatix/img/30.jpg" %}" class="img-responsive" /></li>
@@ -224,23 +225,6 @@
          </div>
 </div>
 
-
- <div class="recommend-place" id="recommend-place">
-         <div class="container">
-            <div class="row">
-               <div class="customized-heading-2">
-                  <div class="background-img-2">
-                     <h3>Do It</h3>
-                     <h2>Yourself</h2>
-                  </div>
-                  <p>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</p>
-                  <div class="recommend-btn">
-                      <a href="/contact">Recommend Experiences</a>
-                   </div>
-               </div>
-            </div>
-         </div>
-</div> 
 <div class="experieces-text" id="experieces-text">
          <div class="container">
             <div class="row">
@@ -271,26 +255,98 @@
                          <!--<p class="content-text">This is a short description</p> -->
                       </div>
                    </a>
-                  </div> 
+                  </div>
                 </div>
-              {% endfor %} 
+              {% endfor %}
             </div>
          </div>
-         </div>
 </div>
+
+    <div class="recommend-place" id="recommend-place">
+         <div class="container">
+            <div class="row">
+               <div class="customized-heading-2">
+                  <div class="background-img-2">
+                     <h3>Do It</h3>
+                     <h2>Yourself</h2>
+                  </div>
+                  <p>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</p>
+{#                  <div class="recommend-btn">#}
+{#                      <a href="/contact">Recommend Experiences</a>#}
+{#                   </div>#}
+               </div>
+            </div>
+         </div>
+    </div>
+
+
+<div class="review" id="review">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-8 col-md-offset-2">
+{#                 <div class="customized-heading-2">#}
+{#                    <div class="background-img-3">#}
+{#                       <h3>We Are</h3>#}
+{#                       <h2>At our Best</h2>#}
+{#                    </div>#}
+{#                 </div>#}
+                <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+                <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                   <!-- Carousel indicators -->
+                   <ol class="carousel-indicators">
+                      <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                      <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+                   </ol>
+                   <!-- Carousel items -->
+                   <div class="carousel-inner">
+                      <div class="active item text-center">
+                         <!-- <div class="profile-circle" style="background-color: rgba(0,0,0,.2);"></div>-->
+                          <div class="reviewer-img text-center">
+                            <img src="{% static "markatix/img/10.jpg" %}" class="img-responsive">
+                          </div>
+                          <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                         </blockquote>
+{#                          <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>#}
+                      </div>
+                      <div class="item text-center">
+                        <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
+                         <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                         </blockquote>
+{#                         <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>#}
+                      </div>
+                      <div class="item text-center">
+                        <div class="profile-circle" style="background-color: rgba(145,169,216,.2);"></div>
+                         <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                         </blockquote>
+{#                         <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>#}
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+                  <div class="recommend-btn text-center">
+                      <a href="/contact">Recommend Experiences</a>
+                  </div>
+       </div>
+</div>
+
 
 {% wordpress_feeds as feeds %}
 <div class="explore-world" id="explore-world">
          <div class="container">
-            <div class="row">
-               <div class="customized-heading-2">
-                  <div class="background-img-3">
-                     <h3>Explore The</h3>
-                     <h2>World of Eco Hunter</h2>
-                  </div>
-                  <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
-               </div>
-            </div>
+{#            <div class="row">#}
+{#               <div class="customized-heading-2">#}
+{#                  <div class="background-img-3">#}
+{#                     <h3>Explore The</h3>#}
+{#                     <h2>World of Eco Hunter</h2>#}
+{#                  </div>#}
+{#                  <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->#}
+{#               </div>#}
+{#            </div>#}
             <div class="row">
                <div class="col-md-12">
                   <ul class="tabs-try">
@@ -300,7 +356,7 @@
                      <li class="two filter-button" data-filter="craft-post">
                         <p>Craft Post</p>
                      </li>
-                     <!-- 
+                     <!--
                         <li class="three filter-button" data-filter="sprinkle"><a href="#">Images</a></li> -->
                      <hr/>
                      <!--   <li class="four"><a href="#">Quatro</a></li> -->
@@ -481,48 +537,49 @@
             </div>
          </div>
 </div>
+
 <div class="review" id="review">
        <div class="container">
           <div class="row">
              <div class="col-md-8 col-md-offset-2">
-                 <div class="customized-heading-2">
-                    <div class="background-img-3">
-                       <h3>We Are</h3>
-                       <h2>At our Best</h2>
-                    </div>
-                 </div>
-                <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
-                <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+{#                 <div class="customized-heading-2">#}
+{#                    <div class="background-img-3">#}
+{#                       <h3>We Are</h3>#}
+{#                       <h2>At our Best</h2>#}
+{#                    </div>#}
+{#                 </div>#}
+{#                <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>#}
+{#                <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">#}
                    <!-- Carousel indicators -->
-                   <ol class="carousel-indicators">
-                      <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
-                      <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
-                   </ol>
+{#                   <ol class="carousel-indicators">#}
+{#                      <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>#}
+{#                      <li data-target="#fade-quote-carousel" data-slide-to="1"></li>#}
+{#                      <li data-target="#fade-quote-carousel" data-slide-to="2"></li>#}
+{#                   </ol>#}
                    <!-- Carousel items -->
                    <div class="carousel-inner">
                       <div class="active item text-center">
                          <!-- <div class="profile-circle" style="background-color: rgba(0,0,0,.2);"></div>-->
-                          <div class="reviewer-img text-center">
-                            <img src="{% static "markatix/img/10.jpg" %}" class="img-responsive">
-                          </div>
-                          <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                         </blockquote>
+{#                          <div class="reviewer-img text-center">#}
+{#                            <img src="{% static "markatix/img/10.jpg" %}" class="img-responsive">#}
+{#                          </div>#}
+{#                          <blockquote>#}
+{#                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>#}
+{#                         </blockquote>#}
                           <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>
                       </div>
                       <div class="item text-center">
                         <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
-                         <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                         </blockquote>
+{#                         <blockquote>#}
+{#                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>#}
+{#                         </blockquote>#}
                          <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>
                       </div>
                       <div class="item text-center">
                         <div class="profile-circle" style="background-color: rgba(145,169,216,.2);"></div>
-                         <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                         </blockquote>
+{#                         <blockquote>#}
+{#                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>#}
+{#                         </blockquote>#}
                          <h3><span><a href=""><i class="fa fa-facebook"></i></a></span><span><a href=""><i class="fa fa-twitter"></i></a></span><span><a href=""><i class="fa fa-instagram"></i></a></span><span><a href=""><i class="fa fa-youtube"></i></a></span></h3>
                       </div>
                    </div>
@@ -531,6 +588,8 @@
           </div>
        </div>
 </div>
+
+
 <footer class="hidden-xs">
          <div class="footer" id="footer">
             <div class="container">
