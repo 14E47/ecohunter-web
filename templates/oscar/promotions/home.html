@@ -24,10 +24,10 @@
                         {% for image in images %}
                             <li><img src="{{ image.original.url }}" class="img-responsive" /></li>
                         {% endfor %}
-                            <li><img src="{% static "markatix/img/thought_banner.jpg" %}" class="img-responsive" /></li>
-                            <li><img src="{% static "markatix/img/28.jpg" %}" class="img-responsive" /></li>
-                            <li><img src="{% static "markatix/img/29.jpg" %}" class="img-responsive" /></li>
-                            <li><img src="{% static "markatix/img/30.jpg" %}" class="img-responsive" /></li>
+                            <li><a href="{{promotions_page.0.link_url}}"> <img src="{{promotions_page.0.image.url}}" class="img-responsive" /></a></li>
+                            <li><a href="{{promotions_page.1.link_url}}"> <img src="{{promotions_page.1.image.url}}" class="img-responsive" /></a></li>
+                            <li><a href="{{promotions_page.2.link_url}}"> <img src="{{promotions_page.2.image.url}}" class="img-responsive" /></a></li>
+                            <li><a href="{{promotions_page.3.link_url}}"> <img src="{{promotions_page.3.image.url}}" class="img-responsive" /></a></li>
                         {% endwith %}
                    </ul>
 
