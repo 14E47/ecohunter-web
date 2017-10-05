@@ -123,7 +123,7 @@
                             <p id="d-prop-heading"><i class="fa fa-shield fa-2x"></i>&nbsp;&nbsp;{{product.attr.abcd12}}</p>
                         </div>
                     </div>
-                    <h1 style="color:#b48b50">{{ product.title }}</h1>
+                    <h1 style="color:#b48b50;font-weight:600;">{{ product.title }}</h1>
                     <!-- <h2>{{ titles.1 }}</h2> -->
                     <!-- <h6>Can't find a place of your taste, leave your recommendation and we will find one for you. Suggest a place you have stayed and loved the experience. Your incentive Awaits.</h6> -->
                 </div>
@@ -241,19 +241,19 @@
     <div class="row">
       <div class="container" style="padding: 40px 13px 20px 13px; border: solid 1px">
 {#               <div id="menu1" class="text-center smoothscroll">#}
-               <div id="menu1" class="smoothscroll descriptiontext">
-                   <h3 class="text-center">EXPERIENCE</h3>
+               <div id="menu1" class="smoothscroll descriptiontext" style="outline:0px">
+                   <h3 class="text-center" style="font-weight:600;font-size:30px;">EXPERIENCE</h3>
                    <p class="text-center">{{ product.description | safe }}</p>
                </div>
 
 {#               <div id="menu2" class="det smoothscroll">#}
-               <div id="menu2" class="smoothscroll descriptiontext">
-                   <h3  class="text-center">ACTIVITIES</h3>
+               <div id="menu2" class="smoothscroll descriptiontext" style="outline:0px">
+                   <h3 class="text-center" style="font-weight:600;font-size:30px;">ACTIVITIES</h3>
                    <p class="text-center">{{ product.activities | safe }}</p>
                </div>
 
-               <div id="menu3" class=" smoothscroll descriptiontext">
-                   <h3 class="text-center">ACCOMODATION</h3>
+               <div id="menu3" class=" smoothscroll descriptiontext" style="outline:0px">
+                   <h3 class="text-center" style="font-weight:600;font-size:30px;">ACCOMODATION</h3>
                    <p class="text-center">{{ product.accomodation | safe }}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
@@ -261,13 +261,13 @@
                   </ul> -->
                </div>
 
-               <div id="menu4" class="smoothscroll descriptiontext">
-                   <h3 class="text-center">PRACTICAL INFO</h3>
+               <div id="menu4" class="smoothscroll descriptiontext" style="outline:0px">
+                   <h3 class="text-center" style="font-weight:600;font-size:30px;">PRACTICAL INFO</h3>
                    <p class="text-center">{{ product.practical | safe }}</p>
                </div>
 
-               <div id="menu5" class="smoothscroll descriptiontext">
-                   <h3 class="text-center">Prices</h3>
+               <div id="menu5" class="smoothscroll descriptiontext" style="outline:0px">
+                   <h3 class="text-center" style="font-weight:600;font-size:30px;">Prices</h3>
                     {% block product_stock_record %}
                         {% include "catalogue/partials/stock_record.html" with verbose=1 %}
                     {% endblock %}

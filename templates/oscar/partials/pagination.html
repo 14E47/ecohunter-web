@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% if paginator.num_pages > 1 %}
-    <div>
+    <div class="col-sm-12">
         <ul class="pager">
             {% if page_obj.has_previous %}
                 <li class="previous"><a href="?{% get_parameters page %}page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a></li>
