@@ -5,6 +5,7 @@
 {% load currency_filters %}
 {% load purchase_info_tags %}
 {% load staticfiles %}
+{% load product_tags %}
 
 {% block product %}
 
@@ -50,22 +51,18 @@
          <div class="desti-descrip">   
             <div class="desti-price-name">
              {% block product_title %}
-                <h4 class="destin-name"><i class="fa fa-shield"></i> 
+                <h4 class="destin-name"><i class="fa fa-shield"></i>
                     <span id="d-name">
-                        <a href="{{ product.get_absolute_url }}" title="{{ product.get_title }}">{{ product.get_title|truncatewords:4 }}
+                        <a href="{{ product.get_absolute_url }}" title="{{ product.get_title }}">{{product.attr.abcd12}}
                         </a>
                     </span>
                 </h4>
              {% endblock %}
              {% block product_price %}
-                <h4 class="desti-price"><i class="fa fa-bed"></i> 
-                    {% purchase_info_for_product request product as session %}
-                    
-                    {% if session.price.exists %}
-                        <p class="price_color"style="display: inline-block; margin-bottom:0">{{ session.price.excl_tax}} </p>
-                    {% endif %}
-                    <!-- Starting From &#8377<span id="d-pirce">2750
-                    </span> -->
+                <h4 class="desti-price"><i class="fa fa-inr"></i>
+                    {% block product_stock_record %}
+                        {% include "catalogue/partials/stock_record.html" with verbose=1 %}
+                    {% endblock %}
                 </h4>
             </div>     
              {% endblock %}

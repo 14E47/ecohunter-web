@@ -119,11 +119,8 @@
             <div class="row">
                 <div class="customized-heading-3">
                     <div class="text-center">
-                        <div class="desti-property-icon">
-                            <img src="{% static "markatix/img/icons/001-open-door.png" %}" class="img-responsive icon-i">
-                        </div>
                         <div class="desti-property-icon-heading">
-                            <p id="d-prop-heading">{{product.attr.abcd12}}</p>
+                            <p id="d-prop-heading"><i class="fa fa-shield fa-2x"></i>{{product.attr.abcd12}}</p>
                         </div>
                     </div>
                     <h1 style="color:#b48b50">{{ product.title }}</h1>
@@ -207,7 +204,7 @@
                   <div class="process-step">
                       <a href = "#menu3">
                           <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3">
-                              <i class="fa fa-imagefa-2x"></i>&nbsp;<span style="font-size:18px;">ACCOMODATION</span></p>
+                              <i class="fa fa-bed fa-2x"></i>&nbsp;<span style="font-size:18px;">ACCOMODATION</span></p>
                           </button>
                       </a>
 
@@ -245,18 +242,18 @@
       <div class="container" style="padding: 40px 13px 20px 13px; border: solid 1px">
 {#               <div id="menu1" class="text-center smoothscroll">#}
                <div id="menu1" class="smoothscroll descriptiontext">
-                   <h3 class="text-center"><u>EXPERIENCE</u></h3>
+                   <h3 class="text-center">EXPERIENCE</h3>
                    <p class="text-center">{{ product.description | safe }}</p>
                </div>
 
 {#               <div id="menu2" class="det smoothscroll">#}
                <div id="menu2" class="smoothscroll descriptiontext">
-                   <h3  class="text-center"><u>ACTIVITIES</u></h3>
+                   <h3  class="text-center">ACTIVITIES</h3>
                    <p class="text-center">{{ product.activities | safe }}</p>
                </div>
 
                <div id="menu3" class=" smoothscroll descriptiontext">
-                   <h3 class="text-center"><u>ACCOMODATION</u></h3>
+                   <h3 class="text-center">ACCOMODATION</h3>
                    <p class="text-center">{{ product.accomodation | safe }}</p>
                   <!-- <ul class="list-unstyled list-inline pull-right">
                      <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
@@ -265,12 +262,12 @@
                </div>
 
                <div id="menu4" class="smoothscroll descriptiontext">
-                   <h3 class="text-center"><u>PRACTICAL INFO</u></h3>
+                   <h3 class="text-center">PRACTICAL INFO</h3>
                    <p class="text-center">{{ product.practical | safe }}</p>
                </div>
 
                <div id="menu5" class="smoothscroll descriptiontext">
-                   <h3 class="text-center"><u>Prices</u></h3>
+                   <h3 class="text-center">Prices</h3>
                     {% block product_stock_record %}
                         {% include "catalogue/partials/stock_record.html" with verbose=1 %}
                     {% endblock %}
