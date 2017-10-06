@@ -353,7 +353,7 @@ Experiences Text Styling
 .experieces-text-img h2 {
     color: #000;
     padding: 15%;
-    background-image: url(../img/1.png);
+    background-image: url(../img/3.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat
@@ -440,6 +440,14 @@ Carousel & Banner Styling/Dependent Carousel
 /*---------------------
 Experintial Stays Styling
 -----------------------*/
+.background-experiential {
+    color: #000;
+    padding: 4%;
+    background-image: url(../img/1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat
+}
 
 .customized-heading-1 {
     color: #000;

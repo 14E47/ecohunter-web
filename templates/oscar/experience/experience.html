@@ -138,59 +138,100 @@
     </div>
   </div>
 </section>
+
 <section id="exp-nav" class="container-fluid" style="background-color: #fff;">
   <div class="process">
     <div class="process-row nav nav-tabs">   
         <div class="process-step">
           <a href = "#menu2">
-          <button type="button" class="btn btn-default btn-circle smoothscroll"><i class="fa fa-file-text-o fa-3x"></i></button>
+              <button type="button" class="btn btn-default btn-circle smoothscroll">
+                <p class="hide-scroll"><i class="fa fa-file-text-o fa-2x"></i>&nbsp;<span style="font-size: 18px">ACTIVITIES</span></p>
+              </button>
           </a>
-          <p class="hide-scroll"><small><br />Activities</small></p>
         </div>
       
         <div class="process-step">
           <a href = "#menu3">
-          <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3"><i class="fa fa-image fa-3x"></i></button>
+              <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu3">
+                <p class="hide-scroll"><i class="fa fa-image fa-2x"></i>&nbsp;<span style="font-size: 18px">WHY TO ENROLL ?</span></p>
+              </button>
           </a>
-          <p class="hide-scroll"><small><br />Why to Enroll?</small></p>
         </div>
       
       
         <div class="process-step">
           <a href= "#menu4">
-          <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu4"><i class="fa fa-cogs fa-3x"></i></button>
+              <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu4">
+                <p class="hide-scroll"><i class="fa fa-cogs fa-2x"></i>&nbsp;<span style="font-size: 18px">BOOKING DETAILS</span></p>
+              </button>
+          </a>
+        </div>
+
+        <div class="process-step">
+            <a href= "#menu6">
+                <button type="button" class="btn btn-default btn-circle smoothscroll" href="#menu6">
+                    <p class="hide-scroll"><i class="fa fa-cogs fa-2x"></i>&nbsp;<span style="font-size:18px;">PRACTICAL INFO</span></p>
+                </button>
             </a>
-          <p class="hide-scroll"><small>Booking <br />Details</small></p>
+        </div>
+
+        <div class="process-step">
+            <a href= "#menu7">
+                <button type="button" class="btn btn-default btn-price smoothscroll" href="#menu7">
+                    <p class="hide-scroll"><i class="fa fa-rupee fa-2x"></i>&nbsp;<span style="font-size:18px;">PRICE</span></p>
+                </button>
+            </a>
         </div>
       
         <div class="process-step">
-          <a href="book-now"><button type="button" class="btn btn-default btn-circle" href="book-now"><i class="fa fa-check fa-3x"></i></button></a>
-          <p class="hide-scroll"><small>Book<br />Now</small></p>
+          <a href="book-now">
+              <button type="button" class="btn btn-default btn-circle" href="book-now">
+                    <p class="hide-scroll"><i class="fa fa-check fa-2x"></i>&nbsp;<span style="font-size: 18px">BOOK NOW</span></p>
+              </button>
+          </a>
         </div>
     </div>
   </div>
 </section>
+
 <section class="exp-detail container">
-  <div id="menu2" class="det smoothscroll">
-      <h3  class="text-center">Activities</h3>
-      <p class="text-center">{{ experience.the_activity | safe }}</p>
-      
-  </div>
-  <div id="menu3" class=" smoothscroll">
-    <h3 class="text-center">Why to Enroll</h3>
-    <p class="text-center">{{ experience.Accomodation | safe }}</p>
-    
-  </div>
-  <div id="menu4" class="smoothscroll">
-    <h3 class="text-center">Booking Details</h3>
-    <p class="text-center">{{ experience.practical | safe }}</p>
+
+      <div id="menu2" class="det smoothscroll">
+          <h3  class="text-center">Activities</h3>
+          <p class="text-center">{{ experience.the_activity | safe }}</p>
+
       </div>
+
+      <div id="menu3" class=" smoothscroll">
+        <h3 class="text-center">Why to Enroll</h3>
+        <p class="text-center">{{ experience.Accomodation | safe }}</p>
+
+      </div>
+
+      <div id="menu4" class="smoothscroll">
+        <h3 class="text-center">Booking Details</h3>
+        <p class="text-center">{{ experience.practical | safe }}</p>
+      </div>
+
+        <div id="menu6" class="smoothscroll">
+            <h3 class="text-center">Practical Info</h3>
+            <p class="text-center">{{ product.practical | safe }}</p>
+        </div>
+
+        <div id="menu7" class="smoothscroll">
+            <h3 class="text-center">Price</h3>
+            {% block product_stock_record %}
+                {% include "catalogue/partials/stock_record.html" with verbose=1 %}
+            {% endblock %}
+        </div>
+
   <div id="menu5" class="">
-      <h3 class="text-center"></h3>
       <div class="book-button">
-        <a href="book-now">Book Now</a>
+        <a href="book-now">
+            <h3 class="text-center">Book Now</h3>
+        </a>
       </div>
-    </div>
+  </div>
 </section>
 {% endblock content %}
 

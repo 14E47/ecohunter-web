@@ -10,13 +10,11 @@
         {% csrf_token %}
         {{ basket_form.as_p }}
         <button type="button" class="btn btn-default btn-circle">
-            <i class="fa fa-check fa-3x"></i>
-            <p><small>Book Now</small></p>
+            <i class="fa fa-check fa-2x"></i>&nbsp;<span style="font-size: 18px">BOOK NOW</span>
         </button>
     </form>
 {% else %}
     <button type="button" class="btn btn-default btn-circle">
-        <i class="fa fa-check fa-3x"></i>
-        <p><small>Book Now</small></p>
+        <i class="fa fa-check fa-2x"></i>&nbsp;<span style="font-size: 18px">BOOK NOW</span>
     </button>
 {% endif %}
