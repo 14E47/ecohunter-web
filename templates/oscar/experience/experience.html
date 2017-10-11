@@ -140,6 +140,7 @@
 </section>
 
 <section id="exp-nav" class="container-fluid" style="background-color: #fff;">
+<div class="row">
   <div class="process">
     <div class="process-row nav nav-tabs">   
         <div class="process-step">
@@ -191,6 +192,7 @@
         </div>
     </div>
   </div>
+</div>
 </section>
 
 <section class="exp-detail container">
@@ -212,17 +214,17 @@
         <p class="text-center">{{ experience.practical | safe }}</p>
       </div>
 
-        <div id="menu6" class="smoothscroll">
-            <h3 class="text-center">Practical Info</h3>
-            <p class="text-center">{{ product.practical | safe }}</p>
-        </div>
+        <!--<div id="menu6" class="smoothscroll">-->
+            <!--<h3 class="text-center">Practical Info</h3>-->
+            <!--<p class="text-center">{{ product.practical | safe }}</p>-->
+        <!--</div>-->
 
-        <div id="menu7" class="smoothscroll">
-            <h3 class="text-center">Price</h3>
-            {% block product_stock_record %}
-                {% include "catalogue/partials/stock_record.html" with verbose=1 %}
-            {% endblock %}
-        </div>
+        <!--<div id="menu7" class="smoothscroll">-->
+            <!--<h3 class="text-center">Price</h3>-->
+            <!--{% block product_stock_record %}-->
+                <!--{% include "catalogue/partials/stock_record.html" with verbose=1 %}-->
+            <!--{% endblock %}-->
+        <!--</div>-->
 
       <div id="menu5" class="">
           <div class="book-button">
