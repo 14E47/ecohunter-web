@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'booking',
     'template_debug',
+    'rest_framework',
+    'oscarapi',
 ] + get_core_apps(['custom_oscar.catalogue'])
 
 SITE_ID = 1
@@ -172,3 +174,12 @@ OSCAR_ORDER_STATUS_PIPELINE = {
 OSCAR_MISSING_IMAGE_URL = MEDIA_URL + 'image_not_found.jpg'
 
 OSCAR_PRODUCTS_PER_PAGE = 12
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+    )
+}

@@ -27,3 +27,17 @@ class Booking(models.Model):
     def short_desc(self):
         """Default short description visible on reservation button"""
         return str(self.id)
+
+class BookingQuery(models.Model):
+    user = models.ForeignKey("auth.User")
+    name = models.CharField(max_length=255, blank=True, default='')
+    email = models.CharField(max_length=255, blank=True, default='')
+    phone = models.CharField(max_length=255, blank=True, default='')
+    travel_dates = models.CharField(max_length=255, blank=True, default='')
+    hotel = models.CharField(max_length=255, blank=True, default='')
+    price = models.CharField(max_length=255, blank=True, default='')
+    type = models.CharField(max_length=255, blank=True, default='')
+    is_confirmed = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return ("%s-%s" %(str(self.name), str(self.phone)))

@@ -24,6 +24,7 @@ from experience import urls as experience_urls
 from oscar.app import application
 from experience import urls as experience_urls
 from booking import urls as booking_url
+from oscarapi.app import application as api
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
@@ -36,7 +37,7 @@ urlpatterns = [
     url(r'^contact/$', TemplateView.as_view(template_name='contact-us.html'), name="contact-us"),
     url(r'', include(application.urls)),
     url(r'^experience/', include(experience_urls)),
-    
+    url(r'^api/', include(api.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = 'Ecohunter'
