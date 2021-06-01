@@ -29,4 +29,4 @@ requests==2.18.4
 six==1.10.0
 sorl-thumbnail==12.4a1
 Unidecode==0.4.21
-urllib3==1.22
+urllib3==1.26.5
